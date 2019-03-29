@@ -1,0 +1,32 @@
+{
+  "gatewayApp": {
+    "commonChiTieu": {
+      "home": {
+        "title": "Chi Tieus",
+        "createLabel": "Create a new Chi Tieu",
+        "createOrEditLabel": "Create or edit a Chi Tieu"
+      },
+      "delete": {
+        "question": "Are you sure you want to delete Chi Tieu {{ id }}?"
+      },
+      "detail": {
+        "title": "Chi Tieu"
+      },
+      "chiTieuCode": "Chi Tieu Code",
+      "name": "Name",
+      "userName": "User Name",
+      "createTime": "Create Time",
+      "updateTime": "Update Time",
+      "status": "Status",
+      "program": "Program",
+      "nhomchitieu": "Nhomchitieu"
+    }
+  },
+  "commonApp": {
+    "commonChiTieu": {
+      "created": "A new Chi Tieu is created with identifier {{ param }}",
+      "updated": "A Chi Tieu is updated with identifier {{ param }}",
+      "deleted": "A Chi Tieu is deleted with identifier {{ param }}"
+    }
+  }
+}

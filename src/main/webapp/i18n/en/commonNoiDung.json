@@ -1,0 +1,31 @@
+{
+  "gatewayApp": {
+    "commonNoiDung": {
+      "home": {
+        "title": "Noi Dungs",
+        "createLabel": "Create a new Noi Dung",
+        "createOrEditLabel": "Create or edit a Noi Dung"
+      },
+      "delete": {
+        "question": "Are you sure you want to delete Noi Dung {{ id }}?"
+      },
+      "detail": {
+        "title": "Noi Dung"
+      },
+      "noiDungCode": "Noi Dung Code",
+      "userName": "User Name",
+      "createTime": "Create Time",
+      "updateTime": "Update Time",
+      "status": "Status",
+      "program": "Program",
+      "nhomnoidung": "Nhomnoidung"
+    }
+  },
+  "commonApp": {
+    "commonNoiDung": {
+      "created": "A new Noi Dung is created with identifier {{ param }}",
+      "updated": "A Noi Dung is updated with identifier {{ param }}",
+      "deleted": "A Noi Dung is deleted with identifier {{ param }}"
+    }
+  }
+}

@@ -1,0 +1,33 @@
+{
+    "name": "MauPhatHanhTieuChi",
+    "fields": [],
+    "relationships": [
+        {
+            "relationshipType": "many-to-one",
+            "relationshipName": "tieuchi",
+            "otherEntityName": "tieuChi",
+            "otherEntityField": "id",
+            "otherEntityRelationshipName": "mauphathanhtieuchi"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "relationshipName": "mauphathanh",
+            "otherEntityName": "mauPhatHanh",
+            "otherEntityField": "id",
+            "otherEntityRelationshipName": "mauphathanhtieuchi"
+        }
+    ],
+    "changelogDate": "20190329044957",
+    "entityTableName": "mau_phat_hanh_tieu_chi",
+    "dto": "mapstruct",
+    "pagination": "pagination",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": [
+        "gateway",
+        "donviphathanh"
+    ],
+    "microserviceName": "donviphathanh"
+}

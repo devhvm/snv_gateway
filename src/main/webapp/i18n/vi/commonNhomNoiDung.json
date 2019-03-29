@@ -1,0 +1,32 @@
+{
+  "gatewayApp": {
+    "commonNhomNoiDung": {
+      "home": {
+        "title": "Nhom Noi Dungs",
+        "createLabel": "Thêm mới một Nhom Noi Dung",
+        "createOrEditLabel": "Thêm mới hoặc cập nhật Nhom Noi Dung"
+      },
+      "delete": {
+        "question": "Bạn có chắc là muốn xóa Nhom Noi Dung {{ id }}?"
+      },
+      "detail": {
+        "title": "Nhom Noi Dung"
+      },
+      "nhomNoiDungCode": "Nhom Noi Dung Code",
+      "name": "Name",
+      "userName": "User Name",
+      "createTime": "Create Time",
+      "updateTime": "Update Time",
+      "status": "Status",
+      "program": "Program",
+      "noiDung": "Noi Dung"
+    }
+  },
+  "commonApp": {
+    "commonNhomNoiDung": {
+      "created": "Một Nhom Noi Dung mới được tạo với định danh {{ param }}",
+      "updated": "Một Nhom Noi Dung cập nhật với định danh {{ param }}",
+      "deleted": "Một Nhom Noi Dung đã xóa với định danh {{ param }}"
+    }
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "gatewayApp": {
+    "commonNhomChiTieu": {
+      "home": {
+        "title": "Nhom Chi Tieus",
+        "createLabel": "Create a new Nhom Chi Tieu",
+        "createOrEditLabel": "Create or edit a Nhom Chi Tieu"
+      },
+      "delete": {
+        "question": "Are you sure you want to delete Nhom Chi Tieu {{ id }}?"
+      },
+      "detail": {
+        "title": "Nhom Chi Tieu"
+      },
+      "nhomChiTieuCode": "Nhom Chi Tieu Code",
+      "name": "Name",
+      "userName": "User Name",
+      "createTime": "Create Time",
+      "updateTime": "Update Time",
+      "status": "Status",
+      "program": "Program",
+      "chitieu": "Chitieu"
+    }
+  },
+  "commonApp": {
+    "commonNhomChiTieu": {
+      "created": "A new Nhom Chi Tieu is created with identifier {{ param }}",
+      "updated": "A Nhom Chi Tieu is updated with identifier {{ param }}",
+      "deleted": "A Nhom Chi Tieu is deleted with identifier {{ param }}"
+    }
+  }
+}

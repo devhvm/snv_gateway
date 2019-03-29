@@ -1,0 +1,34 @@
+{
+  "gatewayApp": {
+    "donviphathanhTieuChi": {
+      "home": {
+        "title": "Tieu Chis",
+        "createLabel": "Create a new Tieu Chi",
+        "createOrEditLabel": "Create or edit a Tieu Chi"
+      },
+      "delete": {
+        "question": "Are you sure you want to delete Tieu Chi {{ id }}?"
+      },
+      "detail": {
+        "title": "Tieu Chi"
+      },
+      "tieuChiCode": "Tieu Chi Code",
+      "name": "Name",
+      "userName": "User Name",
+      "createTime": "Create Time",
+      "updateTime": "Update Time",
+      "status": "Status",
+      "program": "Program",
+      "tieuchibaocao": "Tieuchibaocao",
+      "mauphathanhtieuchi": "Mauphathanhtieuchi",
+      "kycongbo": "Kycongbo"
+    }
+  },
+  "donviphathanhApp": {
+    "donviphathanhTieuChi": {
+      "created": "A new Tieu Chi is created with identifier {{ param }}",
+      "updated": "A Tieu Chi is updated with identifier {{ param }}",
+      "deleted": "A Tieu Chi is deleted with identifier {{ param }}"
+    }
+  }
+}

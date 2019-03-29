@@ -1,0 +1,70 @@
+{
+    "name": "TieuChiBaoCao",
+    "fields": [
+        {
+            "fieldName": "tieuChiBaoCaoCode",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "userName",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "createTime",
+            "fieldType": "ZonedDateTime",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "updateTime",
+            "fieldType": "ZonedDateTime",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "status",
+            "fieldType": "ReportStatus",
+            "fieldValues": "NEW,ACTIVED,CANCELLED,DELETED,SIGNED,COMPLETED",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "program",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "many-to-one",
+            "relationshipName": "tieuchi",
+            "otherEntityName": "tieuChi",
+            "otherEntityField": "id",
+            "otherEntityRelationshipName": "tieuchibaocao"
+        }
+    ],
+    "changelogDate": "20190329045000",
+    "entityTableName": "tieu_chi_bao_cao",
+    "dto": "mapstruct",
+    "pagination": "pagination",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": [
+        "gateway",
+        "donviphathanh"
+    ],
+    "microserviceName": "donviphathanh"
+}
