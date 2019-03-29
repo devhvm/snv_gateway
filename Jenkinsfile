@@ -58,7 +58,7 @@ node {
         }
 
         stage('publish docker') {
-            docker.withRegistry('http://vtools.xyz:5060', 'docker-login') {
+            docker.withRegistry('http://vtools.xyz:5050', 'docker-login') {
                 dockerImage.push 'latest'
             }
         }
