@@ -2,36 +2,8 @@
     "name": "TieuChi",
     "fields": [
         {
-            "fieldName": "tieuChiCode",
-            "fieldType": "String",
-            "fieldValidateRules": [
-                "required"
-            ]
-        },
-        {
             "fieldName": "name",
             "fieldType": "String",
-            "fieldValidateRules": [
-                "required"
-            ]
-        },
-        {
-            "fieldName": "userName",
-            "fieldType": "String",
-            "fieldValidateRules": [
-                "required"
-            ]
-        },
-        {
-            "fieldName": "createTime",
-            "fieldType": "ZonedDateTime",
-            "fieldValidateRules": [
-                "required"
-            ]
-        },
-        {
-            "fieldName": "updateTime",
-            "fieldType": "ZonedDateTime",
             "fieldValidateRules": [
                 "required"
             ]
@@ -43,41 +15,34 @@
             "fieldValidateRules": [
                 "required"
             ]
-        },
-        {
-            "fieldName": "program",
-            "fieldType": "String",
-            "fieldValidateRules": [
-                "required"
-            ]
         }
     ],
     "relationships": [
         {
             "relationshipType": "one-to-many",
-            "relationshipName": "tieuchibaocao",
             "otherEntityName": "tieuChiBaoCao",
-            "otherEntityRelationshipName": "tieuchi"
+            "otherEntityRelationshipName": "tieuchi",
+            "relationshipName": "tieuchibaocao"
         },
         {
             "relationshipType": "one-to-many",
-            "relationshipName": "mauphathanhtieuchi",
             "otherEntityName": "mauPhatHanhTieuChi",
-            "otherEntityRelationshipName": "tieuchi"
+            "otherEntityRelationshipName": "tieuchi",
+            "relationshipName": "mauphathanhtieuchi"
         },
         {
             "relationshipType": "many-to-one",
-            "relationshipName": "kycongbo",
             "otherEntityName": "kyCongBo",
-            "otherEntityField": "id",
-            "otherEntityRelationshipName": "tieuchi"
+            "otherEntityRelationshipName": "tieuchi",
+            "relationshipName": "kycongbo",
+            "otherEntityField": "id"
         }
     ],
     "changelogDate": "20190329044958",
     "entityTableName": "tieu_chi",
     "dto": "mapstruct",
     "pagination": "pagination",
-    "service": "serviceImpl",
+    "service": "serviceClass",
     "jpaMetamodelFiltering": false,
     "fluentMethods": true,
     "clientRootFolder": "",

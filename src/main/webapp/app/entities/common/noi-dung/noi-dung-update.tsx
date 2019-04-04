@@ -49,9 +49,6 @@ export class NoiDungUpdate extends React.Component<INoiDungUpdateProps, INoiDung
   }
 
   saveEntity = (event, errors, values) => {
-    values.createTime = convertDateTimeToServer(values.createTime);
-    values.updateTime = convertDateTimeToServer(values.updateTime);
-
     if (errors.length === 0) {
       const { noiDungEntity } = this.props;
       const entity = {
@@ -112,51 +109,6 @@ export class NoiDungUpdate extends React.Component<INoiDungUpdateProps, INoiDung
                   />
                 </AvGroup>
                 <AvGroup>
-                  <Label id="userNameLabel" for="userName">
-                    <Translate contentKey="gatewayApp.commonNoiDung.userName">User Name</Translate>
-                  </Label>
-                  <AvField
-                    id="noi-dung-userName"
-                    type="text"
-                    name="userName"
-                    validate={{
-                      required: { value: true, errorMessage: translate('entity.validation.required') }
-                    }}
-                  />
-                </AvGroup>
-                <AvGroup>
-                  <Label id="createTimeLabel" for="createTime">
-                    <Translate contentKey="gatewayApp.commonNoiDung.createTime">Create Time</Translate>
-                  </Label>
-                  <AvInput
-                    id="noi-dung-createTime"
-                    type="datetime-local"
-                    className="form-control"
-                    name="createTime"
-                    placeholder={'YYYY-MM-DD HH:mm'}
-                    value={isNew ? null : convertDateTimeFromServer(this.props.noiDungEntity.createTime)}
-                    validate={{
-                      required: { value: true, errorMessage: translate('entity.validation.required') }
-                    }}
-                  />
-                </AvGroup>
-                <AvGroup>
-                  <Label id="updateTimeLabel" for="updateTime">
-                    <Translate contentKey="gatewayApp.commonNoiDung.updateTime">Update Time</Translate>
-                  </Label>
-                  <AvInput
-                    id="noi-dung-updateTime"
-                    type="datetime-local"
-                    className="form-control"
-                    name="updateTime"
-                    placeholder={'YYYY-MM-DD HH:mm'}
-                    value={isNew ? null : convertDateTimeFromServer(this.props.noiDungEntity.updateTime)}
-                    validate={{
-                      required: { value: true, errorMessage: translate('entity.validation.required') }
-                    }}
-                  />
-                </AvGroup>
-                <AvGroup>
                   <Label id="statusLabel">
                     <Translate contentKey="gatewayApp.commonNoiDung.status">Status</Translate>
                   </Label>
@@ -177,19 +129,6 @@ export class NoiDungUpdate extends React.Component<INoiDungUpdateProps, INoiDung
                       <Translate contentKey="gatewayApp.Status.DELETED" />
                     </option>
                   </AvInput>
-                </AvGroup>
-                <AvGroup>
-                  <Label id="programLabel" for="program">
-                    <Translate contentKey="gatewayApp.commonNoiDung.program">Program</Translate>
-                  </Label>
-                  <AvField
-                    id="noi-dung-program"
-                    type="text"
-                    name="program"
-                    validate={{
-                      required: { value: true, errorMessage: translate('entity.validation.required') }
-                    }}
-                  />
                 </AvGroup>
                 <AvGroup>
                   <Label for="nhomnoidung.id">

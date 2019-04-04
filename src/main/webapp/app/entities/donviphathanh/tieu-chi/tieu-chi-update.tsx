@@ -49,9 +49,6 @@ export class TieuChiUpdate extends React.Component<ITieuChiUpdateProps, ITieuChi
   }
 
   saveEntity = (event, errors, values) => {
-    values.createTime = convertDateTimeToServer(values.createTime);
-    values.updateTime = convertDateTimeToServer(values.updateTime);
-
     if (errors.length === 0) {
       const { tieuChiEntity } = this.props;
       const entity = {
@@ -99,19 +96,6 @@ export class TieuChiUpdate extends React.Component<ITieuChiUpdateProps, ITieuChi
                   </AvGroup>
                 ) : null}
                 <AvGroup>
-                  <Label id="tieuChiCodeLabel" for="tieuChiCode">
-                    <Translate contentKey="gatewayApp.donviphathanhTieuChi.tieuChiCode">Tieu Chi Code</Translate>
-                  </Label>
-                  <AvField
-                    id="tieu-chi-tieuChiCode"
-                    type="text"
-                    name="tieuChiCode"
-                    validate={{
-                      required: { value: true, errorMessage: translate('entity.validation.required') }
-                    }}
-                  />
-                </AvGroup>
-                <AvGroup>
                   <Label id="nameLabel" for="name">
                     <Translate contentKey="gatewayApp.donviphathanhTieuChi.name">Name</Translate>
                   </Label>
@@ -119,51 +103,6 @@ export class TieuChiUpdate extends React.Component<ITieuChiUpdateProps, ITieuChi
                     id="tieu-chi-name"
                     type="text"
                     name="name"
-                    validate={{
-                      required: { value: true, errorMessage: translate('entity.validation.required') }
-                    }}
-                  />
-                </AvGroup>
-                <AvGroup>
-                  <Label id="userNameLabel" for="userName">
-                    <Translate contentKey="gatewayApp.donviphathanhTieuChi.userName">User Name</Translate>
-                  </Label>
-                  <AvField
-                    id="tieu-chi-userName"
-                    type="text"
-                    name="userName"
-                    validate={{
-                      required: { value: true, errorMessage: translate('entity.validation.required') }
-                    }}
-                  />
-                </AvGroup>
-                <AvGroup>
-                  <Label id="createTimeLabel" for="createTime">
-                    <Translate contentKey="gatewayApp.donviphathanhTieuChi.createTime">Create Time</Translate>
-                  </Label>
-                  <AvInput
-                    id="tieu-chi-createTime"
-                    type="datetime-local"
-                    className="form-control"
-                    name="createTime"
-                    placeholder={'YYYY-MM-DD HH:mm'}
-                    value={isNew ? null : convertDateTimeFromServer(this.props.tieuChiEntity.createTime)}
-                    validate={{
-                      required: { value: true, errorMessage: translate('entity.validation.required') }
-                    }}
-                  />
-                </AvGroup>
-                <AvGroup>
-                  <Label id="updateTimeLabel" for="updateTime">
-                    <Translate contentKey="gatewayApp.donviphathanhTieuChi.updateTime">Update Time</Translate>
-                  </Label>
-                  <AvInput
-                    id="tieu-chi-updateTime"
-                    type="datetime-local"
-                    className="form-control"
-                    name="updateTime"
-                    placeholder={'YYYY-MM-DD HH:mm'}
-                    value={isNew ? null : convertDateTimeFromServer(this.props.tieuChiEntity.updateTime)}
                     validate={{
                       required: { value: true, errorMessage: translate('entity.validation.required') }
                     }}
@@ -199,19 +138,6 @@ export class TieuChiUpdate extends React.Component<ITieuChiUpdateProps, ITieuChi
                       <Translate contentKey="gatewayApp.ReportStatus.COMPLETED" />
                     </option>
                   </AvInput>
-                </AvGroup>
-                <AvGroup>
-                  <Label id="programLabel" for="program">
-                    <Translate contentKey="gatewayApp.donviphathanhTieuChi.program">Program</Translate>
-                  </Label>
-                  <AvField
-                    id="tieu-chi-program"
-                    type="text"
-                    name="program"
-                    validate={{
-                      required: { value: true, errorMessage: translate('entity.validation.required') }
-                    }}
-                  />
                 </AvGroup>
                 <AvGroup>
                   <Label for="kycongbo.id">

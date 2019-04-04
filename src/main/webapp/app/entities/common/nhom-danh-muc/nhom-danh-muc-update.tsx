@@ -43,9 +43,6 @@ export class NhomDanhMucUpdate extends React.Component<INhomDanhMucUpdateProps, 
   }
 
   saveEntity = (event, errors, values) => {
-    values.createTime = convertDateTimeToServer(values.createTime);
-    values.updateTime = convertDateTimeToServer(values.updateTime);
-
     if (errors.length === 0) {
       const { nhomDanhMucEntity } = this.props;
       const entity = {
@@ -119,51 +116,6 @@ export class NhomDanhMucUpdate extends React.Component<INhomDanhMucUpdateProps, 
                   />
                 </AvGroup>
                 <AvGroup>
-                  <Label id="userNameLabel" for="userName">
-                    <Translate contentKey="gatewayApp.commonNhomDanhMuc.userName">User Name</Translate>
-                  </Label>
-                  <AvField
-                    id="nhom-danh-muc-userName"
-                    type="text"
-                    name="userName"
-                    validate={{
-                      required: { value: true, errorMessage: translate('entity.validation.required') }
-                    }}
-                  />
-                </AvGroup>
-                <AvGroup>
-                  <Label id="createTimeLabel" for="createTime">
-                    <Translate contentKey="gatewayApp.commonNhomDanhMuc.createTime">Create Time</Translate>
-                  </Label>
-                  <AvInput
-                    id="nhom-danh-muc-createTime"
-                    type="datetime-local"
-                    className="form-control"
-                    name="createTime"
-                    placeholder={'YYYY-MM-DD HH:mm'}
-                    value={isNew ? null : convertDateTimeFromServer(this.props.nhomDanhMucEntity.createTime)}
-                    validate={{
-                      required: { value: true, errorMessage: translate('entity.validation.required') }
-                    }}
-                  />
-                </AvGroup>
-                <AvGroup>
-                  <Label id="updateTimeLabel" for="updateTime">
-                    <Translate contentKey="gatewayApp.commonNhomDanhMuc.updateTime">Update Time</Translate>
-                  </Label>
-                  <AvInput
-                    id="nhom-danh-muc-updateTime"
-                    type="datetime-local"
-                    className="form-control"
-                    name="updateTime"
-                    placeholder={'YYYY-MM-DD HH:mm'}
-                    value={isNew ? null : convertDateTimeFromServer(this.props.nhomDanhMucEntity.updateTime)}
-                    validate={{
-                      required: { value: true, errorMessage: translate('entity.validation.required') }
-                    }}
-                  />
-                </AvGroup>
-                <AvGroup>
                   <Label id="statusLabel">
                     <Translate contentKey="gatewayApp.commonNhomDanhMuc.status">Status</Translate>
                   </Label>
@@ -184,19 +136,6 @@ export class NhomDanhMucUpdate extends React.Component<INhomDanhMucUpdateProps, 
                       <Translate contentKey="gatewayApp.Status.DELETED" />
                     </option>
                   </AvInput>
-                </AvGroup>
-                <AvGroup>
-                  <Label id="programLabel" for="program">
-                    <Translate contentKey="gatewayApp.commonNhomDanhMuc.program">Program</Translate>
-                  </Label>
-                  <AvField
-                    id="nhom-danh-muc-program"
-                    type="text"
-                    name="program"
-                    validate={{
-                      required: { value: true, errorMessage: translate('entity.validation.required') }
-                    }}
-                  />
                 </AvGroup>
                 <Button tag={Link} id="cancel-save" to="/entity/nhom-danh-muc" replace color="info">
                   <FontAwesomeIcon icon="arrow-left" />

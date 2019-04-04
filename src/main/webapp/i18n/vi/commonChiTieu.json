@@ -14,11 +14,7 @@
       },
       "chiTieuCode": "Chi Tieu Code",
       "name": "Name",
-      "userName": "User Name",
-      "createTime": "Create Time",
-      "updateTime": "Update Time",
       "status": "Status",
-      "program": "Program",
       "nhomchitieu": "Nhomchitieu"
     }
   },

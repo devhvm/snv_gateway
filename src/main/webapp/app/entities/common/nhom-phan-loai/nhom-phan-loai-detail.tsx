@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import { Link, RouteComponentProps } from 'react-router-dom';
 import { Button, Row, Col } from 'reactstrap';
 // tslint:disable-next-line:no-unused-variable
-import { Translate, ICrudGetAction, TextFormat } from 'react-jhipster';
+import { Translate, ICrudGetAction } from 'react-jhipster';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import { IRootState } from 'app/shared/reducers';
@@ -41,43 +41,15 @@ export class NhomPhanLoaiDetail extends React.Component<INhomPhanLoaiDetailProps
             </dt>
             <dd>{nhomPhanLoaiEntity.name}</dd>
             <dt>
-              <span id="userName">
-                <Translate contentKey="gatewayApp.commonNhomPhanLoai.userName">User Name</Translate>
-              </span>
-            </dt>
-            <dd>{nhomPhanLoaiEntity.userName}</dd>
-            <dt>
-              <span id="createTime">
-                <Translate contentKey="gatewayApp.commonNhomPhanLoai.createTime">Create Time</Translate>
-              </span>
-            </dt>
-            <dd>
-              <TextFormat value={nhomPhanLoaiEntity.createTime} type="date" format={APP_DATE_FORMAT} />
-            </dd>
-            <dt>
-              <span id="updateTime">
-                <Translate contentKey="gatewayApp.commonNhomPhanLoai.updateTime">Update Time</Translate>
-              </span>
-            </dt>
-            <dd>
-              <TextFormat value={nhomPhanLoaiEntity.updateTime} type="date" format={APP_DATE_FORMAT} />
-            </dd>
-            <dt>
               <span id="status">
                 <Translate contentKey="gatewayApp.commonNhomPhanLoai.status">Status</Translate>
               </span>
             </dt>
             <dd>{nhomPhanLoaiEntity.status}</dd>
             <dt>
-              <span id="program">
-                <Translate contentKey="gatewayApp.commonNhomPhanLoai.program">Program</Translate>
-              </span>
+              <Translate contentKey="gatewayApp.commonNhomPhanLoai.donvitinh">Donvitinh</Translate>
             </dt>
-            <dd>{nhomPhanLoaiEntity.program}</dd>
-            <dt>
-              <Translate contentKey="gatewayApp.commonNhomPhanLoai.donvi">Donvi</Translate>
-            </dt>
-            <dd>{nhomPhanLoaiEntity.donviId ? nhomPhanLoaiEntity.donviId : ''}</dd>
+            <dd>{nhomPhanLoaiEntity.donvitinhId ? nhomPhanLoaiEntity.donvitinhId : ''}</dd>
           </dl>
           <Button tag={Link} to="/entity/nhom-phan-loai" replace color="info">
             <FontAwesomeIcon icon="arrow-left" />{' '}

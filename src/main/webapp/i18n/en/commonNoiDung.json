@@ -13,11 +13,7 @@
         "title": "Noi Dung"
       },
       "noiDungCode": "Noi Dung Code",
-      "userName": "User Name",
-      "createTime": "Create Time",
-      "updateTime": "Update Time",
       "status": "Status",
-      "program": "Program",
       "nhomnoidung": "Nhomnoidung"
     }
   },

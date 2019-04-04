@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import { Link, RouteComponentProps } from 'react-router-dom';
 import { Button, Row, Col } from 'reactstrap';
 // tslint:disable-next-line:no-unused-variable
-import { Translate, ICrudGetAction, TextFormat } from 'react-jhipster';
+import { Translate, ICrudGetAction } from 'react-jhipster';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import { IRootState } from 'app/shared/reducers';
@@ -29,51 +29,17 @@ export class TieuChiDetail extends React.Component<ITieuChiDetailProps> {
           </h2>
           <dl className="jh-entity-details">
             <dt>
-              <span id="tieuChiCode">
-                <Translate contentKey="gatewayApp.donviphathanhTieuChi.tieuChiCode">Tieu Chi Code</Translate>
-              </span>
-            </dt>
-            <dd>{tieuChiEntity.tieuChiCode}</dd>
-            <dt>
               <span id="name">
                 <Translate contentKey="gatewayApp.donviphathanhTieuChi.name">Name</Translate>
               </span>
             </dt>
             <dd>{tieuChiEntity.name}</dd>
             <dt>
-              <span id="userName">
-                <Translate contentKey="gatewayApp.donviphathanhTieuChi.userName">User Name</Translate>
-              </span>
-            </dt>
-            <dd>{tieuChiEntity.userName}</dd>
-            <dt>
-              <span id="createTime">
-                <Translate contentKey="gatewayApp.donviphathanhTieuChi.createTime">Create Time</Translate>
-              </span>
-            </dt>
-            <dd>
-              <TextFormat value={tieuChiEntity.createTime} type="date" format={APP_DATE_FORMAT} />
-            </dd>
-            <dt>
-              <span id="updateTime">
-                <Translate contentKey="gatewayApp.donviphathanhTieuChi.updateTime">Update Time</Translate>
-              </span>
-            </dt>
-            <dd>
-              <TextFormat value={tieuChiEntity.updateTime} type="date" format={APP_DATE_FORMAT} />
-            </dd>
-            <dt>
               <span id="status">
                 <Translate contentKey="gatewayApp.donviphathanhTieuChi.status">Status</Translate>
               </span>
             </dt>
             <dd>{tieuChiEntity.status}</dd>
-            <dt>
-              <span id="program">
-                <Translate contentKey="gatewayApp.donviphathanhTieuChi.program">Program</Translate>
-              </span>
-            </dt>
-            <dd>{tieuChiEntity.program}</dd>
             <dt>
               <Translate contentKey="gatewayApp.donviphathanhTieuChi.kycongbo">Kycongbo</Translate>
             </dt>

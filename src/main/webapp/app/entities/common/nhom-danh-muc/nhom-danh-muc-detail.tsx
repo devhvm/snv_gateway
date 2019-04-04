@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import { Link, RouteComponentProps } from 'react-router-dom';
 import { Button, Row, Col } from 'reactstrap';
 // tslint:disable-next-line:no-unused-variable
-import { Translate, ICrudGetAction, TextFormat } from 'react-jhipster';
+import { Translate, ICrudGetAction } from 'react-jhipster';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import { IRootState } from 'app/shared/reducers';
@@ -41,39 +41,11 @@ export class NhomDanhMucDetail extends React.Component<INhomDanhMucDetailProps> 
             </dt>
             <dd>{nhomDanhMucEntity.name}</dd>
             <dt>
-              <span id="userName">
-                <Translate contentKey="gatewayApp.commonNhomDanhMuc.userName">User Name</Translate>
-              </span>
-            </dt>
-            <dd>{nhomDanhMucEntity.userName}</dd>
-            <dt>
-              <span id="createTime">
-                <Translate contentKey="gatewayApp.commonNhomDanhMuc.createTime">Create Time</Translate>
-              </span>
-            </dt>
-            <dd>
-              <TextFormat value={nhomDanhMucEntity.createTime} type="date" format={APP_DATE_FORMAT} />
-            </dd>
-            <dt>
-              <span id="updateTime">
-                <Translate contentKey="gatewayApp.commonNhomDanhMuc.updateTime">Update Time</Translate>
-              </span>
-            </dt>
-            <dd>
-              <TextFormat value={nhomDanhMucEntity.updateTime} type="date" format={APP_DATE_FORMAT} />
-            </dd>
-            <dt>
               <span id="status">
                 <Translate contentKey="gatewayApp.commonNhomDanhMuc.status">Status</Translate>
               </span>
             </dt>
             <dd>{nhomDanhMucEntity.status}</dd>
-            <dt>
-              <span id="program">
-                <Translate contentKey="gatewayApp.commonNhomDanhMuc.program">Program</Translate>
-              </span>
-            </dt>
-            <dd>{nhomDanhMucEntity.program}</dd>
           </dl>
           <Button tag={Link} to="/entity/nhom-danh-muc" replace color="info">
             <FontAwesomeIcon icon="arrow-left" />{' '}

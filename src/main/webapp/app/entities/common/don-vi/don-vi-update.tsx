@@ -8,8 +8,8 @@ import { Translate, translate, ICrudGetAction, ICrudGetAllAction, ICrudPutAction
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { IRootState } from 'app/shared/reducers';
 
-import { IPhamVi } from 'app/shared/model/common/pham-vi.model';
-import { getEntities as getPhamVis } from 'app/entities/common/pham-vi/pham-vi.reducer';
+import { IPhamVi } from 'app/shared/model/donviphathanh/pham-vi.model';
+import { getEntities as getPhamVis } from 'app/entities/donviphathanh/pham-vi/pham-vi.reducer';
 import { getEntity, updateEntity, createEntity, reset } from './don-vi.reducer';
 import { IDonVi } from 'app/shared/model/common/don-vi.model';
 // tslint:disable-next-line:no-unused-variable

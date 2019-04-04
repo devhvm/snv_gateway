@@ -3,15 +3,7 @@ import { connect } from 'react-redux';
 import { Link, RouteComponentProps } from 'react-router-dom';
 import { Button, Col, Row, Table } from 'reactstrap';
 // tslint:disable-next-line:no-unused-variable
-import {
-  Translate,
-  ICrudGetAllAction,
-  TextFormat,
-  getSortState,
-  IPaginationBaseState,
-  getPaginationItemsNumber,
-  JhiPagination
-} from 'react-jhipster';
+import { Translate, ICrudGetAllAction, getSortState, IPaginationBaseState, getPaginationItemsNumber, JhiPagination } from 'react-jhipster';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import { IRootState } from 'app/shared/reducers';
@@ -82,22 +74,8 @@ export class KyCongBo extends React.Component<IKyCongBoProps, IKyCongBoState> {
                 <th className="hand" onClick={this.sort('name')}>
                   <Translate contentKey="gatewayApp.donviphathanhKyCongBo.name">Name</Translate> <FontAwesomeIcon icon="sort" />
                 </th>
-                <th className="hand" onClick={this.sort('userName')}>
-                  <Translate contentKey="gatewayApp.donviphathanhKyCongBo.userName">User Name</Translate> <FontAwesomeIcon icon="sort" />
-                </th>
-                <th className="hand" onClick={this.sort('createTime')}>
-                  <Translate contentKey="gatewayApp.donviphathanhKyCongBo.createTime">Create Time</Translate>{' '}
-                  <FontAwesomeIcon icon="sort" />
-                </th>
-                <th className="hand" onClick={this.sort('updateTime')}>
-                  <Translate contentKey="gatewayApp.donviphathanhKyCongBo.updateTime">Update Time</Translate>{' '}
-                  <FontAwesomeIcon icon="sort" />
-                </th>
                 <th className="hand" onClick={this.sort('status')}>
                   <Translate contentKey="gatewayApp.donviphathanhKyCongBo.status">Status</Translate> <FontAwesomeIcon icon="sort" />
-                </th>
-                <th className="hand" onClick={this.sort('program')}>
-                  <Translate contentKey="gatewayApp.donviphathanhKyCongBo.program">Program</Translate> <FontAwesomeIcon icon="sort" />
                 </th>
                 <th />
               </tr>
@@ -112,17 +90,9 @@ export class KyCongBo extends React.Component<IKyCongBoProps, IKyCongBoState> {
                   </td>
                   <td>{kyCongBo.kyCongBoCode}</td>
                   <td>{kyCongBo.name}</td>
-                  <td>{kyCongBo.userName}</td>
-                  <td>
-                    <TextFormat type="date" value={kyCongBo.createTime} format={APP_DATE_FORMAT} />
-                  </td>
-                  <td>
-                    <TextFormat type="date" value={kyCongBo.updateTime} format={APP_DATE_FORMAT} />
-                  </td>
                   <td>
                     <Translate contentKey={`gatewayApp.ReportStatus.${kyCongBo.status}`} />
                   </td>
-                  <td>{kyCongBo.program}</td>
                   <td className="text-right">
                     <div className="btn-group flex-btn-group-container">
                       <Button tag={Link} to={`${match.url}/${kyCongBo.id}`} color="info" size="sm">

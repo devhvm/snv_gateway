@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import { Link, RouteComponentProps } from 'react-router-dom';
 import { Button, Row, Col } from 'reactstrap';
 // tslint:disable-next-line:no-unused-variable
-import { Translate, ICrudGetAction, TextFormat } from 'react-jhipster';
+import { Translate, ICrudGetAction } from 'react-jhipster';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import { IRootState } from 'app/shared/reducers';
@@ -41,39 +41,11 @@ export class KyCongBoDetail extends React.Component<IKyCongBoDetailProps> {
             </dt>
             <dd>{kyCongBoEntity.name}</dd>
             <dt>
-              <span id="userName">
-                <Translate contentKey="gatewayApp.donviphathanhKyCongBo.userName">User Name</Translate>
-              </span>
-            </dt>
-            <dd>{kyCongBoEntity.userName}</dd>
-            <dt>
-              <span id="createTime">
-                <Translate contentKey="gatewayApp.donviphathanhKyCongBo.createTime">Create Time</Translate>
-              </span>
-            </dt>
-            <dd>
-              <TextFormat value={kyCongBoEntity.createTime} type="date" format={APP_DATE_FORMAT} />
-            </dd>
-            <dt>
-              <span id="updateTime">
-                <Translate contentKey="gatewayApp.donviphathanhKyCongBo.updateTime">Update Time</Translate>
-              </span>
-            </dt>
-            <dd>
-              <TextFormat value={kyCongBoEntity.updateTime} type="date" format={APP_DATE_FORMAT} />
-            </dd>
-            <dt>
               <span id="status">
                 <Translate contentKey="gatewayApp.donviphathanhKyCongBo.status">Status</Translate>
               </span>
             </dt>
             <dd>{kyCongBoEntity.status}</dd>
-            <dt>
-              <span id="program">
-                <Translate contentKey="gatewayApp.donviphathanhKyCongBo.program">Program</Translate>
-              </span>
-            </dt>
-            <dd>{kyCongBoEntity.program}</dd>
           </dl>
           <Button tag={Link} to="/entity/ky-cong-bo" replace color="info">
             <FontAwesomeIcon icon="arrow-left" />{' '}

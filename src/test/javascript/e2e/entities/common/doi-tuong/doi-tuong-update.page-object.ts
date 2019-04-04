@@ -6,11 +6,7 @@ export default class DoiTuongUpdatePage {
   cancelButton: ElementFinder = element(by.id('cancel-save'));
   doiTuongCodeInput: ElementFinder = element(by.css('input#doi-tuong-doiTuongCode'));
   nameInput: ElementFinder = element(by.css('input#doi-tuong-name'));
-  userNameInput: ElementFinder = element(by.css('input#doi-tuong-userName'));
-  createTimeInput: ElementFinder = element(by.css('input#doi-tuong-createTime'));
-  updateTimeInput: ElementFinder = element(by.css('input#doi-tuong-updateTime'));
   statusSelect: ElementFinder = element(by.css('select#doi-tuong-status'));
-  programInput: ElementFinder = element(by.css('input#doi-tuong-program'));
   nhomphanloaiSelect: ElementFinder = element(by.css('select#doi-tuong-nhomphanloai'));
 
   getPageTitle() {
@@ -33,30 +29,6 @@ export default class DoiTuongUpdatePage {
     return this.nameInput.getAttribute('value');
   }
 
-  async setUserNameInput(userName) {
-    await this.userNameInput.sendKeys(userName);
-  }
-
-  async getUserNameInput() {
-    return this.userNameInput.getAttribute('value');
-  }
-
-  async setCreateTimeInput(createTime) {
-    await this.createTimeInput.sendKeys(createTime);
-  }
-
-  async getCreateTimeInput() {
-    return this.createTimeInput.getAttribute('value');
-  }
-
-  async setUpdateTimeInput(updateTime) {
-    await this.updateTimeInput.sendKeys(updateTime);
-  }
-
-  async getUpdateTimeInput() {
-    return this.updateTimeInput.getAttribute('value');
-  }
-
   async setStatusSelect(status) {
     await this.statusSelect.sendKeys(status);
   }
@@ -71,14 +43,6 @@ export default class DoiTuongUpdatePage {
       .last()
       .click();
   }
-  async setProgramInput(program) {
-    await this.programInput.sendKeys(program);
-  }
-
-  async getProgramInput() {
-    return this.programInput.getAttribute('value');
-  }
-
   async nhomphanloaiSelectLastOption() {
     await this.nhomphanloaiSelect
       .all(by.tagName('option'))

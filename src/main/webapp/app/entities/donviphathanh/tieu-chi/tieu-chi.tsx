@@ -3,15 +3,7 @@ import { connect } from 'react-redux';
 import { Link, RouteComponentProps } from 'react-router-dom';
 import { Button, Col, Row, Table } from 'reactstrap';
 // tslint:disable-next-line:no-unused-variable
-import {
-  Translate,
-  ICrudGetAllAction,
-  TextFormat,
-  getSortState,
-  IPaginationBaseState,
-  getPaginationItemsNumber,
-  JhiPagination
-} from 'react-jhipster';
+import { Translate, ICrudGetAllAction, getSortState, IPaginationBaseState, getPaginationItemsNumber, JhiPagination } from 'react-jhipster';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import { IRootState } from 'app/shared/reducers';
@@ -75,27 +67,11 @@ export class TieuChi extends React.Component<ITieuChiProps, ITieuChiState> {
                 <th className="hand" onClick={this.sort('id')}>
                   <Translate contentKey="global.field.id">ID</Translate> <FontAwesomeIcon icon="sort" />
                 </th>
-                <th className="hand" onClick={this.sort('tieuChiCode')}>
-                  <Translate contentKey="gatewayApp.donviphathanhTieuChi.tieuChiCode">Tieu Chi Code</Translate>{' '}
-                  <FontAwesomeIcon icon="sort" />
-                </th>
                 <th className="hand" onClick={this.sort('name')}>
                   <Translate contentKey="gatewayApp.donviphathanhTieuChi.name">Name</Translate> <FontAwesomeIcon icon="sort" />
                 </th>
-                <th className="hand" onClick={this.sort('userName')}>
-                  <Translate contentKey="gatewayApp.donviphathanhTieuChi.userName">User Name</Translate> <FontAwesomeIcon icon="sort" />
-                </th>
-                <th className="hand" onClick={this.sort('createTime')}>
-                  <Translate contentKey="gatewayApp.donviphathanhTieuChi.createTime">Create Time</Translate> <FontAwesomeIcon icon="sort" />
-                </th>
-                <th className="hand" onClick={this.sort('updateTime')}>
-                  <Translate contentKey="gatewayApp.donviphathanhTieuChi.updateTime">Update Time</Translate> <FontAwesomeIcon icon="sort" />
-                </th>
                 <th className="hand" onClick={this.sort('status')}>
                   <Translate contentKey="gatewayApp.donviphathanhTieuChi.status">Status</Translate> <FontAwesomeIcon icon="sort" />
-                </th>
-                <th className="hand" onClick={this.sort('program')}>
-                  <Translate contentKey="gatewayApp.donviphathanhTieuChi.program">Program</Translate> <FontAwesomeIcon icon="sort" />
                 </th>
                 <th>
                   <Translate contentKey="gatewayApp.donviphathanhTieuChi.kycongbo">Kycongbo</Translate> <FontAwesomeIcon icon="sort" />
@@ -111,19 +87,10 @@ export class TieuChi extends React.Component<ITieuChiProps, ITieuChiState> {
                       {tieuChi.id}
                     </Button>
                   </td>
-                  <td>{tieuChi.tieuChiCode}</td>
                   <td>{tieuChi.name}</td>
-                  <td>{tieuChi.userName}</td>
-                  <td>
-                    <TextFormat type="date" value={tieuChi.createTime} format={APP_DATE_FORMAT} />
-                  </td>
-                  <td>
-                    <TextFormat type="date" value={tieuChi.updateTime} format={APP_DATE_FORMAT} />
-                  </td>
                   <td>
                     <Translate contentKey={`gatewayApp.ReportStatus.${tieuChi.status}`} />
                   </td>
-                  <td>{tieuChi.program}</td>
                   <td>{tieuChi.kycongboId ? <Link to={`ky-cong-bo/${tieuChi.kycongboId}`}>{tieuChi.kycongboId}</Link> : ''}</td>
                   <td className="text-right">
                     <div className="btn-group flex-btn-group-container">

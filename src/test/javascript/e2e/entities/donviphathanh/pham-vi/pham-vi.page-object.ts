@@ -33,7 +33,7 @@ export default class PhamViComponentsPage {
 }
 
 export class PhamViDeleteDialog {
-  private dialogTitle: ElementFinder = element(by.id('gatewayApp.commonPhamVi.delete.question'));
+  private dialogTitle: ElementFinder = element(by.id('gatewayApp.donviphathanhPhamVi.delete.question'));
   private confirmButton = element(by.id('jhi-confirm-delete-phamVi'));
 
   getDialogTitle() {

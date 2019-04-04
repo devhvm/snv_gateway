@@ -49,9 +49,6 @@ export class TieuChiBaoCaoUpdate extends React.Component<ITieuChiBaoCaoUpdatePro
   }
 
   saveEntity = (event, errors, values) => {
-    values.createTime = convertDateTimeToServer(values.createTime);
-    values.updateTime = convertDateTimeToServer(values.updateTime);
-
     if (errors.length === 0) {
       const { tieuChiBaoCaoEntity } = this.props;
       const entity = {
@@ -114,51 +111,6 @@ export class TieuChiBaoCaoUpdate extends React.Component<ITieuChiBaoCaoUpdatePro
                   />
                 </AvGroup>
                 <AvGroup>
-                  <Label id="userNameLabel" for="userName">
-                    <Translate contentKey="gatewayApp.donviphathanhTieuChiBaoCao.userName">User Name</Translate>
-                  </Label>
-                  <AvField
-                    id="tieu-chi-bao-cao-userName"
-                    type="text"
-                    name="userName"
-                    validate={{
-                      required: { value: true, errorMessage: translate('entity.validation.required') }
-                    }}
-                  />
-                </AvGroup>
-                <AvGroup>
-                  <Label id="createTimeLabel" for="createTime">
-                    <Translate contentKey="gatewayApp.donviphathanhTieuChiBaoCao.createTime">Create Time</Translate>
-                  </Label>
-                  <AvInput
-                    id="tieu-chi-bao-cao-createTime"
-                    type="datetime-local"
-                    className="form-control"
-                    name="createTime"
-                    placeholder={'YYYY-MM-DD HH:mm'}
-                    value={isNew ? null : convertDateTimeFromServer(this.props.tieuChiBaoCaoEntity.createTime)}
-                    validate={{
-                      required: { value: true, errorMessage: translate('entity.validation.required') }
-                    }}
-                  />
-                </AvGroup>
-                <AvGroup>
-                  <Label id="updateTimeLabel" for="updateTime">
-                    <Translate contentKey="gatewayApp.donviphathanhTieuChiBaoCao.updateTime">Update Time</Translate>
-                  </Label>
-                  <AvInput
-                    id="tieu-chi-bao-cao-updateTime"
-                    type="datetime-local"
-                    className="form-control"
-                    name="updateTime"
-                    placeholder={'YYYY-MM-DD HH:mm'}
-                    value={isNew ? null : convertDateTimeFromServer(this.props.tieuChiBaoCaoEntity.updateTime)}
-                    validate={{
-                      required: { value: true, errorMessage: translate('entity.validation.required') }
-                    }}
-                  />
-                </AvGroup>
-                <AvGroup>
                   <Label id="statusLabel">
                     <Translate contentKey="gatewayApp.donviphathanhTieuChiBaoCao.status">Status</Translate>
                   </Label>
@@ -188,19 +140,6 @@ export class TieuChiBaoCaoUpdate extends React.Component<ITieuChiBaoCaoUpdatePro
                       <Translate contentKey="gatewayApp.ReportStatus.COMPLETED" />
                     </option>
                   </AvInput>
-                </AvGroup>
-                <AvGroup>
-                  <Label id="programLabel" for="program">
-                    <Translate contentKey="gatewayApp.donviphathanhTieuChiBaoCao.program">Program</Translate>
-                  </Label>
-                  <AvField
-                    id="tieu-chi-bao-cao-program"
-                    type="text"
-                    name="program"
-                    validate={{
-                      required: { value: true, errorMessage: translate('entity.validation.required') }
-                    }}
-                  />
                 </AvGroup>
                 <AvGroup>
                   <Label for="tieuchi.id">

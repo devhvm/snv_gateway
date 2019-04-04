@@ -46,7 +46,7 @@ export const EntitiesMenu = props => (
     <DropdownItem tag={Link} to="/entity/pham-vi">
       <FontAwesomeIcon icon="asterisk" fixedWidth />
       &nbsp;
-      <Translate contentKey="global.menu.entities.commonPhamVi" />
+      <Translate contentKey="global.menu.entities.donviphathanhPhamVi" />
     </DropdownItem>
     <DropdownItem tag={Link} to="/entity/nhom-noi-dung">
       <FontAwesomeIcon icon="asterisk" fixedWidth />
@@ -82,6 +82,11 @@ export const EntitiesMenu = props => (
       <FontAwesomeIcon icon="asterisk" fixedWidth />
       &nbsp;
       <Translate contentKey="global.menu.entities.donviphathanhTieuChiBaoCao" />
+    </DropdownItem>
+    <DropdownItem tag={Link} to="/entity/don-vi-tinh">
+      <FontAwesomeIcon icon="asterisk" fixedWidth />
+      &nbsp;
+      <Translate contentKey="global.menu.entities.commonDonViTinh" />
     </DropdownItem>
     {/* jhipster-needle-add-entity-to-menu - JHipster will add entities to the menu here */}
   </NavDropdown>

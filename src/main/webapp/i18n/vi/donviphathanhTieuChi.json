@@ -12,13 +12,8 @@
       "detail": {
         "title": "Tieu Chi"
       },
-      "tieuChiCode": "Tieu Chi Code",
       "name": "Name",
-      "userName": "User Name",
-      "createTime": "Create Time",
-      "updateTime": "Update Time",
       "status": "Status",
-      "program": "Program",
       "tieuchibaocao": "Tieuchibaocao",
       "mauphathanhtieuchi": "Mauphathanhtieuchi",
       "kycongbo": "Kycongbo"

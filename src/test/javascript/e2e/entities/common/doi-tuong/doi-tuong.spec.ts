@@ -1,5 +1,5 @@
 /* tslint:disable no-unused-expression */
-import { browser, element, by, protractor } from 'protractor';
+import { browser, element, by } from 'protractor';
 
 import NavBarPage from './../../../page-objects/navbar-page';
 import SignInPage from './../../../page-objects/signin-page';
@@ -49,15 +49,7 @@ describe('DoiTuong e2e test', () => {
     expect(await doiTuongUpdatePage.getDoiTuongCodeInput()).to.match(/doiTuongCode/);
     await doiTuongUpdatePage.setNameInput('name');
     expect(await doiTuongUpdatePage.getNameInput()).to.match(/name/);
-    await doiTuongUpdatePage.setUserNameInput('userName');
-    expect(await doiTuongUpdatePage.getUserNameInput()).to.match(/userName/);
-    await doiTuongUpdatePage.setCreateTimeInput('01/01/2001' + protractor.Key.TAB + '02:30AM');
-    expect(await doiTuongUpdatePage.getCreateTimeInput()).to.contain('2001-01-01T02:30');
-    await doiTuongUpdatePage.setUpdateTimeInput('01/01/2001' + protractor.Key.TAB + '02:30AM');
-    expect(await doiTuongUpdatePage.getUpdateTimeInput()).to.contain('2001-01-01T02:30');
     await doiTuongUpdatePage.statusSelectLastOption();
-    await doiTuongUpdatePage.setProgramInput('program');
-    expect(await doiTuongUpdatePage.getProgramInput()).to.match(/program/);
     await doiTuongUpdatePage.nhomphanloaiSelectLastOption();
     await waitUntilDisplayed(doiTuongUpdatePage.getSaveButton());
     await doiTuongUpdatePage.save();

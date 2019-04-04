@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import { Link, RouteComponentProps } from 'react-router-dom';
 import { Button, Row, Col } from 'reactstrap';
 // tslint:disable-next-line:no-unused-variable
-import { Translate, ICrudGetAction, TextFormat } from 'react-jhipster';
+import { Translate, ICrudGetAction } from 'react-jhipster';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import { IRootState } from 'app/shared/reducers';
@@ -35,39 +35,11 @@ export class NoiDungDetail extends React.Component<INoiDungDetailProps> {
             </dt>
             <dd>{noiDungEntity.noiDungCode}</dd>
             <dt>
-              <span id="userName">
-                <Translate contentKey="gatewayApp.commonNoiDung.userName">User Name</Translate>
-              </span>
-            </dt>
-            <dd>{noiDungEntity.userName}</dd>
-            <dt>
-              <span id="createTime">
-                <Translate contentKey="gatewayApp.commonNoiDung.createTime">Create Time</Translate>
-              </span>
-            </dt>
-            <dd>
-              <TextFormat value={noiDungEntity.createTime} type="date" format={APP_DATE_FORMAT} />
-            </dd>
-            <dt>
-              <span id="updateTime">
-                <Translate contentKey="gatewayApp.commonNoiDung.updateTime">Update Time</Translate>
-              </span>
-            </dt>
-            <dd>
-              <TextFormat value={noiDungEntity.updateTime} type="date" format={APP_DATE_FORMAT} />
-            </dd>
-            <dt>
               <span id="status">
                 <Translate contentKey="gatewayApp.commonNoiDung.status">Status</Translate>
               </span>
             </dt>
             <dd>{noiDungEntity.status}</dd>
-            <dt>
-              <span id="program">
-                <Translate contentKey="gatewayApp.commonNoiDung.program">Program</Translate>
-              </span>
-            </dt>
-            <dd>{noiDungEntity.program}</dd>
             <dt>
               <Translate contentKey="gatewayApp.commonNoiDung.nhomnoidung">Nhomnoidung</Translate>
             </dt>

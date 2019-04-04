@@ -14,7 +14,7 @@
         "commonNhomPhanLoai": "Nhom Phan Loai",
         "commonDoiTuong": "Doi Tuong",
         "commonDonVi": "Don Vi",
-        "commonPhamVi": "Pham Vi",
+        "donviphathanhPhamVi": "Pham Vi",
         "commonNhomNoiDung": "Nhom Noi Dung",
         "commonNoiDung": "Noi Dung",
         "donviphathanhMauPhatHanh": "Mau Phat Hanh",
@@ -22,6 +22,7 @@
         "donviphathanhTieuChi": "Tieu Chi",
         "donviphathanhKyCongBo": "Ky Cong Bo",
         "donviphathanhTieuChiBaoCao": "Tieu Chi Bao Cao",
+        "commonDonViTinh": "Don Vi Tinh",
         "jhipster-needle-menu-add-entry": "JHipster will add additional entities here (do not translate!)"
       },
       "account": {

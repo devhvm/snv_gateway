@@ -14,11 +14,8 @@
       },
       "nhomDanhMucCode": "Nhom Danh Muc Code",
       "name": "Name",
-      "userName": "User Name",
-      "createTime": "Create Time",
-      "updateTime": "Update Time",
       "status": "Status",
-      "program": "Program"
+      "danhmuc": "Danhmuc"
     }
   },
   "commonApp": {

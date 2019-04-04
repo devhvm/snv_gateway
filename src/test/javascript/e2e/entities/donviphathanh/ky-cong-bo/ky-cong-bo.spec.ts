@@ -1,5 +1,5 @@
 /* tslint:disable no-unused-expression */
-import { browser, element, by, protractor } from 'protractor';
+import { browser, element, by } from 'protractor';
 
 import NavBarPage from './../../../page-objects/navbar-page';
 import SignInPage from './../../../page-objects/signin-page';
@@ -49,15 +49,7 @@ describe('KyCongBo e2e test', () => {
     expect(await kyCongBoUpdatePage.getKyCongBoCodeInput()).to.match(/kyCongBoCode/);
     await kyCongBoUpdatePage.setNameInput('name');
     expect(await kyCongBoUpdatePage.getNameInput()).to.match(/name/);
-    await kyCongBoUpdatePage.setUserNameInput('userName');
-    expect(await kyCongBoUpdatePage.getUserNameInput()).to.match(/userName/);
-    await kyCongBoUpdatePage.setCreateTimeInput('01/01/2001' + protractor.Key.TAB + '02:30AM');
-    expect(await kyCongBoUpdatePage.getCreateTimeInput()).to.contain('2001-01-01T02:30');
-    await kyCongBoUpdatePage.setUpdateTimeInput('01/01/2001' + protractor.Key.TAB + '02:30AM');
-    expect(await kyCongBoUpdatePage.getUpdateTimeInput()).to.contain('2001-01-01T02:30');
     await kyCongBoUpdatePage.statusSelectLastOption();
-    await kyCongBoUpdatePage.setProgramInput('program');
-    expect(await kyCongBoUpdatePage.getProgramInput()).to.match(/program/);
     await waitUntilDisplayed(kyCongBoUpdatePage.getSaveButton());
     await kyCongBoUpdatePage.save();
     await waitUntilHidden(kyCongBoUpdatePage.getSaveButton());

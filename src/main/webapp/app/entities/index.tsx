@@ -11,7 +11,7 @@ import DanhMuc from './common/danh-muc';
 import NhomPhanLoai from './common/nhom-phan-loai';
 import DoiTuong from './common/doi-tuong';
 import DonVi from './common/don-vi';
-import PhamVi from './common/pham-vi';
+import PhamVi from './donviphathanh/pham-vi';
 import NhomNoiDung from './common/nhom-noi-dung';
 import NoiDung from './common/noi-dung';
 import MauPhatHanh from './donviphathanh/mau-phat-hanh';
@@ -19,6 +19,7 @@ import MauPhatHanhTieuChi from './donviphathanh/mau-phat-hanh-tieu-chi';
 import TieuChi from './donviphathanh/tieu-chi';
 import KyCongBo from './donviphathanh/ky-cong-bo';
 import TieuChiBaoCao from './donviphathanh/tieu-chi-bao-cao';
+import DonViTinh from './common/don-vi-tinh';
 /* jhipster-needle-add-route-import - JHipster will add routes here */
 
 const Routes = ({ match }) => (
@@ -40,6 +41,7 @@ const Routes = ({ match }) => (
       <ErrorBoundaryRoute path={`${match.url}/tieu-chi`} component={TieuChi} />
       <ErrorBoundaryRoute path={`${match.url}/ky-cong-bo`} component={KyCongBo} />
       <ErrorBoundaryRoute path={`${match.url}/tieu-chi-bao-cao`} component={TieuChiBaoCao} />
+      <ErrorBoundaryRoute path={`${match.url}/don-vi-tinh`} component={DonViTinh} />
       {/* jhipster-needle-add-route-path - JHipster will routes here */}
     </Switch>
   </div>

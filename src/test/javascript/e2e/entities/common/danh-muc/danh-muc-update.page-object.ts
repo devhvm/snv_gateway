@@ -6,11 +6,8 @@ export default class DanhMucUpdatePage {
   cancelButton: ElementFinder = element(by.id('cancel-save'));
   danhMucCodeInput: ElementFinder = element(by.css('input#danh-muc-danhMucCode'));
   nameInput: ElementFinder = element(by.css('input#danh-muc-name'));
-  userNameInput: ElementFinder = element(by.css('input#danh-muc-userName'));
-  createTimeInput: ElementFinder = element(by.css('input#danh-muc-createTime'));
-  updateTimeInput: ElementFinder = element(by.css('input#danh-muc-updateTime'));
   statusSelect: ElementFinder = element(by.css('select#danh-muc-status'));
-  programInput: ElementFinder = element(by.css('input#danh-muc-program'));
+  nhomdanhmucSelect: ElementFinder = element(by.css('select#danh-muc-nhomdanhmuc'));
 
   getPageTitle() {
     return this.pageTitle;
@@ -32,30 +29,6 @@ export default class DanhMucUpdatePage {
     return this.nameInput.getAttribute('value');
   }
 
-  async setUserNameInput(userName) {
-    await this.userNameInput.sendKeys(userName);
-  }
-
-  async getUserNameInput() {
-    return this.userNameInput.getAttribute('value');
-  }
-
-  async setCreateTimeInput(createTime) {
-    await this.createTimeInput.sendKeys(createTime);
-  }
-
-  async getCreateTimeInput() {
-    return this.createTimeInput.getAttribute('value');
-  }
-
-  async setUpdateTimeInput(updateTime) {
-    await this.updateTimeInput.sendKeys(updateTime);
-  }
-
-  async getUpdateTimeInput() {
-    return this.updateTimeInput.getAttribute('value');
-  }
-
   async setStatusSelect(status) {
     await this.statusSelect.sendKeys(status);
   }
@@ -70,12 +43,23 @@ export default class DanhMucUpdatePage {
       .last()
       .click();
   }
-  async setProgramInput(program) {
-    await this.programInput.sendKeys(program);
+  async nhomdanhmucSelectLastOption() {
+    await this.nhomdanhmucSelect
+      .all(by.tagName('option'))
+      .last()
+      .click();
   }
 
-  async getProgramInput() {
-    return this.programInput.getAttribute('value');
+  async nhomdanhmucSelectOption(option) {
+    await this.nhomdanhmucSelect.sendKeys(option);
+  }
+
+  getNhomdanhmucSelect() {
+    return this.nhomdanhmucSelect;
+  }
+
+  async getNhomdanhmucSelectedOption() {
+    return this.nhomdanhmucSelect.element(by.css('option:checked')).getText();
   }
 
   async save() {

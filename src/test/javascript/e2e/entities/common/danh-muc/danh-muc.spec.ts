@@ -1,5 +1,5 @@
 /* tslint:disable no-unused-expression */
-import { browser, element, by, protractor } from 'protractor';
+import { browser, element, by } from 'protractor';
 
 import NavBarPage from './../../../page-objects/navbar-page';
 import SignInPage from './../../../page-objects/signin-page';
@@ -49,15 +49,8 @@ describe('DanhMuc e2e test', () => {
     expect(await danhMucUpdatePage.getDanhMucCodeInput()).to.match(/danhMucCode/);
     await danhMucUpdatePage.setNameInput('name');
     expect(await danhMucUpdatePage.getNameInput()).to.match(/name/);
-    await danhMucUpdatePage.setUserNameInput('userName');
-    expect(await danhMucUpdatePage.getUserNameInput()).to.match(/userName/);
-    await danhMucUpdatePage.setCreateTimeInput('01/01/2001' + protractor.Key.TAB + '02:30AM');
-    expect(await danhMucUpdatePage.getCreateTimeInput()).to.contain('2001-01-01T02:30');
-    await danhMucUpdatePage.setUpdateTimeInput('01/01/2001' + protractor.Key.TAB + '02:30AM');
-    expect(await danhMucUpdatePage.getUpdateTimeInput()).to.contain('2001-01-01T02:30');
     await danhMucUpdatePage.statusSelectLastOption();
-    await danhMucUpdatePage.setProgramInput('program');
-    expect(await danhMucUpdatePage.getProgramInput()).to.match(/program/);
+    await danhMucUpdatePage.nhomdanhmucSelectLastOption();
     await waitUntilDisplayed(danhMucUpdatePage.getSaveButton());
     await danhMucUpdatePage.save();
     await waitUntilHidden(danhMucUpdatePage.getSaveButton());

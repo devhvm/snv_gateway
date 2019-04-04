@@ -14,13 +14,9 @@
       },
       "nhomPhanLoaiCode": "Nhom Phan Loai Code",
       "name": "Name",
-      "userName": "User Name",
-      "createTime": "Create Time",
-      "updateTime": "Update Time",
       "status": "Status",
-      "program": "Program",
       "doituong": "Doituong",
-      "donvi": "Donvi"
+      "donvitinh": "Donvitinh"
     }
   },
   "commonApp": {

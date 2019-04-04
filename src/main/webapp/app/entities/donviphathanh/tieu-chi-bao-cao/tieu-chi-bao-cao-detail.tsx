@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import { Link, RouteComponentProps } from 'react-router-dom';
 import { Button, Row, Col } from 'reactstrap';
 // tslint:disable-next-line:no-unused-variable
-import { Translate, ICrudGetAction, TextFormat } from 'react-jhipster';
+import { Translate, ICrudGetAction } from 'react-jhipster';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import { IRootState } from 'app/shared/reducers';
@@ -36,39 +36,11 @@ export class TieuChiBaoCaoDetail extends React.Component<ITieuChiBaoCaoDetailPro
             </dt>
             <dd>{tieuChiBaoCaoEntity.tieuChiBaoCaoCode}</dd>
             <dt>
-              <span id="userName">
-                <Translate contentKey="gatewayApp.donviphathanhTieuChiBaoCao.userName">User Name</Translate>
-              </span>
-            </dt>
-            <dd>{tieuChiBaoCaoEntity.userName}</dd>
-            <dt>
-              <span id="createTime">
-                <Translate contentKey="gatewayApp.donviphathanhTieuChiBaoCao.createTime">Create Time</Translate>
-              </span>
-            </dt>
-            <dd>
-              <TextFormat value={tieuChiBaoCaoEntity.createTime} type="date" format={APP_DATE_FORMAT} />
-            </dd>
-            <dt>
-              <span id="updateTime">
-                <Translate contentKey="gatewayApp.donviphathanhTieuChiBaoCao.updateTime">Update Time</Translate>
-              </span>
-            </dt>
-            <dd>
-              <TextFormat value={tieuChiBaoCaoEntity.updateTime} type="date" format={APP_DATE_FORMAT} />
-            </dd>
-            <dt>
               <span id="status">
                 <Translate contentKey="gatewayApp.donviphathanhTieuChiBaoCao.status">Status</Translate>
               </span>
             </dt>
             <dd>{tieuChiBaoCaoEntity.status}</dd>
-            <dt>
-              <span id="program">
-                <Translate contentKey="gatewayApp.donviphathanhTieuChiBaoCao.program">Program</Translate>
-              </span>
-            </dt>
-            <dd>{tieuChiBaoCaoEntity.program}</dd>
             <dt>
               <Translate contentKey="gatewayApp.donviphathanhTieuChiBaoCao.tieuchi">Tieuchi</Translate>
             </dt>

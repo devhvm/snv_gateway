@@ -1,5 +1,5 @@
 /* tslint:disable no-unused-expression */
-import { browser, element, by, protractor } from 'protractor';
+import { browser, element, by } from 'protractor';
 
 import NavBarPage from './../../../page-objects/navbar-page';
 import SignInPage from './../../../page-objects/signin-page';
@@ -49,16 +49,8 @@ describe('NhomPhanLoai e2e test', () => {
     expect(await nhomPhanLoaiUpdatePage.getNhomPhanLoaiCodeInput()).to.match(/nhomPhanLoaiCode/);
     await nhomPhanLoaiUpdatePage.setNameInput('name');
     expect(await nhomPhanLoaiUpdatePage.getNameInput()).to.match(/name/);
-    await nhomPhanLoaiUpdatePage.setUserNameInput('userName');
-    expect(await nhomPhanLoaiUpdatePage.getUserNameInput()).to.match(/userName/);
-    await nhomPhanLoaiUpdatePage.setCreateTimeInput('01/01/2001' + protractor.Key.TAB + '02:30AM');
-    expect(await nhomPhanLoaiUpdatePage.getCreateTimeInput()).to.contain('2001-01-01T02:30');
-    await nhomPhanLoaiUpdatePage.setUpdateTimeInput('01/01/2001' + protractor.Key.TAB + '02:30AM');
-    expect(await nhomPhanLoaiUpdatePage.getUpdateTimeInput()).to.contain('2001-01-01T02:30');
     await nhomPhanLoaiUpdatePage.statusSelectLastOption();
-    await nhomPhanLoaiUpdatePage.setProgramInput('program');
-    expect(await nhomPhanLoaiUpdatePage.getProgramInput()).to.match(/program/);
-    await nhomPhanLoaiUpdatePage.donviSelectLastOption();
+    await nhomPhanLoaiUpdatePage.donvitinhSelectLastOption();
     await waitUntilDisplayed(nhomPhanLoaiUpdatePage.getSaveButton());
     await nhomPhanLoaiUpdatePage.save();
     await waitUntilHidden(nhomPhanLoaiUpdatePage.getSaveButton());

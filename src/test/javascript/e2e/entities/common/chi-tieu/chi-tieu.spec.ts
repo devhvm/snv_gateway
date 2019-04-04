@@ -1,5 +1,5 @@
 /* tslint:disable no-unused-expression */
-import { browser, element, by, protractor } from 'protractor';
+import { browser, element, by } from 'protractor';
 
 import NavBarPage from './../../../page-objects/navbar-page';
 import SignInPage from './../../../page-objects/signin-page';
@@ -49,15 +49,7 @@ describe('ChiTieu e2e test', () => {
     expect(await chiTieuUpdatePage.getChiTieuCodeInput()).to.match(/chiTieuCode/);
     await chiTieuUpdatePage.setNameInput('name');
     expect(await chiTieuUpdatePage.getNameInput()).to.match(/name/);
-    await chiTieuUpdatePage.setUserNameInput('userName');
-    expect(await chiTieuUpdatePage.getUserNameInput()).to.match(/userName/);
-    await chiTieuUpdatePage.setCreateTimeInput('01/01/2001' + protractor.Key.TAB + '02:30AM');
-    expect(await chiTieuUpdatePage.getCreateTimeInput()).to.contain('2001-01-01T02:30');
-    await chiTieuUpdatePage.setUpdateTimeInput('01/01/2001' + protractor.Key.TAB + '02:30AM');
-    expect(await chiTieuUpdatePage.getUpdateTimeInput()).to.contain('2001-01-01T02:30');
     await chiTieuUpdatePage.statusSelectLastOption();
-    await chiTieuUpdatePage.setProgramInput('program');
-    expect(await chiTieuUpdatePage.getProgramInput()).to.match(/program/);
     await chiTieuUpdatePage.nhomchitieuSelectLastOption();
     await waitUntilDisplayed(chiTieuUpdatePage.getSaveButton());
     await chiTieuUpdatePage.save();

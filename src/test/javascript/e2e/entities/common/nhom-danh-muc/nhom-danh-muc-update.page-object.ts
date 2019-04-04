@@ -6,11 +6,7 @@ export default class NhomDanhMucUpdatePage {
   cancelButton: ElementFinder = element(by.id('cancel-save'));
   nhomDanhMucCodeInput: ElementFinder = element(by.css('input#nhom-danh-muc-nhomDanhMucCode'));
   nameInput: ElementFinder = element(by.css('input#nhom-danh-muc-name'));
-  userNameInput: ElementFinder = element(by.css('input#nhom-danh-muc-userName'));
-  createTimeInput: ElementFinder = element(by.css('input#nhom-danh-muc-createTime'));
-  updateTimeInput: ElementFinder = element(by.css('input#nhom-danh-muc-updateTime'));
   statusSelect: ElementFinder = element(by.css('select#nhom-danh-muc-status'));
-  programInput: ElementFinder = element(by.css('input#nhom-danh-muc-program'));
 
   getPageTitle() {
     return this.pageTitle;
@@ -32,30 +28,6 @@ export default class NhomDanhMucUpdatePage {
     return this.nameInput.getAttribute('value');
   }
 
-  async setUserNameInput(userName) {
-    await this.userNameInput.sendKeys(userName);
-  }
-
-  async getUserNameInput() {
-    return this.userNameInput.getAttribute('value');
-  }
-
-  async setCreateTimeInput(createTime) {
-    await this.createTimeInput.sendKeys(createTime);
-  }
-
-  async getCreateTimeInput() {
-    return this.createTimeInput.getAttribute('value');
-  }
-
-  async setUpdateTimeInput(updateTime) {
-    await this.updateTimeInput.sendKeys(updateTime);
-  }
-
-  async getUpdateTimeInput() {
-    return this.updateTimeInput.getAttribute('value');
-  }
-
   async setStatusSelect(status) {
     await this.statusSelect.sendKeys(status);
   }
@@ -70,14 +42,6 @@ export default class NhomDanhMucUpdatePage {
       .last()
       .click();
   }
-  async setProgramInput(program) {
-    await this.programInput.sendKeys(program);
-  }
-
-  async getProgramInput() {
-    return this.programInput.getAttribute('value');
-  }
-
   async save() {
     await this.saveButton.click();
   }

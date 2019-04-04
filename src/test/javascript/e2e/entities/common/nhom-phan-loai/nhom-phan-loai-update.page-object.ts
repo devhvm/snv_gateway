@@ -6,12 +6,8 @@ export default class NhomPhanLoaiUpdatePage {
   cancelButton: ElementFinder = element(by.id('cancel-save'));
   nhomPhanLoaiCodeInput: ElementFinder = element(by.css('input#nhom-phan-loai-nhomPhanLoaiCode'));
   nameInput: ElementFinder = element(by.css('input#nhom-phan-loai-name'));
-  userNameInput: ElementFinder = element(by.css('input#nhom-phan-loai-userName'));
-  createTimeInput: ElementFinder = element(by.css('input#nhom-phan-loai-createTime'));
-  updateTimeInput: ElementFinder = element(by.css('input#nhom-phan-loai-updateTime'));
   statusSelect: ElementFinder = element(by.css('select#nhom-phan-loai-status'));
-  programInput: ElementFinder = element(by.css('input#nhom-phan-loai-program'));
-  donviSelect: ElementFinder = element(by.css('select#nhom-phan-loai-donvi'));
+  donvitinhSelect: ElementFinder = element(by.css('select#nhom-phan-loai-donvitinh'));
 
   getPageTitle() {
     return this.pageTitle;
@@ -33,30 +29,6 @@ export default class NhomPhanLoaiUpdatePage {
     return this.nameInput.getAttribute('value');
   }
 
-  async setUserNameInput(userName) {
-    await this.userNameInput.sendKeys(userName);
-  }
-
-  async getUserNameInput() {
-    return this.userNameInput.getAttribute('value');
-  }
-
-  async setCreateTimeInput(createTime) {
-    await this.createTimeInput.sendKeys(createTime);
-  }
-
-  async getCreateTimeInput() {
-    return this.createTimeInput.getAttribute('value');
-  }
-
-  async setUpdateTimeInput(updateTime) {
-    await this.updateTimeInput.sendKeys(updateTime);
-  }
-
-  async getUpdateTimeInput() {
-    return this.updateTimeInput.getAttribute('value');
-  }
-
   async setStatusSelect(status) {
     await this.statusSelect.sendKeys(status);
   }
@@ -71,31 +43,23 @@ export default class NhomPhanLoaiUpdatePage {
       .last()
       .click();
   }
-  async setProgramInput(program) {
-    await this.programInput.sendKeys(program);
-  }
-
-  async getProgramInput() {
-    return this.programInput.getAttribute('value');
-  }
-
-  async donviSelectLastOption() {
-    await this.donviSelect
+  async donvitinhSelectLastOption() {
+    await this.donvitinhSelect
       .all(by.tagName('option'))
       .last()
       .click();
   }
 
-  async donviSelectOption(option) {
-    await this.donviSelect.sendKeys(option);
+  async donvitinhSelectOption(option) {
+    await this.donvitinhSelect.sendKeys(option);
   }
 
-  getDonviSelect() {
-    return this.donviSelect;
+  getDonvitinhSelect() {
+    return this.donvitinhSelect;
   }
 
-  async getDonviSelectedOption() {
-    return this.donviSelect.element(by.css('option:checked')).getText();
+  async getDonvitinhSelectedOption() {
+    return this.donvitinhSelect.element(by.css('option:checked')).getText();
   }
 
   async save() {

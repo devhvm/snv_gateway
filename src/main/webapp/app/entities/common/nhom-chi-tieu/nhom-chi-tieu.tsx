@@ -3,15 +3,7 @@ import { connect } from 'react-redux';
 import { Link, RouteComponentProps } from 'react-router-dom';
 import { Button, Col, Row, Table } from 'reactstrap';
 // tslint:disable-next-line:no-unused-variable
-import {
-  Translate,
-  ICrudGetAllAction,
-  TextFormat,
-  getSortState,
-  IPaginationBaseState,
-  getPaginationItemsNumber,
-  JhiPagination
-} from 'react-jhipster';
+import { Translate, ICrudGetAllAction, getSortState, IPaginationBaseState, getPaginationItemsNumber, JhiPagination } from 'react-jhipster';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import { IRootState } from 'app/shared/reducers';
@@ -82,20 +74,8 @@ export class NhomChiTieu extends React.Component<INhomChiTieuProps, INhomChiTieu
                 <th className="hand" onClick={this.sort('name')}>
                   <Translate contentKey="gatewayApp.commonNhomChiTieu.name">Name</Translate> <FontAwesomeIcon icon="sort" />
                 </th>
-                <th className="hand" onClick={this.sort('userName')}>
-                  <Translate contentKey="gatewayApp.commonNhomChiTieu.userName">User Name</Translate> <FontAwesomeIcon icon="sort" />
-                </th>
-                <th className="hand" onClick={this.sort('createTime')}>
-                  <Translate contentKey="gatewayApp.commonNhomChiTieu.createTime">Create Time</Translate> <FontAwesomeIcon icon="sort" />
-                </th>
-                <th className="hand" onClick={this.sort('updateTime')}>
-                  <Translate contentKey="gatewayApp.commonNhomChiTieu.updateTime">Update Time</Translate> <FontAwesomeIcon icon="sort" />
-                </th>
                 <th className="hand" onClick={this.sort('status')}>
                   <Translate contentKey="gatewayApp.commonNhomChiTieu.status">Status</Translate> <FontAwesomeIcon icon="sort" />
-                </th>
-                <th className="hand" onClick={this.sort('program')}>
-                  <Translate contentKey="gatewayApp.commonNhomChiTieu.program">Program</Translate> <FontAwesomeIcon icon="sort" />
                 </th>
                 <th />
               </tr>
@@ -110,17 +90,9 @@ export class NhomChiTieu extends React.Component<INhomChiTieuProps, INhomChiTieu
                   </td>
                   <td>{nhomChiTieu.nhomChiTieuCode}</td>
                   <td>{nhomChiTieu.name}</td>
-                  <td>{nhomChiTieu.userName}</td>
-                  <td>
-                    <TextFormat type="date" value={nhomChiTieu.createTime} format={APP_DATE_FORMAT} />
-                  </td>
-                  <td>
-                    <TextFormat type="date" value={nhomChiTieu.updateTime} format={APP_DATE_FORMAT} />
-                  </td>
                   <td>
                     <Translate contentKey={`gatewayApp.Status.${nhomChiTieu.status}`} />
                   </td>
-                  <td>{nhomChiTieu.program}</td>
                   <td className="text-right">
                     <div className="btn-group flex-btn-group-container">
                       <Button tag={Link} to={`${match.url}/${nhomChiTieu.id}`} color="info" size="sm">

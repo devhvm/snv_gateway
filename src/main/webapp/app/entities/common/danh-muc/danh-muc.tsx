@@ -3,15 +3,7 @@ import { connect } from 'react-redux';
 import { Link, RouteComponentProps } from 'react-router-dom';
 import { Button, Col, Row, Table } from 'reactstrap';
 // tslint:disable-next-line:no-unused-variable
-import {
-  Translate,
-  ICrudGetAllAction,
-  TextFormat,
-  getSortState,
-  IPaginationBaseState,
-  getPaginationItemsNumber,
-  JhiPagination
-} from 'react-jhipster';
+import { Translate, ICrudGetAllAction, getSortState, IPaginationBaseState, getPaginationItemsNumber, JhiPagination } from 'react-jhipster';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import { IRootState } from 'app/shared/reducers';
@@ -81,20 +73,11 @@ export class DanhMuc extends React.Component<IDanhMucProps, IDanhMucState> {
                 <th className="hand" onClick={this.sort('name')}>
                   <Translate contentKey="gatewayApp.commonDanhMuc.name">Name</Translate> <FontAwesomeIcon icon="sort" />
                 </th>
-                <th className="hand" onClick={this.sort('userName')}>
-                  <Translate contentKey="gatewayApp.commonDanhMuc.userName">User Name</Translate> <FontAwesomeIcon icon="sort" />
-                </th>
-                <th className="hand" onClick={this.sort('createTime')}>
-                  <Translate contentKey="gatewayApp.commonDanhMuc.createTime">Create Time</Translate> <FontAwesomeIcon icon="sort" />
-                </th>
-                <th className="hand" onClick={this.sort('updateTime')}>
-                  <Translate contentKey="gatewayApp.commonDanhMuc.updateTime">Update Time</Translate> <FontAwesomeIcon icon="sort" />
-                </th>
                 <th className="hand" onClick={this.sort('status')}>
                   <Translate contentKey="gatewayApp.commonDanhMuc.status">Status</Translate> <FontAwesomeIcon icon="sort" />
                 </th>
-                <th className="hand" onClick={this.sort('program')}>
-                  <Translate contentKey="gatewayApp.commonDanhMuc.program">Program</Translate> <FontAwesomeIcon icon="sort" />
+                <th>
+                  <Translate contentKey="gatewayApp.commonDanhMuc.nhomdanhmuc">Nhomdanhmuc</Translate> <FontAwesomeIcon icon="sort" />
                 </th>
                 <th />
               </tr>
@@ -109,17 +92,10 @@ export class DanhMuc extends React.Component<IDanhMucProps, IDanhMucState> {
                   </td>
                   <td>{danhMuc.danhMucCode}</td>
                   <td>{danhMuc.name}</td>
-                  <td>{danhMuc.userName}</td>
-                  <td>
-                    <TextFormat type="date" value={danhMuc.createTime} format={APP_DATE_FORMAT} />
-                  </td>
-                  <td>
-                    <TextFormat type="date" value={danhMuc.updateTime} format={APP_DATE_FORMAT} />
-                  </td>
                   <td>
                     <Translate contentKey={`gatewayApp.Status.${danhMuc.status}`} />
                   </td>
-                  <td>{danhMuc.program}</td>
+                  <td>{danhMuc.nhomdanhmucId ? <Link to={`nhom-danh-muc/${danhMuc.nhomdanhmucId}`}>{danhMuc.nhomdanhmucId}</Link> : ''}</td>
                   <td className="text-right">
                     <div className="btn-group flex-btn-group-container">
                       <Button tag={Link} to={`${match.url}/${danhMuc.id}`} color="info" size="sm">

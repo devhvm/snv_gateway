@@ -1,5 +1,5 @@
 /* tslint:disable no-unused-expression */
-import { browser, element, by, protractor } from 'protractor';
+import { browser, element, by } from 'protractor';
 
 import NavBarPage from './../../../page-objects/navbar-page';
 import SignInPage from './../../../page-objects/signin-page';
@@ -47,15 +47,7 @@ describe('NoiDung e2e test', () => {
 
     await noiDungUpdatePage.setNoiDungCodeInput('noiDungCode');
     expect(await noiDungUpdatePage.getNoiDungCodeInput()).to.match(/noiDungCode/);
-    await noiDungUpdatePage.setUserNameInput('userName');
-    expect(await noiDungUpdatePage.getUserNameInput()).to.match(/userName/);
-    await noiDungUpdatePage.setCreateTimeInput('01/01/2001' + protractor.Key.TAB + '02:30AM');
-    expect(await noiDungUpdatePage.getCreateTimeInput()).to.contain('2001-01-01T02:30');
-    await noiDungUpdatePage.setUpdateTimeInput('01/01/2001' + protractor.Key.TAB + '02:30AM');
-    expect(await noiDungUpdatePage.getUpdateTimeInput()).to.contain('2001-01-01T02:30');
     await noiDungUpdatePage.statusSelectLastOption();
-    await noiDungUpdatePage.setProgramInput('program');
-    expect(await noiDungUpdatePage.getProgramInput()).to.match(/program/);
     await noiDungUpdatePage.nhomnoidungSelectLastOption();
     await waitUntilDisplayed(noiDungUpdatePage.getSaveButton());
     await noiDungUpdatePage.save();

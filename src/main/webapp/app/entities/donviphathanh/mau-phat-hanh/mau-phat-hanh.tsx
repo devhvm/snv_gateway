@@ -3,15 +3,7 @@ import { connect } from 'react-redux';
 import { Link, RouteComponentProps } from 'react-router-dom';
 import { Button, Col, Row, Table } from 'reactstrap';
 // tslint:disable-next-line:no-unused-variable
-import {
-  Translate,
-  ICrudGetAllAction,
-  TextFormat,
-  getSortState,
-  IPaginationBaseState,
-  getPaginationItemsNumber,
-  JhiPagination
-} from 'react-jhipster';
+import { Translate, ICrudGetAllAction, getSortState, IPaginationBaseState, getPaginationItemsNumber, JhiPagination } from 'react-jhipster';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import { IRootState } from 'app/shared/reducers';
@@ -82,22 +74,11 @@ export class MauPhatHanh extends React.Component<IMauPhatHanhProps, IMauPhatHanh
                 <th className="hand" onClick={this.sort('name')}>
                   <Translate contentKey="gatewayApp.donviphathanhMauPhatHanh.name">Name</Translate> <FontAwesomeIcon icon="sort" />
                 </th>
-                <th className="hand" onClick={this.sort('userName')}>
-                  <Translate contentKey="gatewayApp.donviphathanhMauPhatHanh.userName">User Name</Translate> <FontAwesomeIcon icon="sort" />
-                </th>
-                <th className="hand" onClick={this.sort('createTime')}>
-                  <Translate contentKey="gatewayApp.donviphathanhMauPhatHanh.createTime">Create Time</Translate>{' '}
-                  <FontAwesomeIcon icon="sort" />
-                </th>
-                <th className="hand" onClick={this.sort('updateTime')}>
-                  <Translate contentKey="gatewayApp.donviphathanhMauPhatHanh.updateTime">Update Time</Translate>{' '}
-                  <FontAwesomeIcon icon="sort" />
-                </th>
                 <th className="hand" onClick={this.sort('status')}>
                   <Translate contentKey="gatewayApp.donviphathanhMauPhatHanh.status">Status</Translate> <FontAwesomeIcon icon="sort" />
                 </th>
-                <th className="hand" onClick={this.sort('program')}>
-                  <Translate contentKey="gatewayApp.donviphathanhMauPhatHanh.program">Program</Translate> <FontAwesomeIcon icon="sort" />
+                <th>
+                  <Translate contentKey="gatewayApp.donviphathanhMauPhatHanh.phamvi">Phamvi</Translate> <FontAwesomeIcon icon="sort" />
                 </th>
                 <th />
               </tr>
@@ -112,17 +93,10 @@ export class MauPhatHanh extends React.Component<IMauPhatHanhProps, IMauPhatHanh
                   </td>
                   <td>{mauPhatHanh.mauPhatHanhCode}</td>
                   <td>{mauPhatHanh.name}</td>
-                  <td>{mauPhatHanh.userName}</td>
-                  <td>
-                    <TextFormat type="date" value={mauPhatHanh.createTime} format={APP_DATE_FORMAT} />
-                  </td>
-                  <td>
-                    <TextFormat type="date" value={mauPhatHanh.updateTime} format={APP_DATE_FORMAT} />
-                  </td>
                   <td>
                     <Translate contentKey={`gatewayApp.ReportStatus.${mauPhatHanh.status}`} />
                   </td>
-                  <td>{mauPhatHanh.program}</td>
+                  <td>{mauPhatHanh.phamviId ? <Link to={`pham-vi/${mauPhatHanh.phamviId}`}>{mauPhatHanh.phamviId}</Link> : ''}</td>
                   <td className="text-right">
                     <div className="btn-group flex-btn-group-container">
                       <Button tag={Link} to={`${match.url}/${mauPhatHanh.id}`} color="info" size="sm">

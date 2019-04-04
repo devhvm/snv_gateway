@@ -1,5 +1,5 @@
 /* tslint:disable no-unused-expression */
-import { browser, element, by, protractor } from 'protractor';
+import { browser, element, by } from 'protractor';
 
 import NavBarPage from './../../../page-objects/navbar-page';
 import SignInPage from './../../../page-objects/signin-page';
@@ -49,15 +49,7 @@ describe('NhomDanhMuc e2e test', () => {
     expect(await nhomDanhMucUpdatePage.getNhomDanhMucCodeInput()).to.match(/nhomDanhMucCode/);
     await nhomDanhMucUpdatePage.setNameInput('name');
     expect(await nhomDanhMucUpdatePage.getNameInput()).to.match(/name/);
-    await nhomDanhMucUpdatePage.setUserNameInput('userName');
-    expect(await nhomDanhMucUpdatePage.getUserNameInput()).to.match(/userName/);
-    await nhomDanhMucUpdatePage.setCreateTimeInput('01/01/2001' + protractor.Key.TAB + '02:30AM');
-    expect(await nhomDanhMucUpdatePage.getCreateTimeInput()).to.contain('2001-01-01T02:30');
-    await nhomDanhMucUpdatePage.setUpdateTimeInput('01/01/2001' + protractor.Key.TAB + '02:30AM');
-    expect(await nhomDanhMucUpdatePage.getUpdateTimeInput()).to.contain('2001-01-01T02:30');
     await nhomDanhMucUpdatePage.statusSelectLastOption();
-    await nhomDanhMucUpdatePage.setProgramInput('program');
-    expect(await nhomDanhMucUpdatePage.getProgramInput()).to.match(/program/);
     await waitUntilDisplayed(nhomDanhMucUpdatePage.getSaveButton());
     await nhomDanhMucUpdatePage.save();
     await waitUntilHidden(nhomDanhMucUpdatePage.getSaveButton());

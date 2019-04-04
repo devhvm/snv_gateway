@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import { Link, RouteComponentProps } from 'react-router-dom';
 import { Button, Row, Col } from 'reactstrap';
 // tslint:disable-next-line:no-unused-variable
-import { Translate, ICrudGetAction, TextFormat } from 'react-jhipster';
+import { Translate, ICrudGetAction } from 'react-jhipster';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import { IRootState } from 'app/shared/reducers';
@@ -41,39 +41,15 @@ export class MauPhatHanhDetail extends React.Component<IMauPhatHanhDetailProps> 
             </dt>
             <dd>{mauPhatHanhEntity.name}</dd>
             <dt>
-              <span id="userName">
-                <Translate contentKey="gatewayApp.donviphathanhMauPhatHanh.userName">User Name</Translate>
-              </span>
-            </dt>
-            <dd>{mauPhatHanhEntity.userName}</dd>
-            <dt>
-              <span id="createTime">
-                <Translate contentKey="gatewayApp.donviphathanhMauPhatHanh.createTime">Create Time</Translate>
-              </span>
-            </dt>
-            <dd>
-              <TextFormat value={mauPhatHanhEntity.createTime} type="date" format={APP_DATE_FORMAT} />
-            </dd>
-            <dt>
-              <span id="updateTime">
-                <Translate contentKey="gatewayApp.donviphathanhMauPhatHanh.updateTime">Update Time</Translate>
-              </span>
-            </dt>
-            <dd>
-              <TextFormat value={mauPhatHanhEntity.updateTime} type="date" format={APP_DATE_FORMAT} />
-            </dd>
-            <dt>
               <span id="status">
                 <Translate contentKey="gatewayApp.donviphathanhMauPhatHanh.status">Status</Translate>
               </span>
             </dt>
             <dd>{mauPhatHanhEntity.status}</dd>
             <dt>
-              <span id="program">
-                <Translate contentKey="gatewayApp.donviphathanhMauPhatHanh.program">Program</Translate>
-              </span>
+              <Translate contentKey="gatewayApp.donviphathanhMauPhatHanh.phamvi">Phamvi</Translate>
             </dt>
-            <dd>{mauPhatHanhEntity.program}</dd>
+            <dd>{mauPhatHanhEntity.phamviId ? mauPhatHanhEntity.phamviId : ''}</dd>
           </dl>
           <Button tag={Link} to="/entity/mau-phat-hanh" replace color="info">
             <FontAwesomeIcon icon="arrow-left" />{' '}

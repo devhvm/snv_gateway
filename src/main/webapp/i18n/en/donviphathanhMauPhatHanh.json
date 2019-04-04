@@ -14,11 +14,8 @@
       },
       "mauPhatHanhCode": "Mau Phat Hanh Code",
       "name": "Name",
-      "userName": "User Name",
-      "createTime": "Create Time",
-      "updateTime": "Update Time",
       "status": "Status",
-      "program": "Program",
+      "phamvi": "Phamvi",
       "mauphathanhtieuchi": "Mauphathanhtieuchi"
     }
   },

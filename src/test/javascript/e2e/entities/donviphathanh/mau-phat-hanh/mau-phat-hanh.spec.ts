@@ -1,5 +1,5 @@
 /* tslint:disable no-unused-expression */
-import { browser, element, by, protractor } from 'protractor';
+import { browser, element, by } from 'protractor';
 
 import NavBarPage from './../../../page-objects/navbar-page';
 import SignInPage from './../../../page-objects/signin-page';
@@ -51,15 +51,8 @@ describe('MauPhatHanh e2e test', () => {
     expect(await mauPhatHanhUpdatePage.getMauPhatHanhCodeInput()).to.match(/mauPhatHanhCode/);
     await mauPhatHanhUpdatePage.setNameInput('name');
     expect(await mauPhatHanhUpdatePage.getNameInput()).to.match(/name/);
-    await mauPhatHanhUpdatePage.setUserNameInput('userName');
-    expect(await mauPhatHanhUpdatePage.getUserNameInput()).to.match(/userName/);
-    await mauPhatHanhUpdatePage.setCreateTimeInput('01/01/2001' + protractor.Key.TAB + '02:30AM');
-    expect(await mauPhatHanhUpdatePage.getCreateTimeInput()).to.contain('2001-01-01T02:30');
-    await mauPhatHanhUpdatePage.setUpdateTimeInput('01/01/2001' + protractor.Key.TAB + '02:30AM');
-    expect(await mauPhatHanhUpdatePage.getUpdateTimeInput()).to.contain('2001-01-01T02:30');
     await mauPhatHanhUpdatePage.statusSelectLastOption();
-    await mauPhatHanhUpdatePage.setProgramInput('program');
-    expect(await mauPhatHanhUpdatePage.getProgramInput()).to.match(/program/);
+    await mauPhatHanhUpdatePage.phamviSelectLastOption();
     await waitUntilDisplayed(mauPhatHanhUpdatePage.getSaveButton());
     await mauPhatHanhUpdatePage.save();
     await waitUntilHidden(mauPhatHanhUpdatePage.getSaveButton());

@@ -1,4 +1,3 @@
-import { Moment } from 'moment';
 import { IMauPhatHanhTieuChi } from 'app/shared/model/donviphathanh/mau-phat-hanh-tieu-chi.model';
 
 export const enum ReportStatus {
@@ -14,11 +13,8 @@ export interface IMauPhatHanh {
   id?: number;
   mauPhatHanhCode?: string;
   name?: string;
-  userName?: string;
-  createTime?: Moment;
-  updateTime?: Moment;
   status?: ReportStatus;
-  program?: string;
+  phamviId?: number;
   mauphathanhtieuchis?: IMauPhatHanhTieuChi[];
 }
 

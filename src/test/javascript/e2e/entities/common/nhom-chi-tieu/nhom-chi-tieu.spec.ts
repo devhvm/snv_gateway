@@ -1,5 +1,5 @@
 /* tslint:disable no-unused-expression */
-import { browser, element, by, protractor } from 'protractor';
+import { browser, element, by } from 'protractor';
 
 import NavBarPage from './../../../page-objects/navbar-page';
 import SignInPage from './../../../page-objects/signin-page';
@@ -49,15 +49,7 @@ describe('NhomChiTieu e2e test', () => {
     expect(await nhomChiTieuUpdatePage.getNhomChiTieuCodeInput()).to.match(/nhomChiTieuCode/);
     await nhomChiTieuUpdatePage.setNameInput('name');
     expect(await nhomChiTieuUpdatePage.getNameInput()).to.match(/name/);
-    await nhomChiTieuUpdatePage.setUserNameInput('userName');
-    expect(await nhomChiTieuUpdatePage.getUserNameInput()).to.match(/userName/);
-    await nhomChiTieuUpdatePage.setCreateTimeInput('01/01/2001' + protractor.Key.TAB + '02:30AM');
-    expect(await nhomChiTieuUpdatePage.getCreateTimeInput()).to.contain('2001-01-01T02:30');
-    await nhomChiTieuUpdatePage.setUpdateTimeInput('01/01/2001' + protractor.Key.TAB + '02:30AM');
-    expect(await nhomChiTieuUpdatePage.getUpdateTimeInput()).to.contain('2001-01-01T02:30');
     await nhomChiTieuUpdatePage.statusSelectLastOption();
-    await nhomChiTieuUpdatePage.setProgramInput('program');
-    expect(await nhomChiTieuUpdatePage.getProgramInput()).to.match(/program/);
     await waitUntilDisplayed(nhomChiTieuUpdatePage.getSaveButton());
     await nhomChiTieuUpdatePage.save();
     await waitUntilHidden(nhomChiTieuUpdatePage.getSaveButton());

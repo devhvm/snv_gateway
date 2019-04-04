@@ -1,5 +1,3 @@
-import { Moment } from 'moment';
-
 export const enum ReportStatus {
   NEW = 'NEW',
   ACTIVED = 'ACTIVED',
@@ -12,11 +10,7 @@ export const enum ReportStatus {
 export interface ITieuChiBaoCao {
   id?: number;
   tieuChiBaoCaoCode?: string;
-  userName?: string;
-  createTime?: Moment;
-  updateTime?: Moment;
   status?: ReportStatus;
-  program?: string;
   tieuchiId?: number;
 }
 

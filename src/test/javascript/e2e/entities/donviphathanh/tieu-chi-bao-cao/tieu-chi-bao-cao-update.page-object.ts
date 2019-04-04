@@ -5,11 +5,7 @@ export default class TieuChiBaoCaoUpdatePage {
   saveButton: ElementFinder = element(by.id('save-entity'));
   cancelButton: ElementFinder = element(by.id('cancel-save'));
   tieuChiBaoCaoCodeInput: ElementFinder = element(by.css('input#tieu-chi-bao-cao-tieuChiBaoCaoCode'));
-  userNameInput: ElementFinder = element(by.css('input#tieu-chi-bao-cao-userName'));
-  createTimeInput: ElementFinder = element(by.css('input#tieu-chi-bao-cao-createTime'));
-  updateTimeInput: ElementFinder = element(by.css('input#tieu-chi-bao-cao-updateTime'));
   statusSelect: ElementFinder = element(by.css('select#tieu-chi-bao-cao-status'));
-  programInput: ElementFinder = element(by.css('input#tieu-chi-bao-cao-program'));
   tieuchiSelect: ElementFinder = element(by.css('select#tieu-chi-bao-cao-tieuchi'));
 
   getPageTitle() {
@@ -22,30 +18,6 @@ export default class TieuChiBaoCaoUpdatePage {
 
   async getTieuChiBaoCaoCodeInput() {
     return this.tieuChiBaoCaoCodeInput.getAttribute('value');
-  }
-
-  async setUserNameInput(userName) {
-    await this.userNameInput.sendKeys(userName);
-  }
-
-  async getUserNameInput() {
-    return this.userNameInput.getAttribute('value');
-  }
-
-  async setCreateTimeInput(createTime) {
-    await this.createTimeInput.sendKeys(createTime);
-  }
-
-  async getCreateTimeInput() {
-    return this.createTimeInput.getAttribute('value');
-  }
-
-  async setUpdateTimeInput(updateTime) {
-    await this.updateTimeInput.sendKeys(updateTime);
-  }
-
-  async getUpdateTimeInput() {
-    return this.updateTimeInput.getAttribute('value');
   }
 
   async setStatusSelect(status) {
@@ -62,14 +34,6 @@ export default class TieuChiBaoCaoUpdatePage {
       .last()
       .click();
   }
-  async setProgramInput(program) {
-    await this.programInput.sendKeys(program);
-  }
-
-  async getProgramInput() {
-    return this.programInput.getAttribute('value');
-  }
-
   async tieuchiSelectLastOption() {
     await this.tieuchiSelect
       .all(by.tagName('option'))

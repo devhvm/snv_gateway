@@ -1,4 +1,4 @@
-import { Moment } from 'moment';
+import { IDanhMuc } from 'app/shared/model/common/danh-muc.model';
 
 export const enum Status {
   PUBLISH = 'PUBLISH',
@@ -10,11 +10,8 @@ export interface INhomDanhMuc {
   id?: number;
   nhomDanhMucCode?: string;
   name?: string;
-  userName?: string;
-  createTime?: Moment;
-  updateTime?: Moment;
   status?: Status;
-  program?: string;
+  danhmucs?: IDanhMuc[];
 }
 
 export const defaultValue: Readonly<INhomDanhMuc> = {};

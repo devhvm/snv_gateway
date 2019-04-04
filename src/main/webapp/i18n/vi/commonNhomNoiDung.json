@@ -14,12 +14,8 @@
       },
       "nhomNoiDungCode": "Nhom Noi Dung Code",
       "name": "Name",
-      "userName": "User Name",
-      "createTime": "Create Time",
-      "updateTime": "Update Time",
       "status": "Status",
-      "program": "Program",
-      "noiDung": "Noi Dung"
+      "noidung": "Noidung"
     }
   },
   "commonApp": {

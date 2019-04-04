@@ -13,9 +13,9 @@ import reducer, {
   getEntity,
   updateEntity,
   reset
-} from 'app/entities/common/pham-vi/pham-vi.reducer';
+} from 'app/entities/donviphathanh/pham-vi/pham-vi.reducer';
 import { REQUEST, SUCCESS, FAILURE } from 'app/shared/reducers/action-type.util';
-import { IPhamVi, defaultValue } from 'app/shared/model/common/pham-vi.model';
+import { IPhamVi, defaultValue } from 'app/shared/model/donviphathanh/pham-vi.model';
 
 // tslint:disable no-invalid-template-strings
 describe('Entities reducer tests', () => {

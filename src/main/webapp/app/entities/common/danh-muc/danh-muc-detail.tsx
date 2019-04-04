@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import { Link, RouteComponentProps } from 'react-router-dom';
 import { Button, Row, Col } from 'reactstrap';
 // tslint:disable-next-line:no-unused-variable
-import { Translate, ICrudGetAction, TextFormat } from 'react-jhipster';
+import { Translate, ICrudGetAction } from 'react-jhipster';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import { IRootState } from 'app/shared/reducers';
@@ -41,39 +41,15 @@ export class DanhMucDetail extends React.Component<IDanhMucDetailProps> {
             </dt>
             <dd>{danhMucEntity.name}</dd>
             <dt>
-              <span id="userName">
-                <Translate contentKey="gatewayApp.commonDanhMuc.userName">User Name</Translate>
-              </span>
-            </dt>
-            <dd>{danhMucEntity.userName}</dd>
-            <dt>
-              <span id="createTime">
-                <Translate contentKey="gatewayApp.commonDanhMuc.createTime">Create Time</Translate>
-              </span>
-            </dt>
-            <dd>
-              <TextFormat value={danhMucEntity.createTime} type="date" format={APP_DATE_FORMAT} />
-            </dd>
-            <dt>
-              <span id="updateTime">
-                <Translate contentKey="gatewayApp.commonDanhMuc.updateTime">Update Time</Translate>
-              </span>
-            </dt>
-            <dd>
-              <TextFormat value={danhMucEntity.updateTime} type="date" format={APP_DATE_FORMAT} />
-            </dd>
-            <dt>
               <span id="status">
                 <Translate contentKey="gatewayApp.commonDanhMuc.status">Status</Translate>
               </span>
             </dt>
             <dd>{danhMucEntity.status}</dd>
             <dt>
-              <span id="program">
-                <Translate contentKey="gatewayApp.commonDanhMuc.program">Program</Translate>
-              </span>
+              <Translate contentKey="gatewayApp.commonDanhMuc.nhomdanhmuc">Nhomdanhmuc</Translate>
             </dt>
-            <dd>{danhMucEntity.program}</dd>
+            <dd>{danhMucEntity.nhomdanhmucId ? danhMucEntity.nhomdanhmucId : ''}</dd>
           </dl>
           <Button tag={Link} to="/entity/danh-muc" replace color="info">
             <FontAwesomeIcon icon="arrow-left" />{' '}

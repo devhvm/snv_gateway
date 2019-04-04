@@ -26,7 +26,7 @@
     "clientFramework": "react",
     "serverPort": "15050",
     "useSass": true,
-    "jhipsterVersion": "5.8.1",
+    "jhipsterVersion": "5.8.2",
     "skipUserManagement": false,
     "clientPackageManager": "npm",
     "jwtSecretKey": "NTgxM2I5MGI3YWViNDYyYWJhMzNjYWZmOTFlNTU5NGVkYWZmOTgyMmJjN2EyMjUwNzAyOTcwODE2YTc0NThmN2YzYzE5OTk2NGFkZjkzMmMyYjUzN2ZlZDY4Yjc4YzkzYzRlZTIzOTk3ZGExMzg1YmRlMTdjOGI0Y2QxMTViNjM=",
@@ -41,14 +41,14 @@
     "DanhMuc",
     "NhomPhanLoai",
     "DoiTuong",
-    "DonVi",
-    "PhamVi",
+    "DonViTinh",
     "NhomNoiDung",
     "NoiDung",
     "MauPhatHanh",
     "MauPhatHanhTieuChi",
     "TieuChi",
     "KyCongBo",
-    "TieuChiBaoCao"
+    "TieuChiBaoCao",
+    "PhamVi"
   ]
 }

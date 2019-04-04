@@ -3,15 +3,7 @@ import { connect } from 'react-redux';
 import { Link, RouteComponentProps } from 'react-router-dom';
 import { Button, Col, Row, Table } from 'reactstrap';
 // tslint:disable-next-line:no-unused-variable
-import {
-  Translate,
-  ICrudGetAllAction,
-  TextFormat,
-  getSortState,
-  IPaginationBaseState,
-  getPaginationItemsNumber,
-  JhiPagination
-} from 'react-jhipster';
+import { Translate, ICrudGetAllAction, getSortState, IPaginationBaseState, getPaginationItemsNumber, JhiPagination } from 'react-jhipster';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import { IRootState } from 'app/shared/reducers';
@@ -82,20 +74,8 @@ export class NhomNoiDung extends React.Component<INhomNoiDungProps, INhomNoiDung
                 <th className="hand" onClick={this.sort('name')}>
                   <Translate contentKey="gatewayApp.commonNhomNoiDung.name">Name</Translate> <FontAwesomeIcon icon="sort" />
                 </th>
-                <th className="hand" onClick={this.sort('userName')}>
-                  <Translate contentKey="gatewayApp.commonNhomNoiDung.userName">User Name</Translate> <FontAwesomeIcon icon="sort" />
-                </th>
-                <th className="hand" onClick={this.sort('createTime')}>
-                  <Translate contentKey="gatewayApp.commonNhomNoiDung.createTime">Create Time</Translate> <FontAwesomeIcon icon="sort" />
-                </th>
-                <th className="hand" onClick={this.sort('updateTime')}>
-                  <Translate contentKey="gatewayApp.commonNhomNoiDung.updateTime">Update Time</Translate> <FontAwesomeIcon icon="sort" />
-                </th>
                 <th className="hand" onClick={this.sort('status')}>
                   <Translate contentKey="gatewayApp.commonNhomNoiDung.status">Status</Translate> <FontAwesomeIcon icon="sort" />
-                </th>
-                <th className="hand" onClick={this.sort('program')}>
-                  <Translate contentKey="gatewayApp.commonNhomNoiDung.program">Program</Translate> <FontAwesomeIcon icon="sort" />
                 </th>
                 <th />
               </tr>
@@ -110,17 +90,9 @@ export class NhomNoiDung extends React.Component<INhomNoiDungProps, INhomNoiDung
                   </td>
                   <td>{nhomNoiDung.nhomNoiDungCode}</td>
                   <td>{nhomNoiDung.name}</td>
-                  <td>{nhomNoiDung.userName}</td>
-                  <td>
-                    <TextFormat type="date" value={nhomNoiDung.createTime} format={APP_DATE_FORMAT} />
-                  </td>
-                  <td>
-                    <TextFormat type="date" value={nhomNoiDung.updateTime} format={APP_DATE_FORMAT} />
-                  </td>
                   <td>
                     <Translate contentKey={`gatewayApp.Status.${nhomNoiDung.status}`} />
                   </td>
-                  <td>{nhomNoiDung.program}</td>
                   <td className="text-right">
                     <div className="btn-group flex-btn-group-container">
                       <Button tag={Link} to={`${match.url}/${nhomNoiDung.id}`} color="info" size="sm">

@@ -49,9 +49,6 @@ export class DoiTuongUpdate extends React.Component<IDoiTuongUpdateProps, IDoiTu
   }
 
   saveEntity = (event, errors, values) => {
-    values.createTime = convertDateTimeToServer(values.createTime);
-    values.updateTime = convertDateTimeToServer(values.updateTime);
-
     if (errors.length === 0) {
       const { doiTuongEntity } = this.props;
       const entity = {
@@ -125,51 +122,6 @@ export class DoiTuongUpdate extends React.Component<IDoiTuongUpdateProps, IDoiTu
                   />
                 </AvGroup>
                 <AvGroup>
-                  <Label id="userNameLabel" for="userName">
-                    <Translate contentKey="gatewayApp.commonDoiTuong.userName">User Name</Translate>
-                  </Label>
-                  <AvField
-                    id="doi-tuong-userName"
-                    type="text"
-                    name="userName"
-                    validate={{
-                      required: { value: true, errorMessage: translate('entity.validation.required') }
-                    }}
-                  />
-                </AvGroup>
-                <AvGroup>
-                  <Label id="createTimeLabel" for="createTime">
-                    <Translate contentKey="gatewayApp.commonDoiTuong.createTime">Create Time</Translate>
-                  </Label>
-                  <AvInput
-                    id="doi-tuong-createTime"
-                    type="datetime-local"
-                    className="form-control"
-                    name="createTime"
-                    placeholder={'YYYY-MM-DD HH:mm'}
-                    value={isNew ? null : convertDateTimeFromServer(this.props.doiTuongEntity.createTime)}
-                    validate={{
-                      required: { value: true, errorMessage: translate('entity.validation.required') }
-                    }}
-                  />
-                </AvGroup>
-                <AvGroup>
-                  <Label id="updateTimeLabel" for="updateTime">
-                    <Translate contentKey="gatewayApp.commonDoiTuong.updateTime">Update Time</Translate>
-                  </Label>
-                  <AvInput
-                    id="doi-tuong-updateTime"
-                    type="datetime-local"
-                    className="form-control"
-                    name="updateTime"
-                    placeholder={'YYYY-MM-DD HH:mm'}
-                    value={isNew ? null : convertDateTimeFromServer(this.props.doiTuongEntity.updateTime)}
-                    validate={{
-                      required: { value: true, errorMessage: translate('entity.validation.required') }
-                    }}
-                  />
-                </AvGroup>
-                <AvGroup>
                   <Label id="statusLabel">
                     <Translate contentKey="gatewayApp.commonDoiTuong.status">Status</Translate>
                   </Label>
@@ -190,19 +142,6 @@ export class DoiTuongUpdate extends React.Component<IDoiTuongUpdateProps, IDoiTu
                       <Translate contentKey="gatewayApp.Status.DELETED" />
                     </option>
                   </AvInput>
-                </AvGroup>
-                <AvGroup>
-                  <Label id="programLabel" for="program">
-                    <Translate contentKey="gatewayApp.commonDoiTuong.program">Program</Translate>
-                  </Label>
-                  <AvField
-                    id="doi-tuong-program"
-                    type="text"
-                    name="program"
-                    validate={{
-                      required: { value: true, errorMessage: translate('entity.validation.required') }
-                    }}
-                  />
                 </AvGroup>
                 <AvGroup>
                   <Label for="nhomphanloai.id">

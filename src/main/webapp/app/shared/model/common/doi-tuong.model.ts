@@ -1,5 +1,3 @@
-import { Moment } from 'moment';
-
 export const enum Status {
   PUBLISH = 'PUBLISH',
   UNPUBLISH = 'UNPUBLISH',
@@ -10,11 +8,7 @@ export interface IDoiTuong {
   id?: number;
   doiTuongCode?: string;
   name?: string;
-  userName?: string;
-  createTime?: Moment;
-  updateTime?: Moment;
   status?: Status;
-  program?: string;
   nhomphanloaiId?: number;
 }
 

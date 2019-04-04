@@ -1,5 +1,5 @@
 /* tslint:disable no-unused-expression */
-import { browser, element, by, protractor } from 'protractor';
+import { browser, element, by } from 'protractor';
 
 import NavBarPage from './../../../page-objects/navbar-page';
 import SignInPage from './../../../page-objects/signin-page';
@@ -49,15 +49,7 @@ describe('TieuChiBaoCao e2e test', () => {
 
     await tieuChiBaoCaoUpdatePage.setTieuChiBaoCaoCodeInput('tieuChiBaoCaoCode');
     expect(await tieuChiBaoCaoUpdatePage.getTieuChiBaoCaoCodeInput()).to.match(/tieuChiBaoCaoCode/);
-    await tieuChiBaoCaoUpdatePage.setUserNameInput('userName');
-    expect(await tieuChiBaoCaoUpdatePage.getUserNameInput()).to.match(/userName/);
-    await tieuChiBaoCaoUpdatePage.setCreateTimeInput('01/01/2001' + protractor.Key.TAB + '02:30AM');
-    expect(await tieuChiBaoCaoUpdatePage.getCreateTimeInput()).to.contain('2001-01-01T02:30');
-    await tieuChiBaoCaoUpdatePage.setUpdateTimeInput('01/01/2001' + protractor.Key.TAB + '02:30AM');
-    expect(await tieuChiBaoCaoUpdatePage.getUpdateTimeInput()).to.contain('2001-01-01T02:30');
     await tieuChiBaoCaoUpdatePage.statusSelectLastOption();
-    await tieuChiBaoCaoUpdatePage.setProgramInput('program');
-    expect(await tieuChiBaoCaoUpdatePage.getProgramInput()).to.match(/program/);
     await tieuChiBaoCaoUpdatePage.tieuchiSelectLastOption();
     await waitUntilDisplayed(tieuChiBaoCaoUpdatePage.getSaveButton());
     await tieuChiBaoCaoUpdatePage.save();

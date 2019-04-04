@@ -8,6 +8,8 @@ import { Translate, translate, ICrudGetAction, ICrudGetAllAction, ICrudPutAction
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { IRootState } from 'app/shared/reducers';
 
+import { IPhamVi } from 'app/shared/model/donviphathanh/pham-vi.model';
+import { getEntities as getPhamVis } from 'app/entities/donviphathanh/pham-vi/pham-vi.reducer';
 import { getEntity, updateEntity, createEntity, reset } from './mau-phat-hanh.reducer';
 import { IMauPhatHanh } from 'app/shared/model/donviphathanh/mau-phat-hanh.model';
 // tslint:disable-next-line:no-unused-variable
@@ -18,12 +20,14 @@ export interface IMauPhatHanhUpdateProps extends StateProps, DispatchProps, Rout
 
 export interface IMauPhatHanhUpdateState {
   isNew: boolean;
+  phamviId: string;
 }
 
 export class MauPhatHanhUpdate extends React.Component<IMauPhatHanhUpdateProps, IMauPhatHanhUpdateState> {
   constructor(props) {
     super(props);
     this.state = {
+      phamviId: '0',
       isNew: !this.props.match.params || !this.props.match.params.id
     };
   }
@@ -40,12 +44,11 @@ export class MauPhatHanhUpdate extends React.Component<IMauPhatHanhUpdateProps, 
     } else {
       this.props.getEntity(this.props.match.params.id);
     }
+
+    this.props.getPhamVis();
   }
 
   saveEntity = (event, errors, values) => {
-    values.createTime = convertDateTimeToServer(values.createTime);
-    values.updateTime = convertDateTimeToServer(values.updateTime);
-
     if (errors.length === 0) {
       const { mauPhatHanhEntity } = this.props;
       const entity = {
@@ -66,7 +69,7 @@ export class MauPhatHanhUpdate extends React.Component<IMauPhatHanhUpdateProps, 
   };
 
   render() {
-    const { mauPhatHanhEntity, loading, updating } = this.props;
+    const { mauPhatHanhEntity, phamVis, loading, updating } = this.props;
     const { isNew } = this.state;
 
     return (
@@ -119,51 +122,6 @@ export class MauPhatHanhUpdate extends React.Component<IMauPhatHanhUpdateProps, 
                   />
                 </AvGroup>
                 <AvGroup>
-                  <Label id="userNameLabel" for="userName">
-                    <Translate contentKey="gatewayApp.donviphathanhMauPhatHanh.userName">User Name</Translate>
-                  </Label>
-                  <AvField
-                    id="mau-phat-hanh-userName"
-                    type="text"
-                    name="userName"
-                    validate={{
-                      required: { value: true, errorMessage: translate('entity.validation.required') }
-                    }}
-                  />
-                </AvGroup>
-                <AvGroup>
-                  <Label id="createTimeLabel" for="createTime">
-                    <Translate contentKey="gatewayApp.donviphathanhMauPhatHanh.createTime">Create Time</Translate>
-                  </Label>
-                  <AvInput
-                    id="mau-phat-hanh-createTime"
-                    type="datetime-local"
-                    className="form-control"
-                    name="createTime"
-                    placeholder={'YYYY-MM-DD HH:mm'}
-                    value={isNew ? null : convertDateTimeFromServer(this.props.mauPhatHanhEntity.createTime)}
-                    validate={{
-                      required: { value: true, errorMessage: translate('entity.validation.required') }
-                    }}
-                  />
-                </AvGroup>
-                <AvGroup>
-                  <Label id="updateTimeLabel" for="updateTime">
-                    <Translate contentKey="gatewayApp.donviphathanhMauPhatHanh.updateTime">Update Time</Translate>
-                  </Label>
-                  <AvInput
-                    id="mau-phat-hanh-updateTime"
-                    type="datetime-local"
-                    className="form-control"
-                    name="updateTime"
-                    placeholder={'YYYY-MM-DD HH:mm'}
-                    value={isNew ? null : convertDateTimeFromServer(this.props.mauPhatHanhEntity.updateTime)}
-                    validate={{
-                      required: { value: true, errorMessage: translate('entity.validation.required') }
-                    }}
-                  />
-                </AvGroup>
-                <AvGroup>
                   <Label id="statusLabel">
                     <Translate contentKey="gatewayApp.donviphathanhMauPhatHanh.status">Status</Translate>
                   </Label>
@@ -195,17 +153,19 @@ export class MauPhatHanhUpdate extends React.Component<IMauPhatHanhUpdateProps, 
                   </AvInput>
                 </AvGroup>
                 <AvGroup>
-                  <Label id="programLabel" for="program">
-                    <Translate contentKey="gatewayApp.donviphathanhMauPhatHanh.program">Program</Translate>
+                  <Label for="phamvi.id">
+                    <Translate contentKey="gatewayApp.donviphathanhMauPhatHanh.phamvi">Phamvi</Translate>
                   </Label>
-                  <AvField
-                    id="mau-phat-hanh-program"
-                    type="text"
-                    name="program"
-                    validate={{
-                      required: { value: true, errorMessage: translate('entity.validation.required') }
-                    }}
-                  />
+                  <AvInput id="mau-phat-hanh-phamvi" type="select" className="form-control" name="phamviId">
+                    <option value="" key="0" />
+                    {phamVis
+                      ? phamVis.map(otherEntity => (
+                          <option value={otherEntity.id} key={otherEntity.id}>
+                            {otherEntity.id}
+                          </option>
+                        ))
+                      : null}
+                  </AvInput>
                 </AvGroup>
                 <Button tag={Link} id="cancel-save" to="/entity/mau-phat-hanh" replace color="info">
                   <FontAwesomeIcon icon="arrow-left" />
@@ -230,6 +190,7 @@ export class MauPhatHanhUpdate extends React.Component<IMauPhatHanhUpdateProps, 
 }
 
 const mapStateToProps = (storeState: IRootState) => ({
+  phamVis: storeState.phamVi.entities,
   mauPhatHanhEntity: storeState.mauPhatHanh.entity,
   loading: storeState.mauPhatHanh.loading,
   updating: storeState.mauPhatHanh.updating,
@@ -237,6 +198,7 @@ const mapStateToProps = (storeState: IRootState) => ({
 });
 
 const mapDispatchToProps = {
+  getPhamVis,
   getEntity,
   updateEntity,
   createEntity,

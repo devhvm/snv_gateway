@@ -5,7 +5,7 @@ import { Modal, ModalHeader, ModalBody, ModalFooter, Button } from 'reactstrap';
 import { Translate, ICrudGetAction, ICrudDeleteAction } from 'react-jhipster';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-import { IPhamVi } from 'app/shared/model/common/pham-vi.model';
+import { IPhamVi } from 'app/shared/model/donviphathanh/pham-vi.model';
 import { IRootState } from 'app/shared/reducers';
 import { getEntity, deleteEntity } from './pham-vi.reducer';
 
@@ -33,8 +33,8 @@ export class PhamViDeleteDialog extends React.Component<IPhamViDeleteDialogProps
         <ModalHeader toggle={this.handleClose}>
           <Translate contentKey="entity.delete.title">Confirm delete operation</Translate>
         </ModalHeader>
-        <ModalBody id="gatewayApp.commonPhamVi.delete.question">
-          <Translate contentKey="gatewayApp.commonPhamVi.delete.question" interpolate={{ id: phamViEntity.id }}>
+        <ModalBody id="gatewayApp.donviphathanhPhamVi.delete.question">
+          <Translate contentKey="gatewayApp.donviphathanhPhamVi.delete.question" interpolate={{ id: phamViEntity.id }}>
             Are you sure you want to delete this PhamVi?
           </Translate>
         </ModalBody>

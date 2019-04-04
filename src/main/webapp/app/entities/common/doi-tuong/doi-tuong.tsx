@@ -3,15 +3,7 @@ import { connect } from 'react-redux';
 import { Link, RouteComponentProps } from 'react-router-dom';
 import { Button, Col, Row, Table } from 'reactstrap';
 // tslint:disable-next-line:no-unused-variable
-import {
-  Translate,
-  ICrudGetAllAction,
-  TextFormat,
-  getSortState,
-  IPaginationBaseState,
-  getPaginationItemsNumber,
-  JhiPagination
-} from 'react-jhipster';
+import { Translate, ICrudGetAllAction, getSortState, IPaginationBaseState, getPaginationItemsNumber, JhiPagination } from 'react-jhipster';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import { IRootState } from 'app/shared/reducers';
@@ -81,20 +73,8 @@ export class DoiTuong extends React.Component<IDoiTuongProps, IDoiTuongState> {
                 <th className="hand" onClick={this.sort('name')}>
                   <Translate contentKey="gatewayApp.commonDoiTuong.name">Name</Translate> <FontAwesomeIcon icon="sort" />
                 </th>
-                <th className="hand" onClick={this.sort('userName')}>
-                  <Translate contentKey="gatewayApp.commonDoiTuong.userName">User Name</Translate> <FontAwesomeIcon icon="sort" />
-                </th>
-                <th className="hand" onClick={this.sort('createTime')}>
-                  <Translate contentKey="gatewayApp.commonDoiTuong.createTime">Create Time</Translate> <FontAwesomeIcon icon="sort" />
-                </th>
-                <th className="hand" onClick={this.sort('updateTime')}>
-                  <Translate contentKey="gatewayApp.commonDoiTuong.updateTime">Update Time</Translate> <FontAwesomeIcon icon="sort" />
-                </th>
                 <th className="hand" onClick={this.sort('status')}>
                   <Translate contentKey="gatewayApp.commonDoiTuong.status">Status</Translate> <FontAwesomeIcon icon="sort" />
-                </th>
-                <th className="hand" onClick={this.sort('program')}>
-                  <Translate contentKey="gatewayApp.commonDoiTuong.program">Program</Translate> <FontAwesomeIcon icon="sort" />
                 </th>
                 <th>
                   <Translate contentKey="gatewayApp.commonDoiTuong.nhomphanloai">Nhomphanloai</Translate> <FontAwesomeIcon icon="sort" />
@@ -112,17 +92,9 @@ export class DoiTuong extends React.Component<IDoiTuongProps, IDoiTuongState> {
                   </td>
                   <td>{doiTuong.doiTuongCode}</td>
                   <td>{doiTuong.name}</td>
-                  <td>{doiTuong.userName}</td>
-                  <td>
-                    <TextFormat type="date" value={doiTuong.createTime} format={APP_DATE_FORMAT} />
-                  </td>
-                  <td>
-                    <TextFormat type="date" value={doiTuong.updateTime} format={APP_DATE_FORMAT} />
-                  </td>
                   <td>
                     <Translate contentKey={`gatewayApp.Status.${doiTuong.status}`} />
                   </td>
-                  <td>{doiTuong.program}</td>
                   <td>
                     {doiTuong.nhomphanloaiId ? <Link to={`nhom-phan-loai/${doiTuong.nhomphanloaiId}`}>{doiTuong.nhomphanloaiId}</Link> : ''}
                   </td>

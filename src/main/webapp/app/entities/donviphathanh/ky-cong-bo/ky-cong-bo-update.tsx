@@ -43,9 +43,6 @@ export class KyCongBoUpdate extends React.Component<IKyCongBoUpdateProps, IKyCon
   }
 
   saveEntity = (event, errors, values) => {
-    values.createTime = convertDateTimeToServer(values.createTime);
-    values.updateTime = convertDateTimeToServer(values.updateTime);
-
     if (errors.length === 0) {
       const { kyCongBoEntity } = this.props;
       const entity = {
@@ -119,51 +116,6 @@ export class KyCongBoUpdate extends React.Component<IKyCongBoUpdateProps, IKyCon
                   />
                 </AvGroup>
                 <AvGroup>
-                  <Label id="userNameLabel" for="userName">
-                    <Translate contentKey="gatewayApp.donviphathanhKyCongBo.userName">User Name</Translate>
-                  </Label>
-                  <AvField
-                    id="ky-cong-bo-userName"
-                    type="text"
-                    name="userName"
-                    validate={{
-                      required: { value: true, errorMessage: translate('entity.validation.required') }
-                    }}
-                  />
-                </AvGroup>
-                <AvGroup>
-                  <Label id="createTimeLabel" for="createTime">
-                    <Translate contentKey="gatewayApp.donviphathanhKyCongBo.createTime">Create Time</Translate>
-                  </Label>
-                  <AvInput
-                    id="ky-cong-bo-createTime"
-                    type="datetime-local"
-                    className="form-control"
-                    name="createTime"
-                    placeholder={'YYYY-MM-DD HH:mm'}
-                    value={isNew ? null : convertDateTimeFromServer(this.props.kyCongBoEntity.createTime)}
-                    validate={{
-                      required: { value: true, errorMessage: translate('entity.validation.required') }
-                    }}
-                  />
-                </AvGroup>
-                <AvGroup>
-                  <Label id="updateTimeLabel" for="updateTime">
-                    <Translate contentKey="gatewayApp.donviphathanhKyCongBo.updateTime">Update Time</Translate>
-                  </Label>
-                  <AvInput
-                    id="ky-cong-bo-updateTime"
-                    type="datetime-local"
-                    className="form-control"
-                    name="updateTime"
-                    placeholder={'YYYY-MM-DD HH:mm'}
-                    value={isNew ? null : convertDateTimeFromServer(this.props.kyCongBoEntity.updateTime)}
-                    validate={{
-                      required: { value: true, errorMessage: translate('entity.validation.required') }
-                    }}
-                  />
-                </AvGroup>
-                <AvGroup>
                   <Label id="statusLabel">
                     <Translate contentKey="gatewayApp.donviphathanhKyCongBo.status">Status</Translate>
                   </Label>
@@ -193,19 +145,6 @@ export class KyCongBoUpdate extends React.Component<IKyCongBoUpdateProps, IKyCon
                       <Translate contentKey="gatewayApp.ReportStatus.COMPLETED" />
                     </option>
                   </AvInput>
-                </AvGroup>
-                <AvGroup>
-                  <Label id="programLabel" for="program">
-                    <Translate contentKey="gatewayApp.donviphathanhKyCongBo.program">Program</Translate>
-                  </Label>
-                  <AvField
-                    id="ky-cong-bo-program"
-                    type="text"
-                    name="program"
-                    validate={{
-                      required: { value: true, errorMessage: translate('entity.validation.required') }
-                    }}
-                  />
                 </AvGroup>
                 <Button tag={Link} id="cancel-save" to="/entity/ky-cong-bo" replace color="info">
                   <FontAwesomeIcon icon="arrow-left" />

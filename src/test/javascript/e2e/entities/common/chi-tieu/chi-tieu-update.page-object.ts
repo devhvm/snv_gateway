@@ -6,11 +6,7 @@ export default class ChiTieuUpdatePage {
   cancelButton: ElementFinder = element(by.id('cancel-save'));
   chiTieuCodeInput: ElementFinder = element(by.css('input#chi-tieu-chiTieuCode'));
   nameInput: ElementFinder = element(by.css('input#chi-tieu-name'));
-  userNameInput: ElementFinder = element(by.css('input#chi-tieu-userName'));
-  createTimeInput: ElementFinder = element(by.css('input#chi-tieu-createTime'));
-  updateTimeInput: ElementFinder = element(by.css('input#chi-tieu-updateTime'));
   statusSelect: ElementFinder = element(by.css('select#chi-tieu-status'));
-  programInput: ElementFinder = element(by.css('input#chi-tieu-program'));
   nhomchitieuSelect: ElementFinder = element(by.css('select#chi-tieu-nhomchitieu'));
 
   getPageTitle() {
@@ -33,30 +29,6 @@ export default class ChiTieuUpdatePage {
     return this.nameInput.getAttribute('value');
   }
 
-  async setUserNameInput(userName) {
-    await this.userNameInput.sendKeys(userName);
-  }
-
-  async getUserNameInput() {
-    return this.userNameInput.getAttribute('value');
-  }
-
-  async setCreateTimeInput(createTime) {
-    await this.createTimeInput.sendKeys(createTime);
-  }
-
-  async getCreateTimeInput() {
-    return this.createTimeInput.getAttribute('value');
-  }
-
-  async setUpdateTimeInput(updateTime) {
-    await this.updateTimeInput.sendKeys(updateTime);
-  }
-
-  async getUpdateTimeInput() {
-    return this.updateTimeInput.getAttribute('value');
-  }
-
   async setStatusSelect(status) {
     await this.statusSelect.sendKeys(status);
   }
@@ -71,14 +43,6 @@ export default class ChiTieuUpdatePage {
       .last()
       .click();
   }
-  async setProgramInput(program) {
-    await this.programInput.sendKeys(program);
-  }
-
-  async getProgramInput() {
-    return this.programInput.getAttribute('value');
-  }
-
   async nhomchitieuSelectLastOption() {
     await this.nhomchitieuSelect
       .all(by.tagName('option'))

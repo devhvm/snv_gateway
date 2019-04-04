@@ -49,9 +49,6 @@ export class ChiTieuUpdate extends React.Component<IChiTieuUpdateProps, IChiTieu
   }
 
   saveEntity = (event, errors, values) => {
-    values.createTime = convertDateTimeToServer(values.createTime);
-    values.updateTime = convertDateTimeToServer(values.updateTime);
-
     if (errors.length === 0) {
       const { chiTieuEntity } = this.props;
       const entity = {
@@ -125,51 +122,6 @@ export class ChiTieuUpdate extends React.Component<IChiTieuUpdateProps, IChiTieu
                   />
                 </AvGroup>
                 <AvGroup>
-                  <Label id="userNameLabel" for="userName">
-                    <Translate contentKey="gatewayApp.commonChiTieu.userName">User Name</Translate>
-                  </Label>
-                  <AvField
-                    id="chi-tieu-userName"
-                    type="text"
-                    name="userName"
-                    validate={{
-                      required: { value: true, errorMessage: translate('entity.validation.required') }
-                    }}
-                  />
-                </AvGroup>
-                <AvGroup>
-                  <Label id="createTimeLabel" for="createTime">
-                    <Translate contentKey="gatewayApp.commonChiTieu.createTime">Create Time</Translate>
-                  </Label>
-                  <AvInput
-                    id="chi-tieu-createTime"
-                    type="datetime-local"
-                    className="form-control"
-                    name="createTime"
-                    placeholder={'YYYY-MM-DD HH:mm'}
-                    value={isNew ? null : convertDateTimeFromServer(this.props.chiTieuEntity.createTime)}
-                    validate={{
-                      required: { value: true, errorMessage: translate('entity.validation.required') }
-                    }}
-                  />
-                </AvGroup>
-                <AvGroup>
-                  <Label id="updateTimeLabel" for="updateTime">
-                    <Translate contentKey="gatewayApp.commonChiTieu.updateTime">Update Time</Translate>
-                  </Label>
-                  <AvInput
-                    id="chi-tieu-updateTime"
-                    type="datetime-local"
-                    className="form-control"
-                    name="updateTime"
-                    placeholder={'YYYY-MM-DD HH:mm'}
-                    value={isNew ? null : convertDateTimeFromServer(this.props.chiTieuEntity.updateTime)}
-                    validate={{
-                      required: { value: true, errorMessage: translate('entity.validation.required') }
-                    }}
-                  />
-                </AvGroup>
-                <AvGroup>
                   <Label id="statusLabel">
                     <Translate contentKey="gatewayApp.commonChiTieu.status">Status</Translate>
                   </Label>
@@ -190,19 +142,6 @@ export class ChiTieuUpdate extends React.Component<IChiTieuUpdateProps, IChiTieu
                       <Translate contentKey="gatewayApp.Status.DELETED" />
                     </option>
                   </AvInput>
-                </AvGroup>
-                <AvGroup>
-                  <Label id="programLabel" for="program">
-                    <Translate contentKey="gatewayApp.commonChiTieu.program">Program</Translate>
-                  </Label>
-                  <AvField
-                    id="chi-tieu-program"
-                    type="text"
-                    name="program"
-                    validate={{
-                      required: { value: true, errorMessage: translate('entity.validation.required') }
-                    }}
-                  />
                 </AvGroup>
                 <AvGroup>
                   <Label for="nhomchitieu.id">

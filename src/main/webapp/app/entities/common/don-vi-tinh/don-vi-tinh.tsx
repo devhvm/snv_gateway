@@ -3,30 +3,22 @@ import { connect } from 'react-redux';
 import { Link, RouteComponentProps } from 'react-router-dom';
 import { Button, Col, Row, Table } from 'reactstrap';
 // tslint:disable-next-line:no-unused-variable
-import {
-  Translate,
-  ICrudGetAllAction,
-  TextFormat,
-  getSortState,
-  IPaginationBaseState,
-  getPaginationItemsNumber,
-  JhiPagination
-} from 'react-jhipster';
+import { Translate, ICrudGetAllAction, getSortState, IPaginationBaseState, getPaginationItemsNumber, JhiPagination } from 'react-jhipster';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import { IRootState } from 'app/shared/reducers';
-import { getEntities } from './pham-vi.reducer';
-import { IPhamVi } from 'app/shared/model/common/pham-vi.model';
+import { getEntities } from './don-vi-tinh.reducer';
+import { IDonViTinh } from 'app/shared/model/common/don-vi-tinh.model';
 // tslint:disable-next-line:no-unused-variable
 import { APP_DATE_FORMAT, APP_LOCAL_DATE_FORMAT } from 'app/config/constants';
 import { ITEMS_PER_PAGE } from 'app/shared/util/pagination.constants';
 
-export interface IPhamViProps extends StateProps, DispatchProps, RouteComponentProps<{ url: string }> {}
+export interface IDonViTinhProps extends StateProps, DispatchProps, RouteComponentProps<{ url: string }> {}
 
-export type IPhamViState = IPaginationBaseState;
+export type IDonViTinhState = IPaginationBaseState;
 
-export class PhamVi extends React.Component<IPhamViProps, IPhamViState> {
-  state: IPhamViState = {
+export class DonViTinh extends React.Component<IDonViTinhProps, IDonViTinhState> {
+  state: IDonViTinhState = {
     ...getSortState(this.props.location, ITEMS_PER_PAGE)
   };
 
@@ -57,15 +49,15 @@ export class PhamVi extends React.Component<IPhamViProps, IPhamViState> {
   };
 
   render() {
-    const { phamViList, match, totalItems } = this.props;
+    const { donViTinhList, match, totalItems } = this.props;
     return (
       <div>
-        <h2 id="pham-vi-heading">
-          <Translate contentKey="gatewayApp.commonPhamVi.home.title">Pham Vis</Translate>
+        <h2 id="don-vi-tinh-heading">
+          <Translate contentKey="gatewayApp.commonDonViTinh.home.title">Don Vi Tinhs</Translate>
           <Link to={`${match.url}/new`} className="btn btn-primary float-right jh-create-entity" id="jh-create-entity">
             <FontAwesomeIcon icon="plus" />
             &nbsp;
-            <Translate contentKey="gatewayApp.commonPhamVi.home.createLabel">Create new Pham Vi</Translate>
+            <Translate contentKey="gatewayApp.commonDonViTinh.home.createLabel">Create new Don Vi Tinh</Translate>
           </Link>
         </h2>
         <div className="table-responsive">
@@ -75,66 +67,47 @@ export class PhamVi extends React.Component<IPhamViProps, IPhamViState> {
                 <th className="hand" onClick={this.sort('id')}>
                   <Translate contentKey="global.field.id">ID</Translate> <FontAwesomeIcon icon="sort" />
                 </th>
-                <th className="hand" onClick={this.sort('begin')}>
-                  <Translate contentKey="gatewayApp.commonPhamVi.begin">Begin</Translate> <FontAwesomeIcon icon="sort" />
+                <th className="hand" onClick={this.sort('donViTinhCode')}>
+                  <Translate contentKey="gatewayApp.commonDonViTinh.donViTinhCode">Don Vi Tinh Code</Translate>{' '}
+                  <FontAwesomeIcon icon="sort" />
                 </th>
-                <th className="hand" onClick={this.sort('end')}>
-                  <Translate contentKey="gatewayApp.commonPhamVi.end">End</Translate> <FontAwesomeIcon icon="sort" />
-                </th>
-                <th className="hand" onClick={this.sort('userName')}>
-                  <Translate contentKey="gatewayApp.commonPhamVi.userName">User Name</Translate> <FontAwesomeIcon icon="sort" />
-                </th>
-                <th className="hand" onClick={this.sort('createTime')}>
-                  <Translate contentKey="gatewayApp.commonPhamVi.createTime">Create Time</Translate> <FontAwesomeIcon icon="sort" />
-                </th>
-                <th className="hand" onClick={this.sort('updateTime')}>
-                  <Translate contentKey="gatewayApp.commonPhamVi.updateTime">Update Time</Translate> <FontAwesomeIcon icon="sort" />
+                <th className="hand" onClick={this.sort('name')}>
+                  <Translate contentKey="gatewayApp.commonDonViTinh.name">Name</Translate> <FontAwesomeIcon icon="sort" />
                 </th>
                 <th className="hand" onClick={this.sort('status')}>
-                  <Translate contentKey="gatewayApp.commonPhamVi.status">Status</Translate> <FontAwesomeIcon icon="sort" />
-                </th>
-                <th className="hand" onClick={this.sort('program')}>
-                  <Translate contentKey="gatewayApp.commonPhamVi.program">Program</Translate> <FontAwesomeIcon icon="sort" />
+                  <Translate contentKey="gatewayApp.commonDonViTinh.status">Status</Translate> <FontAwesomeIcon icon="sort" />
                 </th>
                 <th />
               </tr>
             </thead>
             <tbody>
-              {phamViList.map((phamVi, i) => (
+              {donViTinhList.map((donViTinh, i) => (
                 <tr key={`entity-${i}`}>
                   <td>
-                    <Button tag={Link} to={`${match.url}/${phamVi.id}`} color="link" size="sm">
-                      {phamVi.id}
+                    <Button tag={Link} to={`${match.url}/${donViTinh.id}`} color="link" size="sm">
+                      {donViTinh.id}
                     </Button>
                   </td>
-                  <td>{phamVi.begin}</td>
-                  <td>{phamVi.end}</td>
-                  <td>{phamVi.userName}</td>
+                  <td>{donViTinh.donViTinhCode}</td>
+                  <td>{donViTinh.name}</td>
                   <td>
-                    <TextFormat type="date" value={phamVi.createTime} format={APP_DATE_FORMAT} />
+                    <Translate contentKey={`gatewayApp.Status.${donViTinh.status}`} />
                   </td>
-                  <td>
-                    <TextFormat type="date" value={phamVi.updateTime} format={APP_DATE_FORMAT} />
-                  </td>
-                  <td>
-                    <Translate contentKey={`gatewayApp.Status.${phamVi.status}`} />
-                  </td>
-                  <td>{phamVi.program}</td>
                   <td className="text-right">
                     <div className="btn-group flex-btn-group-container">
-                      <Button tag={Link} to={`${match.url}/${phamVi.id}`} color="info" size="sm">
+                      <Button tag={Link} to={`${match.url}/${donViTinh.id}`} color="info" size="sm">
                         <FontAwesomeIcon icon="eye" />{' '}
                         <span className="d-none d-md-inline">
                           <Translate contentKey="entity.action.view">View</Translate>
                         </span>
                       </Button>
-                      <Button tag={Link} to={`${match.url}/${phamVi.id}/edit`} color="primary" size="sm">
+                      <Button tag={Link} to={`${match.url}/${donViTinh.id}/edit`} color="primary" size="sm">
                         <FontAwesomeIcon icon="pencil-alt" />{' '}
                         <span className="d-none d-md-inline">
                           <Translate contentKey="entity.action.edit">Edit</Translate>
                         </span>
                       </Button>
-                      <Button tag={Link} to={`${match.url}/${phamVi.id}/delete`} color="danger" size="sm">
+                      <Button tag={Link} to={`${match.url}/${donViTinh.id}/delete`} color="danger" size="sm">
                         <FontAwesomeIcon icon="trash" />{' '}
                         <span className="d-none d-md-inline">
                           <Translate contentKey="entity.action.delete">Delete</Translate>
@@ -160,9 +133,9 @@ export class PhamVi extends React.Component<IPhamViProps, IPhamViState> {
   }
 }
 
-const mapStateToProps = ({ phamVi }: IRootState) => ({
-  phamViList: phamVi.entities,
-  totalItems: phamVi.totalItems
+const mapStateToProps = ({ donViTinh }: IRootState) => ({
+  donViTinhList: donViTinh.entities,
+  totalItems: donViTinh.totalItems
 });
 
 const mapDispatchToProps = {
@@ -175,4 +148,4 @@ type DispatchProps = typeof mapDispatchToProps;
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(PhamVi);
+)(DonViTinh);

@@ -43,7 +43,7 @@ import donVi, {
 // prettier-ignore
 import phamVi, {
   PhamViState
-} from 'app/entities/common/pham-vi/pham-vi.reducer';
+} from 'app/entities/donviphathanh/pham-vi/pham-vi.reducer';
 // prettier-ignore
 import nhomNoiDung, {
   NhomNoiDungState
@@ -72,6 +72,10 @@ import kyCongBo, {
 import tieuChiBaoCao, {
   TieuChiBaoCaoState
 } from 'app/entities/donviphathanh/tieu-chi-bao-cao/tieu-chi-bao-cao.reducer';
+// prettier-ignore
+import donViTinh, {
+  DonViTinhState
+} from 'app/entities/common/don-vi-tinh/don-vi-tinh.reducer';
 /* jhipster-needle-add-reducer-import - JHipster will add reducer here */
 
 export interface IRootState {
@@ -100,6 +104,7 @@ export interface IRootState {
   readonly tieuChi: TieuChiState;
   readonly kyCongBo: KyCongBoState;
   readonly tieuChiBaoCao: TieuChiBaoCaoState;
+  readonly donViTinh: DonViTinhState;
   /* jhipster-needle-add-reducer-type - JHipster will add reducer type here */
   readonly loadingBar: any;
 }
@@ -130,6 +135,7 @@ const rootReducer = combineReducers<IRootState>({
   tieuChi,
   kyCongBo,
   tieuChiBaoCao,
+  donViTinh,
   /* jhipster-needle-add-reducer-combine - JHipster will add reducer here */
   loadingBar
 });

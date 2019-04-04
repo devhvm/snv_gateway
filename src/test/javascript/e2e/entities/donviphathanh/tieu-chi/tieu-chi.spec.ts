@@ -1,5 +1,5 @@
 /* tslint:disable no-unused-expression */
-import { browser, element, by, protractor } from 'protractor';
+import { browser, element, by } from 'protractor';
 
 import NavBarPage from './../../../page-objects/navbar-page';
 import SignInPage from './../../../page-objects/signin-page';
@@ -45,19 +45,9 @@ describe('TieuChi e2e test', () => {
   it('should create and save TieuChis', async () => {
     const nbButtonsBeforeCreate = await tieuChiComponentsPage.countDeleteButtons();
 
-    await tieuChiUpdatePage.setTieuChiCodeInput('tieuChiCode');
-    expect(await tieuChiUpdatePage.getTieuChiCodeInput()).to.match(/tieuChiCode/);
     await tieuChiUpdatePage.setNameInput('name');
     expect(await tieuChiUpdatePage.getNameInput()).to.match(/name/);
-    await tieuChiUpdatePage.setUserNameInput('userName');
-    expect(await tieuChiUpdatePage.getUserNameInput()).to.match(/userName/);
-    await tieuChiUpdatePage.setCreateTimeInput('01/01/2001' + protractor.Key.TAB + '02:30AM');
-    expect(await tieuChiUpdatePage.getCreateTimeInput()).to.contain('2001-01-01T02:30');
-    await tieuChiUpdatePage.setUpdateTimeInput('01/01/2001' + protractor.Key.TAB + '02:30AM');
-    expect(await tieuChiUpdatePage.getUpdateTimeInput()).to.contain('2001-01-01T02:30');
     await tieuChiUpdatePage.statusSelectLastOption();
-    await tieuChiUpdatePage.setProgramInput('program');
-    expect(await tieuChiUpdatePage.getProgramInput()).to.match(/program/);
     await tieuChiUpdatePage.kycongboSelectLastOption();
     await waitUntilDisplayed(tieuChiUpdatePage.getSaveButton());
     await tieuChiUpdatePage.save();

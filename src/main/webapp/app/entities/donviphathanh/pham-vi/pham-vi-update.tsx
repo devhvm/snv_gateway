@@ -8,10 +8,8 @@ import { Translate, translate, ICrudGetAction, ICrudGetAllAction, ICrudPutAction
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { IRootState } from 'app/shared/reducers';
 
-import { IDonVi } from 'app/shared/model/common/don-vi.model';
-import { getEntities as getDonVis } from 'app/entities/common/don-vi/don-vi.reducer';
 import { getEntity, updateEntity, createEntity, reset } from './pham-vi.reducer';
-import { IPhamVi } from 'app/shared/model/common/pham-vi.model';
+import { IPhamVi } from 'app/shared/model/donviphathanh/pham-vi.model';
 // tslint:disable-next-line:no-unused-variable
 import { convertDateTimeFromServer, convertDateTimeToServer } from 'app/shared/util/date-utils';
 import { mapIdList } from 'app/shared/util/entity-utils';
@@ -20,14 +18,12 @@ export interface IPhamViUpdateProps extends StateProps, DispatchProps, RouteComp
 
 export interface IPhamViUpdateState {
   isNew: boolean;
-  donviId: string;
 }
 
 export class PhamViUpdate extends React.Component<IPhamViUpdateProps, IPhamViUpdateState> {
   constructor(props) {
     super(props);
     this.state = {
-      donviId: '0',
       isNew: !this.props.match.params || !this.props.match.params.id
     };
   }
@@ -44,14 +40,9 @@ export class PhamViUpdate extends React.Component<IPhamViUpdateProps, IPhamViUpd
     } else {
       this.props.getEntity(this.props.match.params.id);
     }
-
-    this.props.getDonVis();
   }
 
   saveEntity = (event, errors, values) => {
-    values.createTime = convertDateTimeToServer(values.createTime);
-    values.updateTime = convertDateTimeToServer(values.updateTime);
-
     if (errors.length === 0) {
       const { phamViEntity } = this.props;
       const entity = {
@@ -72,15 +63,15 @@ export class PhamViUpdate extends React.Component<IPhamViUpdateProps, IPhamViUpd
   };
 
   render() {
-    const { phamViEntity, donVis, loading, updating } = this.props;
+    const { phamViEntity, loading, updating } = this.props;
     const { isNew } = this.state;
 
     return (
       <div>
         <Row className="justify-content-center">
           <Col md="8">
-            <h2 id="gatewayApp.commonPhamVi.home.createOrEditLabel">
-              <Translate contentKey="gatewayApp.commonPhamVi.home.createOrEditLabel">Create or edit a PhamVi</Translate>
+            <h2 id="gatewayApp.donviphathanhPhamVi.home.createOrEditLabel">
+              <Translate contentKey="gatewayApp.donviphathanhPhamVi.home.createOrEditLabel">Create or edit a PhamVi</Translate>
             </h2>
           </Col>
         </Row>
@@ -100,7 +91,7 @@ export class PhamViUpdate extends React.Component<IPhamViUpdateProps, IPhamViUpd
                 ) : null}
                 <AvGroup>
                   <Label id="beginLabel" for="begin">
-                    <Translate contentKey="gatewayApp.commonPhamVi.begin">Begin</Translate>
+                    <Translate contentKey="gatewayApp.donviphathanhPhamVi.begin">Begin</Translate>
                   </Label>
                   <AvField
                     id="pham-vi-begin"
@@ -113,92 +104,12 @@ export class PhamViUpdate extends React.Component<IPhamViUpdateProps, IPhamViUpd
                 </AvGroup>
                 <AvGroup>
                   <Label id="endLabel" for="end">
-                    <Translate contentKey="gatewayApp.commonPhamVi.end">End</Translate>
+                    <Translate contentKey="gatewayApp.donviphathanhPhamVi.end">End</Translate>
                   </Label>
                   <AvField
                     id="pham-vi-end"
                     type="text"
                     name="end"
-                    validate={{
-                      required: { value: true, errorMessage: translate('entity.validation.required') }
-                    }}
-                  />
-                </AvGroup>
-                <AvGroup>
-                  <Label id="userNameLabel" for="userName">
-                    <Translate contentKey="gatewayApp.commonPhamVi.userName">User Name</Translate>
-                  </Label>
-                  <AvField
-                    id="pham-vi-userName"
-                    type="text"
-                    name="userName"
-                    validate={{
-                      required: { value: true, errorMessage: translate('entity.validation.required') }
-                    }}
-                  />
-                </AvGroup>
-                <AvGroup>
-                  <Label id="createTimeLabel" for="createTime">
-                    <Translate contentKey="gatewayApp.commonPhamVi.createTime">Create Time</Translate>
-                  </Label>
-                  <AvInput
-                    id="pham-vi-createTime"
-                    type="datetime-local"
-                    className="form-control"
-                    name="createTime"
-                    placeholder={'YYYY-MM-DD HH:mm'}
-                    value={isNew ? null : convertDateTimeFromServer(this.props.phamViEntity.createTime)}
-                    validate={{
-                      required: { value: true, errorMessage: translate('entity.validation.required') }
-                    }}
-                  />
-                </AvGroup>
-                <AvGroup>
-                  <Label id="updateTimeLabel" for="updateTime">
-                    <Translate contentKey="gatewayApp.commonPhamVi.updateTime">Update Time</Translate>
-                  </Label>
-                  <AvInput
-                    id="pham-vi-updateTime"
-                    type="datetime-local"
-                    className="form-control"
-                    name="updateTime"
-                    placeholder={'YYYY-MM-DD HH:mm'}
-                    value={isNew ? null : convertDateTimeFromServer(this.props.phamViEntity.updateTime)}
-                    validate={{
-                      required: { value: true, errorMessage: translate('entity.validation.required') }
-                    }}
-                  />
-                </AvGroup>
-                <AvGroup>
-                  <Label id="statusLabel">
-                    <Translate contentKey="gatewayApp.commonPhamVi.status">Status</Translate>
-                  </Label>
-                  <AvInput
-                    id="pham-vi-status"
-                    type="select"
-                    className="form-control"
-                    name="status"
-                    value={(!isNew && phamViEntity.status) || 'PUBLISH'}
-                  >
-                    <option value="PUBLISH">
-                      <Translate contentKey="gatewayApp.Status.PUBLISH" />
-                    </option>
-                    <option value="UNPUBLISH">
-                      <Translate contentKey="gatewayApp.Status.UNPUBLISH" />
-                    </option>
-                    <option value="DELETED">
-                      <Translate contentKey="gatewayApp.Status.DELETED" />
-                    </option>
-                  </AvInput>
-                </AvGroup>
-                <AvGroup>
-                  <Label id="programLabel" for="program">
-                    <Translate contentKey="gatewayApp.commonPhamVi.program">Program</Translate>
-                  </Label>
-                  <AvField
-                    id="pham-vi-program"
-                    type="text"
-                    name="program"
                     validate={{
                       required: { value: true, errorMessage: translate('entity.validation.required') }
                     }}
@@ -227,7 +138,6 @@ export class PhamViUpdate extends React.Component<IPhamViUpdateProps, IPhamViUpd
 }
 
 const mapStateToProps = (storeState: IRootState) => ({
-  donVis: storeState.donVi.entities,
   phamViEntity: storeState.phamVi.entity,
   loading: storeState.phamVi.loading,
   updating: storeState.phamVi.updating,
@@ -235,7 +145,6 @@ const mapStateToProps = (storeState: IRootState) => ({
 });
 
 const mapDispatchToProps = {
-  getDonVis,
   getEntity,
   updateEntity,
   createEntity,

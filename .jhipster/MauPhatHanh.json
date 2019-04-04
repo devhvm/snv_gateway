@@ -16,37 +16,9 @@
             ]
         },
         {
-            "fieldName": "userName",
-            "fieldType": "String",
-            "fieldValidateRules": [
-                "required"
-            ]
-        },
-        {
-            "fieldName": "createTime",
-            "fieldType": "ZonedDateTime",
-            "fieldValidateRules": [
-                "required"
-            ]
-        },
-        {
-            "fieldName": "updateTime",
-            "fieldType": "ZonedDateTime",
-            "fieldValidateRules": [
-                "required"
-            ]
-        },
-        {
             "fieldName": "status",
             "fieldType": "ReportStatus",
             "fieldValues": "NEW,ACTIVED,CANCELLED,DELETED,SIGNED,COMPLETED",
-            "fieldValidateRules": [
-                "required"
-            ]
-        },
-        {
-            "fieldName": "program",
-            "fieldType": "String",
             "fieldValidateRules": [
                 "required"
             ]
@@ -54,17 +26,25 @@
     ],
     "relationships": [
         {
+            "relationshipType": "one-to-one",
+            "otherEntityName": "phamVi",
+            "otherEntityRelationshipName": "mauPhatHanh",
+            "relationshipName": "phamvi",
+            "otherEntityField": "id",
+            "ownerSide": true
+        },
+        {
             "relationshipType": "one-to-many",
-            "relationshipName": "mauphathanhtieuchi",
             "otherEntityName": "mauPhatHanhTieuChi",
-            "otherEntityRelationshipName": "mauphathanh"
+            "otherEntityRelationshipName": "mauphathanh",
+            "relationshipName": "mauphathanhtieuchi"
         }
     ],
     "changelogDate": "20190329044956",
     "entityTableName": "mau_phat_hanh",
     "dto": "mapstruct",
     "pagination": "pagination",
-    "service": "serviceImpl",
+    "service": "serviceClass",
     "jpaMetamodelFiltering": false,
     "fluentMethods": true,
     "clientRootFolder": "",

@@ -14,64 +14,20 @@
             "fieldValidateRules": [
                 "required"
             ]
-        },
-        {
-            "fieldName": "userName",
-            "fieldType": "String",
-            "fieldValidateRules": [
-                "required"
-            ]
-        },
-        {
-            "fieldName": "createTime",
-            "fieldType": "ZonedDateTime",
-            "fieldValidateRules": [
-                "required"
-            ]
-        },
-        {
-            "fieldName": "updateTime",
-            "fieldType": "ZonedDateTime",
-            "fieldValidateRules": [
-                "required"
-            ]
-        },
-        {
-            "fieldName": "status",
-            "fieldType": "Status",
-            "fieldValues": "PUBLISH,UNPUBLISH,DELETED",
-            "fieldValidateRules": [
-                "required"
-            ]
-        },
-        {
-            "fieldName": "program",
-            "fieldType": "String",
-            "fieldValidateRules": [
-                "required"
-            ]
         }
     ],
-    "relationships": [
-        {
-            "relationshipType": "one-to-one",
-            "relationshipName": "donvi",
-            "otherEntityName": "donVi",
-            "ownerSide": false,
-            "otherEntityRelationshipName": "phamvi"
-        }
-    ],
+    "relationships": [],
     "changelogDate": "20190329044953",
     "entityTableName": "pham_vi",
     "dto": "mapstruct",
     "pagination": "pagination",
-    "service": "serviceImpl",
+    "service": "serviceClass",
     "jpaMetamodelFiltering": false,
     "fluentMethods": true,
     "clientRootFolder": "",
     "applications": [
         "gateway",
-        "common"
+        "donviphathanh"
     ],
-    "microserviceName": "common"
+    "microserviceName": "donviphathanh"
 }

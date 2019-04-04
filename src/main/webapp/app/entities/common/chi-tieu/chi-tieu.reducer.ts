@@ -3,7 +3,6 @@ import { ICrudGetAction, ICrudGetAllAction, ICrudPutAction, ICrudDeleteAction } 
 
 import { cleanEntity } from 'app/shared/util/entity-utils';
 import { REQUEST, SUCCESS, FAILURE } from 'app/shared/reducers/action-type.util';
-
 import { IChiTieu, defaultValue } from 'app/shared/model/common/chi-tieu.model';
 
 export const ACTION_TYPES = {

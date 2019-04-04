@@ -1,6 +1,6 @@
 {
   "gatewayApp": {
-    "commonPhamVi": {
+    "donviphathanhPhamVi": {
       "home": {
         "title": "Pham Vis",
         "createLabel": "Create a new Pham Vi",
@@ -13,17 +13,11 @@
         "title": "Pham Vi"
       },
       "begin": "Begin",
-      "end": "End",
-      "userName": "User Name",
-      "createTime": "Create Time",
-      "updateTime": "Update Time",
-      "status": "Status",
-      "program": "Program",
-      "donvi": "Donvi"
+      "end": "End"
     }
   },
-  "commonApp": {
-    "commonPhamVi": {
+  "donviphathanhApp": {
+    "donviphathanhPhamVi": {
       "created": "A new Pham Vi is created with identifier {{ param }}",
       "updated": "A Pham Vi is updated with identifier {{ param }}",
       "deleted": "A Pham Vi is deleted with identifier {{ param }}"

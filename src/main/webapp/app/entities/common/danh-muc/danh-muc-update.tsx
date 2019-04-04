@@ -8,6 +8,8 @@ import { Translate, translate, ICrudGetAction, ICrudGetAllAction, ICrudPutAction
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { IRootState } from 'app/shared/reducers';
 
+import { INhomDanhMuc } from 'app/shared/model/common/nhom-danh-muc.model';
+import { getEntities as getNhomDanhMucs } from 'app/entities/common/nhom-danh-muc/nhom-danh-muc.reducer';
 import { getEntity, updateEntity, createEntity, reset } from './danh-muc.reducer';
 import { IDanhMuc } from 'app/shared/model/common/danh-muc.model';
 // tslint:disable-next-line:no-unused-variable
@@ -18,12 +20,14 @@ export interface IDanhMucUpdateProps extends StateProps, DispatchProps, RouteCom
 
 export interface IDanhMucUpdateState {
   isNew: boolean;
+  nhomdanhmucId: string;
 }
 
 export class DanhMucUpdate extends React.Component<IDanhMucUpdateProps, IDanhMucUpdateState> {
   constructor(props) {
     super(props);
     this.state = {
+      nhomdanhmucId: '0',
       isNew: !this.props.match.params || !this.props.match.params.id
     };
   }
@@ -40,12 +44,11 @@ export class DanhMucUpdate extends React.Component<IDanhMucUpdateProps, IDanhMuc
     } else {
       this.props.getEntity(this.props.match.params.id);
     }
+
+    this.props.getNhomDanhMucs();
   }
 
   saveEntity = (event, errors, values) => {
-    values.createTime = convertDateTimeToServer(values.createTime);
-    values.updateTime = convertDateTimeToServer(values.updateTime);
-
     if (errors.length === 0) {
       const { danhMucEntity } = this.props;
       const entity = {
@@ -66,7 +69,7 @@ export class DanhMucUpdate extends React.Component<IDanhMucUpdateProps, IDanhMuc
   };
 
   render() {
-    const { danhMucEntity, loading, updating } = this.props;
+    const { danhMucEntity, nhomDanhMucs, loading, updating } = this.props;
     const { isNew } = this.state;
 
     return (
@@ -119,51 +122,6 @@ export class DanhMucUpdate extends React.Component<IDanhMucUpdateProps, IDanhMuc
                   />
                 </AvGroup>
                 <AvGroup>
-                  <Label id="userNameLabel" for="userName">
-                    <Translate contentKey="gatewayApp.commonDanhMuc.userName">User Name</Translate>
-                  </Label>
-                  <AvField
-                    id="danh-muc-userName"
-                    type="text"
-                    name="userName"
-                    validate={{
-                      required: { value: true, errorMessage: translate('entity.validation.required') }
-                    }}
-                  />
-                </AvGroup>
-                <AvGroup>
-                  <Label id="createTimeLabel" for="createTime">
-                    <Translate contentKey="gatewayApp.commonDanhMuc.createTime">Create Time</Translate>
-                  </Label>
-                  <AvInput
-                    id="danh-muc-createTime"
-                    type="datetime-local"
-                    className="form-control"
-                    name="createTime"
-                    placeholder={'YYYY-MM-DD HH:mm'}
-                    value={isNew ? null : convertDateTimeFromServer(this.props.danhMucEntity.createTime)}
-                    validate={{
-                      required: { value: true, errorMessage: translate('entity.validation.required') }
-                    }}
-                  />
-                </AvGroup>
-                <AvGroup>
-                  <Label id="updateTimeLabel" for="updateTime">
-                    <Translate contentKey="gatewayApp.commonDanhMuc.updateTime">Update Time</Translate>
-                  </Label>
-                  <AvInput
-                    id="danh-muc-updateTime"
-                    type="datetime-local"
-                    className="form-control"
-                    name="updateTime"
-                    placeholder={'YYYY-MM-DD HH:mm'}
-                    value={isNew ? null : convertDateTimeFromServer(this.props.danhMucEntity.updateTime)}
-                    validate={{
-                      required: { value: true, errorMessage: translate('entity.validation.required') }
-                    }}
-                  />
-                </AvGroup>
-                <AvGroup>
                   <Label id="statusLabel">
                     <Translate contentKey="gatewayApp.commonDanhMuc.status">Status</Translate>
                   </Label>
@@ -186,17 +144,19 @@ export class DanhMucUpdate extends React.Component<IDanhMucUpdateProps, IDanhMuc
                   </AvInput>
                 </AvGroup>
                 <AvGroup>
-                  <Label id="programLabel" for="program">
-                    <Translate contentKey="gatewayApp.commonDanhMuc.program">Program</Translate>
+                  <Label for="nhomdanhmuc.id">
+                    <Translate contentKey="gatewayApp.commonDanhMuc.nhomdanhmuc">Nhomdanhmuc</Translate>
                   </Label>
-                  <AvField
-                    id="danh-muc-program"
-                    type="text"
-                    name="program"
-                    validate={{
-                      required: { value: true, errorMessage: translate('entity.validation.required') }
-                    }}
-                  />
+                  <AvInput id="danh-muc-nhomdanhmuc" type="select" className="form-control" name="nhomdanhmucId">
+                    <option value="" key="0" />
+                    {nhomDanhMucs
+                      ? nhomDanhMucs.map(otherEntity => (
+                          <option value={otherEntity.id} key={otherEntity.id}>
+                            {otherEntity.id}
+                          </option>
+                        ))
+                      : null}
+                  </AvInput>
                 </AvGroup>
                 <Button tag={Link} id="cancel-save" to="/entity/danh-muc" replace color="info">
                   <FontAwesomeIcon icon="arrow-left" />
@@ -221,6 +181,7 @@ export class DanhMucUpdate extends React.Component<IDanhMucUpdateProps, IDanhMuc
 }
 
 const mapStateToProps = (storeState: IRootState) => ({
+  nhomDanhMucs: storeState.nhomDanhMuc.entities,
   danhMucEntity: storeState.danhMuc.entity,
   loading: storeState.danhMuc.loading,
   updating: storeState.danhMuc.updating,
@@ -228,6 +189,7 @@ const mapStateToProps = (storeState: IRootState) => ({
 });
 
 const mapDispatchToProps = {
+  getNhomDanhMucs,
   getEntity,
   updateEntity,
   createEntity,

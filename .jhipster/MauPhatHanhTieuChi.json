@@ -4,24 +4,24 @@
     "relationships": [
         {
             "relationshipType": "many-to-one",
-            "relationshipName": "tieuchi",
             "otherEntityName": "tieuChi",
-            "otherEntityField": "id",
-            "otherEntityRelationshipName": "mauphathanhtieuchi"
+            "otherEntityRelationshipName": "mauphathanhtieuchi",
+            "relationshipName": "tieuchi",
+            "otherEntityField": "id"
         },
         {
             "relationshipType": "many-to-one",
-            "relationshipName": "mauphathanh",
             "otherEntityName": "mauPhatHanh",
-            "otherEntityField": "id",
-            "otherEntityRelationshipName": "mauphathanhtieuchi"
+            "otherEntityRelationshipName": "mauphathanhtieuchi",
+            "relationshipName": "mauphathanh",
+            "otherEntityField": "id"
         }
     ],
     "changelogDate": "20190329044957",
     "entityTableName": "mau_phat_hanh_tieu_chi",
     "dto": "mapstruct",
     "pagination": "pagination",
-    "service": "serviceImpl",
+    "service": "serviceClass",
     "jpaMetamodelFiltering": false,
     "fluentMethods": true,
     "clientRootFolder": "",

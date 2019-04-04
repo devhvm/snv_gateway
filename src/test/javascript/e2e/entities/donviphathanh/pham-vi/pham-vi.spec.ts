@@ -1,5 +1,5 @@
 /* tslint:disable no-unused-expression */
-import { browser, element, by, protractor } from 'protractor';
+import { browser, element, by } from 'protractor';
 
 import NavBarPage from './../../../page-objects/navbar-page';
 import SignInPage from './../../../page-objects/signin-page';
@@ -39,7 +39,7 @@ describe('PhamVi e2e test', () => {
   it('should load create PhamVi page', async () => {
     await phamViComponentsPage.clickOnCreateButton();
     phamViUpdatePage = new PhamViUpdatePage();
-    expect(await phamViUpdatePage.getPageTitle().getAttribute('id')).to.match(/gatewayApp.commonPhamVi.home.createOrEditLabel/);
+    expect(await phamViUpdatePage.getPageTitle().getAttribute('id')).to.match(/gatewayApp.donviphathanhPhamVi.home.createOrEditLabel/);
   });
 
   it('should create and save PhamVis', async () => {
@@ -49,15 +49,6 @@ describe('PhamVi e2e test', () => {
     expect(await phamViUpdatePage.getBeginInput()).to.match(/begin/);
     await phamViUpdatePage.setEndInput('end');
     expect(await phamViUpdatePage.getEndInput()).to.match(/end/);
-    await phamViUpdatePage.setUserNameInput('userName');
-    expect(await phamViUpdatePage.getUserNameInput()).to.match(/userName/);
-    await phamViUpdatePage.setCreateTimeInput('01/01/2001' + protractor.Key.TAB + '02:30AM');
-    expect(await phamViUpdatePage.getCreateTimeInput()).to.contain('2001-01-01T02:30');
-    await phamViUpdatePage.setUpdateTimeInput('01/01/2001' + protractor.Key.TAB + '02:30AM');
-    expect(await phamViUpdatePage.getUpdateTimeInput()).to.contain('2001-01-01T02:30');
-    await phamViUpdatePage.statusSelectLastOption();
-    await phamViUpdatePage.setProgramInput('program');
-    expect(await phamViUpdatePage.getProgramInput()).to.match(/program/);
     await waitUntilDisplayed(phamViUpdatePage.getSaveButton());
     await phamViUpdatePage.save();
     await waitUntilHidden(phamViUpdatePage.getSaveButton());
@@ -76,7 +67,7 @@ describe('PhamVi e2e test', () => {
     await waitUntilDisplayed(deleteModal);
 
     phamViDeleteDialog = new PhamViDeleteDialog();
-    expect(await phamViDeleteDialog.getDialogTitle().getAttribute('id')).to.match(/gatewayApp.commonPhamVi.delete.question/);
+    expect(await phamViDeleteDialog.getDialogTitle().getAttribute('id')).to.match(/gatewayApp.donviphathanhPhamVi.delete.question/);
     await phamViDeleteDialog.clickOnConfirmButton();
 
     await phamViComponentsPage.waitUntilDeleteButtonsLength(nbButtonsBeforeDelete - 1);

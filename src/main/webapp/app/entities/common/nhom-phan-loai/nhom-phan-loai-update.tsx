@@ -8,8 +8,8 @@ import { Translate, translate, ICrudGetAction, ICrudGetAllAction, ICrudPutAction
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { IRootState } from 'app/shared/reducers';
 
-import { IDonVi } from 'app/shared/model/common/don-vi.model';
-import { getEntities as getDonVis } from 'app/entities/common/don-vi/don-vi.reducer';
+import { IDonViTinh } from 'app/shared/model/common/don-vi-tinh.model';
+import { getEntities as getDonViTinhs } from 'app/entities/common/don-vi-tinh/don-vi-tinh.reducer';
 import { getEntity, updateEntity, createEntity, reset } from './nhom-phan-loai.reducer';
 import { INhomPhanLoai } from 'app/shared/model/common/nhom-phan-loai.model';
 // tslint:disable-next-line:no-unused-variable
@@ -20,14 +20,14 @@ export interface INhomPhanLoaiUpdateProps extends StateProps, DispatchProps, Rou
 
 export interface INhomPhanLoaiUpdateState {
   isNew: boolean;
-  donviId: string;
+  donvitinhId: string;
 }
 
 export class NhomPhanLoaiUpdate extends React.Component<INhomPhanLoaiUpdateProps, INhomPhanLoaiUpdateState> {
   constructor(props) {
     super(props);
     this.state = {
-      donviId: '0',
+      donvitinhId: '0',
       isNew: !this.props.match.params || !this.props.match.params.id
     };
   }
@@ -45,13 +45,10 @@ export class NhomPhanLoaiUpdate extends React.Component<INhomPhanLoaiUpdateProps
       this.props.getEntity(this.props.match.params.id);
     }
 
-    this.props.getDonVis();
+    this.props.getDonViTinhs();
   }
 
   saveEntity = (event, errors, values) => {
-    values.createTime = convertDateTimeToServer(values.createTime);
-    values.updateTime = convertDateTimeToServer(values.updateTime);
-
     if (errors.length === 0) {
       const { nhomPhanLoaiEntity } = this.props;
       const entity = {
@@ -72,7 +69,7 @@ export class NhomPhanLoaiUpdate extends React.Component<INhomPhanLoaiUpdateProps
   };
 
   render() {
-    const { nhomPhanLoaiEntity, donVis, loading, updating } = this.props;
+    const { nhomPhanLoaiEntity, donViTinhs, loading, updating } = this.props;
     const { isNew } = this.state;
 
     return (
@@ -125,51 +122,6 @@ export class NhomPhanLoaiUpdate extends React.Component<INhomPhanLoaiUpdateProps
                   />
                 </AvGroup>
                 <AvGroup>
-                  <Label id="userNameLabel" for="userName">
-                    <Translate contentKey="gatewayApp.commonNhomPhanLoai.userName">User Name</Translate>
-                  </Label>
-                  <AvField
-                    id="nhom-phan-loai-userName"
-                    type="text"
-                    name="userName"
-                    validate={{
-                      required: { value: true, errorMessage: translate('entity.validation.required') }
-                    }}
-                  />
-                </AvGroup>
-                <AvGroup>
-                  <Label id="createTimeLabel" for="createTime">
-                    <Translate contentKey="gatewayApp.commonNhomPhanLoai.createTime">Create Time</Translate>
-                  </Label>
-                  <AvInput
-                    id="nhom-phan-loai-createTime"
-                    type="datetime-local"
-                    className="form-control"
-                    name="createTime"
-                    placeholder={'YYYY-MM-DD HH:mm'}
-                    value={isNew ? null : convertDateTimeFromServer(this.props.nhomPhanLoaiEntity.createTime)}
-                    validate={{
-                      required: { value: true, errorMessage: translate('entity.validation.required') }
-                    }}
-                  />
-                </AvGroup>
-                <AvGroup>
-                  <Label id="updateTimeLabel" for="updateTime">
-                    <Translate contentKey="gatewayApp.commonNhomPhanLoai.updateTime">Update Time</Translate>
-                  </Label>
-                  <AvInput
-                    id="nhom-phan-loai-updateTime"
-                    type="datetime-local"
-                    className="form-control"
-                    name="updateTime"
-                    placeholder={'YYYY-MM-DD HH:mm'}
-                    value={isNew ? null : convertDateTimeFromServer(this.props.nhomPhanLoaiEntity.updateTime)}
-                    validate={{
-                      required: { value: true, errorMessage: translate('entity.validation.required') }
-                    }}
-                  />
-                </AvGroup>
-                <AvGroup>
                   <Label id="statusLabel">
                     <Translate contentKey="gatewayApp.commonNhomPhanLoai.status">Status</Translate>
                   </Label>
@@ -192,26 +144,13 @@ export class NhomPhanLoaiUpdate extends React.Component<INhomPhanLoaiUpdateProps
                   </AvInput>
                 </AvGroup>
                 <AvGroup>
-                  <Label id="programLabel" for="program">
-                    <Translate contentKey="gatewayApp.commonNhomPhanLoai.program">Program</Translate>
+                  <Label for="donvitinh.id">
+                    <Translate contentKey="gatewayApp.commonNhomPhanLoai.donvitinh">Donvitinh</Translate>
                   </Label>
-                  <AvField
-                    id="nhom-phan-loai-program"
-                    type="text"
-                    name="program"
-                    validate={{
-                      required: { value: true, errorMessage: translate('entity.validation.required') }
-                    }}
-                  />
-                </AvGroup>
-                <AvGroup>
-                  <Label for="donvi.id">
-                    <Translate contentKey="gatewayApp.commonNhomPhanLoai.donvi">Donvi</Translate>
-                  </Label>
-                  <AvInput id="nhom-phan-loai-donvi" type="select" className="form-control" name="donviId">
+                  <AvInput id="nhom-phan-loai-donvitinh" type="select" className="form-control" name="donvitinhId">
                     <option value="" key="0" />
-                    {donVis
-                      ? donVis.map(otherEntity => (
+                    {donViTinhs
+                      ? donViTinhs.map(otherEntity => (
                           <option value={otherEntity.id} key={otherEntity.id}>
                             {otherEntity.id}
                           </option>
@@ -242,7 +181,7 @@ export class NhomPhanLoaiUpdate extends React.Component<INhomPhanLoaiUpdateProps
 }
 
 const mapStateToProps = (storeState: IRootState) => ({
-  donVis: storeState.donVi.entities,
+  donViTinhs: storeState.donViTinh.entities,
   nhomPhanLoaiEntity: storeState.nhomPhanLoai.entity,
   loading: storeState.nhomPhanLoai.loading,
   updating: storeState.nhomPhanLoai.updating,
@@ -250,7 +189,7 @@ const mapStateToProps = (storeState: IRootState) => ({
 });
 
 const mapDispatchToProps = {
-  getDonVis,
+  getDonViTinhs,
   getEntity,
   updateEntity,
   createEntity,
