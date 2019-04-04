@@ -1,0 +1,29 @@
+{
+  "gatewayApp": {
+    "donviphathanhMauPhatHanh": {
+      "home": {
+        "title": "Mau Phat Hanhs",
+        "createLabel": "Thêm mới một Mau Phat Hanh",
+        "createOrEditLabel": "Thêm mới hoặc cập nhật Mau Phat Hanh"
+      },
+      "delete": {
+        "question": "Bạn có chắc là muốn xóa Mau Phat Hanh {{ id }}?"
+      },
+      "detail": {
+        "title": "Mau Phat Hanh"
+      },
+      "mauPhatHanhCode": "Mau Phat Hanh Code",
+      "name": "Name",
+      "status": "Status",
+      "phamvi": "Phamvi",
+      "mauphathanhtieuchi": "Mauphathanhtieuchi"
+    }
+  },
+  "donviphathanhApp": {
+    "donviphathanhMauPhatHanh": {
+      "created": "Một Mau Phat Hanh mới được tạo với định danh {{ param }}",
+      "updated": "Một Mau Phat Hanh cập nhật với định danh {{ param }}",
+      "deleted": "Một Mau Phat Hanh đã xóa với định danh {{ param }}"
+    }
+  }
+}

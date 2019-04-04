@@ -1,0 +1,27 @@
+{
+  "gatewayApp": {
+    "donviphathanhTieuChiBaoCao": {
+      "home": {
+        "title": "Tieu Chi Bao Caos",
+        "createLabel": "Thêm mới một Tieu Chi Bao Cao",
+        "createOrEditLabel": "Thêm mới hoặc cập nhật Tieu Chi Bao Cao"
+      },
+      "delete": {
+        "question": "Bạn có chắc là muốn xóa Tieu Chi Bao Cao {{ id }}?"
+      },
+      "detail": {
+        "title": "Tieu Chi Bao Cao"
+      },
+      "tieuChiBaoCaoCode": "Tieu Chi Bao Cao Code",
+      "status": "Status",
+      "tieuchi": "Tieuchi"
+    }
+  },
+  "donviphathanhApp": {
+    "donviphathanhTieuChiBaoCao": {
+      "created": "Một Tieu Chi Bao Cao mới được tạo với định danh {{ param }}",
+      "updated": "Một Tieu Chi Bao Cao cập nhật với định danh {{ param }}",
+      "deleted": "Một Tieu Chi Bao Cao đã xóa với định danh {{ param }}"
+    }
+  }
+}

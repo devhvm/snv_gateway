@@ -1,0 +1,29 @@
+{
+  "gatewayApp": {
+    "commonNhomPhanLoai": {
+      "home": {
+        "title": "Nhom Phan Loais",
+        "createLabel": "Create a new Nhom Phan Loai",
+        "createOrEditLabel": "Create or edit a Nhom Phan Loai"
+      },
+      "delete": {
+        "question": "Are you sure you want to delete Nhom Phan Loai {{ id }}?"
+      },
+      "detail": {
+        "title": "Nhom Phan Loai"
+      },
+      "nhomPhanLoaiCode": "Nhom Phan Loai Code",
+      "name": "Name",
+      "status": "Status",
+      "doituong": "Doituong",
+      "donvitinh": "Donvitinh"
+    }
+  },
+  "commonApp": {
+    "commonNhomPhanLoai": {
+      "created": "A new Nhom Phan Loai is created with identifier {{ param }}",
+      "updated": "A Nhom Phan Loai is updated with identifier {{ param }}",
+      "deleted": "A Nhom Phan Loai is deleted with identifier {{ param }}"
+    }
+  }
+}

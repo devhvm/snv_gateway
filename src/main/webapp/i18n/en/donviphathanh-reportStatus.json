@@ -1,0 +1,13 @@
+{
+  "gatewayApp": {
+    "ReportStatus": {
+      "null": "",
+      "NEW": "NEW",
+      "ACTIVED": "ACTIVED",
+      "CANCELLED": "CANCELLED",
+      "DELETED": "DELETED",
+      "SIGNED": "SIGNED",
+      "COMPLETED": "COMPLETED"
+    }
+  }
+}

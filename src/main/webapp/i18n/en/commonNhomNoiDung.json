@@ -1,0 +1,28 @@
+{
+  "gatewayApp": {
+    "commonNhomNoiDung": {
+      "home": {
+        "title": "Nhom Noi Dungs",
+        "createLabel": "Create a new Nhom Noi Dung",
+        "createOrEditLabel": "Create or edit a Nhom Noi Dung"
+      },
+      "delete": {
+        "question": "Are you sure you want to delete Nhom Noi Dung {{ id }}?"
+      },
+      "detail": {
+        "title": "Nhom Noi Dung"
+      },
+      "nhomNoiDungCode": "Nhom Noi Dung Code",
+      "name": "Name",
+      "status": "Status",
+      "noidung": "Noidung"
+    }
+  },
+  "commonApp": {
+    "commonNhomNoiDung": {
+      "created": "A new Nhom Noi Dung is created with identifier {{ param }}",
+      "updated": "A Nhom Noi Dung is updated with identifier {{ param }}",
+      "deleted": "A Nhom Noi Dung is deleted with identifier {{ param }}"
+    }
+  }
+}
