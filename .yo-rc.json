@@ -50,5 +50,8 @@
     "KyCongBo",
     "TieuChiBaoCao",
     "PhamVi"
-  ]
+  ],
+  "generator-jhipster-entity-audit": {
+    "auditFramework": "custom"
+  }
 }
