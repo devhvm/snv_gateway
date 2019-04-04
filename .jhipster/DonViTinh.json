@@ -32,7 +32,7 @@
             "relationshipName": "nhomphanloai"
         }
     ],
-    "changelogDate": "20190404020716",
+    "changelogDate": "20190404154001",
     "entityTableName": "don_vi_tinh",
     "dto": "mapstruct",
     "pagination": "pagination",

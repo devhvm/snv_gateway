@@ -38,7 +38,7 @@
             "otherEntityField": "id"
         }
     ],
-    "changelogDate": "20190329044958",
+    "changelogDate": "20190404154006",
     "entityTableName": "tieu_chi",
     "dto": "mapstruct",
     "pagination": "pagination",

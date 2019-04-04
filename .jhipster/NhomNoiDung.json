@@ -32,7 +32,7 @@
             "relationshipName": "noidung"
         }
     ],
-    "changelogDate": "20190329044954",
+    "changelogDate": "20190404154002",
     "entityTableName": "nhom_noi_dung",
     "dto": "mapstruct",
     "pagination": "pagination",

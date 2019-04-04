@@ -1,0 +1,28 @@
+{
+  "gatewayApp": {
+    "commonChiTieu": {
+      "home": {
+        "title": "Chi Tieus",
+        "createLabel": "Thêm mới một Chi Tieu",
+        "createOrEditLabel": "Thêm mới hoặc cập nhật Chi Tieu"
+      },
+      "delete": {
+        "question": "Bạn có chắc là muốn xóa Chi Tieu {{ id }}?"
+      },
+      "detail": {
+        "title": "Chi Tieu"
+      },
+      "chiTieuCode": "Chi Tieu Code",
+      "name": "Name",
+      "status": "Status",
+      "nhomchitieu": "Nhomchitieu"
+    }
+  },
+  "commonApp": {
+    "commonChiTieu": {
+      "created": "Một Chi Tieu mới được tạo với định danh {{ param }}",
+      "updated": "Một Chi Tieu cập nhật với định danh {{ param }}",
+      "deleted": "Một Chi Tieu đã xóa với định danh {{ param }}"
+    }
+  }
+}

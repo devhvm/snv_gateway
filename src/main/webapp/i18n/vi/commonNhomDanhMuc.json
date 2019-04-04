@@ -1,0 +1,28 @@
+{
+  "gatewayApp": {
+    "commonNhomDanhMuc": {
+      "home": {
+        "title": "Nhom Danh Mucs",
+        "createLabel": "Thêm mới một Nhom Danh Muc",
+        "createOrEditLabel": "Thêm mới hoặc cập nhật Nhom Danh Muc"
+      },
+      "delete": {
+        "question": "Bạn có chắc là muốn xóa Nhom Danh Muc {{ id }}?"
+      },
+      "detail": {
+        "title": "Nhom Danh Muc"
+      },
+      "nhomDanhMucCode": "Nhom Danh Muc Code",
+      "name": "Name",
+      "status": "Status",
+      "danhmuc": "Danhmuc"
+    }
+  },
+  "commonApp": {
+    "commonNhomDanhMuc": {
+      "created": "Một Nhom Danh Muc mới được tạo với định danh {{ param }}",
+      "updated": "Một Nhom Danh Muc cập nhật với định danh {{ param }}",
+      "deleted": "Một Nhom Danh Muc đã xóa với định danh {{ param }}"
+    }
+  }
+}

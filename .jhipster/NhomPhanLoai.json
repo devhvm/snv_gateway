@@ -39,7 +39,7 @@
             "otherEntityField": "id"
         }
     ],
-    "changelogDate": "20190329044950",
+    "changelogDate": "20190404153959",
     "entityTableName": "nhom_phan_loai",
     "dto": "mapstruct",
     "pagination": "pagination",

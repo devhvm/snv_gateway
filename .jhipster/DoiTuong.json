@@ -33,7 +33,7 @@
             "otherEntityField": "id"
         }
     ],
-    "changelogDate": "20190329044951",
+    "changelogDate": "20190404154000",
     "entityTableName": "doi_tuong",
     "dto": "mapstruct",
     "pagination": "pagination",

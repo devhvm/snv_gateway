@@ -1,0 +1,28 @@
+{
+  "gatewayApp": {
+    "commonDanhMuc": {
+      "home": {
+        "title": "Danh Mucs",
+        "createLabel": "Thêm mới một Danh Muc",
+        "createOrEditLabel": "Thêm mới hoặc cập nhật Danh Muc"
+      },
+      "delete": {
+        "question": "Bạn có chắc là muốn xóa Danh Muc {{ id }}?"
+      },
+      "detail": {
+        "title": "Danh Muc"
+      },
+      "danhMucCode": "Danh Muc Code",
+      "name": "Name",
+      "status": "Status",
+      "nhomdanhmuc": "Nhomdanhmuc"
+    }
+  },
+  "commonApp": {
+    "commonDanhMuc": {
+      "created": "Một Danh Muc mới được tạo với định danh {{ param }}",
+      "updated": "Một Danh Muc cập nhật với định danh {{ param }}",
+      "deleted": "Một Danh Muc đã xóa với định danh {{ param }}"
+    }
+  }
+}

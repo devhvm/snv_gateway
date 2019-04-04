@@ -32,7 +32,7 @@
             "relationshipName": "tieuchi"
         }
     ],
-    "changelogDate": "20190329044959",
+    "changelogDate": "20190404154007",
     "entityTableName": "ky_cong_bo",
     "dto": "mapstruct",
     "pagination": "pagination",

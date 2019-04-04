@@ -26,7 +26,7 @@
             "otherEntityField": "id"
         }
     ],
-    "changelogDate": "20190329044955",
+    "changelogDate": "20190404154003",
     "entityTableName": "noi_dung",
     "dto": "mapstruct",
     "pagination": "pagination",

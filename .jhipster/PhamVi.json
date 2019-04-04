@@ -17,7 +17,7 @@
         }
     ],
     "relationships": [],
-    "changelogDate": "20190329044953",
+    "changelogDate": "20190404154009",
     "entityTableName": "pham_vi",
     "dto": "mapstruct",
     "pagination": "pagination",

@@ -1,0 +1,26 @@
+{
+  "gatewayApp": {
+    "donviphathanhMauPhatHanhTieuChi": {
+      "home": {
+        "title": "Mau Phat Hanh Tieu Chis",
+        "createLabel": "Create a new Mau Phat Hanh Tieu Chi",
+        "createOrEditLabel": "Create or edit a Mau Phat Hanh Tieu Chi"
+      },
+      "delete": {
+        "question": "Are you sure you want to delete Mau Phat Hanh Tieu Chi {{ id }}?"
+      },
+      "detail": {
+        "title": "Mau Phat Hanh Tieu Chi"
+      },
+      "tieuchi": "Tieuchi",
+      "mauphathanh": "Mauphathanh"
+    }
+  },
+  "donviphathanhApp": {
+    "donviphathanhMauPhatHanhTieuChi": {
+      "created": "A new Mau Phat Hanh Tieu Chi is created with identifier {{ param }}",
+      "updated": "A Mau Phat Hanh Tieu Chi is updated with identifier {{ param }}",
+      "deleted": "A Mau Phat Hanh Tieu Chi is deleted with identifier {{ param }}"
+    }
+  }
+}

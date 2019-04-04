@@ -1,0 +1,29 @@
+{
+  "gatewayApp": {
+    "commonNhomPhanLoai": {
+      "home": {
+        "title": "Nhom Phan Loais",
+        "createLabel": "Thêm mới một Nhom Phan Loai",
+        "createOrEditLabel": "Thêm mới hoặc cập nhật Nhom Phan Loai"
+      },
+      "delete": {
+        "question": "Bạn có chắc là muốn xóa Nhom Phan Loai {{ id }}?"
+      },
+      "detail": {
+        "title": "Nhom Phan Loai"
+      },
+      "nhomPhanLoaiCode": "Nhom Phan Loai Code",
+      "name": "Name",
+      "status": "Status",
+      "doituong": "Doituong",
+      "donvitinh": "Donvitinh"
+    }
+  },
+  "commonApp": {
+    "commonNhomPhanLoai": {
+      "created": "Một Nhom Phan Loai mới được tạo với định danh {{ param }}",
+      "updated": "Một Nhom Phan Loai cập nhật với định danh {{ param }}",
+      "deleted": "Một Nhom Phan Loai đã xóa với định danh {{ param }}"
+    }
+  }
+}

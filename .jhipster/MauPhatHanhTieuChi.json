@@ -17,7 +17,7 @@
             "otherEntityField": "id"
         }
     ],
-    "changelogDate": "20190329044957",
+    "changelogDate": "20190404154005",
     "entityTableName": "mau_phat_hanh_tieu_chi",
     "dto": "mapstruct",
     "pagination": "pagination",

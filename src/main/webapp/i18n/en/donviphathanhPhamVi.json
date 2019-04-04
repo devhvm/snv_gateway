@@ -1,0 +1,26 @@
+{
+  "gatewayApp": {
+    "donviphathanhPhamVi": {
+      "home": {
+        "title": "Pham Vis",
+        "createLabel": "Create a new Pham Vi",
+        "createOrEditLabel": "Create or edit a Pham Vi"
+      },
+      "delete": {
+        "question": "Are you sure you want to delete Pham Vi {{ id }}?"
+      },
+      "detail": {
+        "title": "Pham Vi"
+      },
+      "begin": "Begin",
+      "end": "End"
+    }
+  },
+  "donviphathanhApp": {
+    "donviphathanhPhamVi": {
+      "created": "A new Pham Vi is created with identifier {{ param }}",
+      "updated": "A Pham Vi is updated with identifier {{ param }}",
+      "deleted": "A Pham Vi is deleted with identifier {{ param }}"
+    }
+  }
+}

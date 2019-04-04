@@ -32,7 +32,7 @@
             "relationshipName": "chitieu"
         }
     ],
-    "changelogDate": "20190329044946",
+    "changelogDate": "20190404153955",
     "entityTableName": "nhom_chi_tieu",
     "dto": "mapstruct",
     "pagination": "pagination",

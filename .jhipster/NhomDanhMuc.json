@@ -32,7 +32,7 @@
             "relationshipName": "danhmuc"
         }
     ],
-    "changelogDate": "20190329044948",
+    "changelogDate": "20190404153957",
     "entityTableName": "nhom_danh_muc",
     "dto": "mapstruct",
     "pagination": "pagination",

@@ -40,7 +40,7 @@
             "relationshipName": "mauphathanhtieuchi"
         }
     ],
-    "changelogDate": "20190329044956",
+    "changelogDate": "20190404154004",
     "entityTableName": "mau_phat_hanh",
     "dto": "mapstruct",
     "pagination": "pagination",

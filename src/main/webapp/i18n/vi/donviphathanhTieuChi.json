@@ -1,0 +1,29 @@
+{
+  "gatewayApp": {
+    "donviphathanhTieuChi": {
+      "home": {
+        "title": "Tieu Chis",
+        "createLabel": "Thêm mới một Tieu Chi",
+        "createOrEditLabel": "Thêm mới hoặc cập nhật Tieu Chi"
+      },
+      "delete": {
+        "question": "Bạn có chắc là muốn xóa Tieu Chi {{ id }}?"
+      },
+      "detail": {
+        "title": "Tieu Chi"
+      },
+      "name": "Name",
+      "status": "Status",
+      "tieuchibaocao": "Tieuchibaocao",
+      "mauphathanhtieuchi": "Mauphathanhtieuchi",
+      "kycongbo": "Kycongbo"
+    }
+  },
+  "donviphathanhApp": {
+    "donviphathanhTieuChi": {
+      "created": "Một Tieu Chi mới được tạo với định danh {{ param }}",
+      "updated": "Một Tieu Chi cập nhật với định danh {{ param }}",
+      "deleted": "Một Tieu Chi đã xóa với định danh {{ param }}"
+    }
+  }
+}
