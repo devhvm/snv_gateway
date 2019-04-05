@@ -32,7 +32,7 @@
             "relationshipName": "noidung"
         }
     ],
-    "changelogDate": "20190404154002",
+    "changelogDate": "20190405140718",
     "entityTableName": "nhom_noi_dung",
     "dto": "mapstruct",
     "pagination": "pagination",
@@ -44,6 +44,5 @@
         "gateway",
         "common"
     ],
-    "microserviceName": "common",
-    "enableEntityAudit": true
+    "microserviceName": "common"
 }

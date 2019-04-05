@@ -33,7 +33,7 @@
             "otherEntityField": "id"
         }
     ],
-    "changelogDate": "20190404153956",
+    "changelogDate": "20190405140712",
     "entityTableName": "chi_tieu",
     "dto": "mapstruct",
     "pagination": "pagination",
@@ -45,6 +45,5 @@
         "gateway",
         "common"
     ],
-    "microserviceName": "common",
-    "enableEntityAudit": true
+    "microserviceName": "common"
 }

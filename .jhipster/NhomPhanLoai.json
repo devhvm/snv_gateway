@@ -39,7 +39,7 @@
             "otherEntityField": "id"
         }
     ],
-    "changelogDate": "20190404153959",
+    "changelogDate": "20190405140715",
     "entityTableName": "nhom_phan_loai",
     "dto": "mapstruct",
     "pagination": "pagination",
@@ -51,6 +51,5 @@
         "gateway",
         "common"
     ],
-    "microserviceName": "common",
-    "enableEntityAudit": true
+    "microserviceName": "common"
 }

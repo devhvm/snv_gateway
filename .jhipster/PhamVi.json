@@ -17,7 +17,7 @@
         }
     ],
     "relationships": [],
-    "changelogDate": "20190404154009",
+    "changelogDate": "20190405140725",
     "entityTableName": "pham_vi",
     "dto": "mapstruct",
     "pagination": "pagination",
@@ -29,6 +29,5 @@
         "gateway",
         "donviphathanh"
     ],
-    "microserviceName": "donviphathanh",
-    "enableEntityAudit": true
+    "microserviceName": "donviphathanh"
 }

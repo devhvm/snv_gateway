@@ -40,7 +40,7 @@
             "relationshipName": "mauphathanhtieuchi"
         }
     ],
-    "changelogDate": "20190404154004",
+    "changelogDate": "20190405140720",
     "entityTableName": "mau_phat_hanh",
     "dto": "mapstruct",
     "pagination": "pagination",
@@ -52,6 +52,5 @@
         "gateway",
         "donviphathanh"
     ],
-    "microserviceName": "donviphathanh",
-    "enableEntityAudit": true
+    "microserviceName": "donviphathanh"
 }

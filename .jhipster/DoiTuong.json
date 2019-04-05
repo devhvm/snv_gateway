@@ -33,7 +33,7 @@
             "otherEntityField": "id"
         }
     ],
-    "changelogDate": "20190404154000",
+    "changelogDate": "20190405140716",
     "entityTableName": "doi_tuong",
     "dto": "mapstruct",
     "pagination": "pagination",
@@ -45,6 +45,5 @@
         "gateway",
         "common"
     ],
-    "microserviceName": "common",
-    "enableEntityAudit": true
+    "microserviceName": "common"
 }

@@ -32,7 +32,7 @@
             "relationshipName": "tieuchi"
         }
     ],
-    "changelogDate": "20190404154007",
+    "changelogDate": "20190405140723",
     "entityTableName": "ky_cong_bo",
     "dto": "mapstruct",
     "pagination": "pagination",
@@ -44,6 +44,5 @@
         "gateway",
         "donviphathanh"
     ],
-    "microserviceName": "donviphathanh",
-    "enableEntityAudit": true
+    "microserviceName": "donviphathanh"
 }

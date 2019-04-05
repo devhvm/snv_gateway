@@ -32,7 +32,7 @@
             "relationshipName": "nhomphanloai"
         }
     ],
-    "changelogDate": "20190404154001",
+    "changelogDate": "20190405140717",
     "entityTableName": "don_vi_tinh",
     "dto": "mapstruct",
     "pagination": "pagination",
@@ -44,6 +44,5 @@
         "gateway",
         "common"
     ],
-    "microserviceName": "common",
-    "enableEntityAudit": true
+    "microserviceName": "common"
 }

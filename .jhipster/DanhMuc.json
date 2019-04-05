@@ -33,7 +33,7 @@
             "otherEntityField": "id"
         }
     ],
-    "changelogDate": "20190404153958",
+    "changelogDate": "20190405140714",
     "entityTableName": "danh_muc",
     "dto": "mapstruct",
     "pagination": "pagination",
@@ -45,6 +45,5 @@
         "gateway",
         "common"
     ],
-    "microserviceName": "common",
-    "enableEntityAudit": true
+    "microserviceName": "common"
 }

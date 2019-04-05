@@ -38,7 +38,7 @@
             "otherEntityField": "id"
         }
     ],
-    "changelogDate": "20190404154006",
+    "changelogDate": "20190405140722",
     "entityTableName": "tieu_chi",
     "dto": "mapstruct",
     "pagination": "pagination",
@@ -50,6 +50,5 @@
         "gateway",
         "donviphathanh"
     ],
-    "microserviceName": "donviphathanh",
-    "enableEntityAudit": true
+    "microserviceName": "donviphathanh"
 }

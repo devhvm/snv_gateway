@@ -32,7 +32,7 @@
             "relationshipName": "chitieu"
         }
     ],
-    "changelogDate": "20190404153955",
+    "changelogDate": "20190405140711",
     "entityTableName": "nhom_chi_tieu",
     "dto": "mapstruct",
     "pagination": "pagination",
@@ -44,6 +44,5 @@
         "gateway",
         "common"
     ],
-    "microserviceName": "common",
-    "enableEntityAudit": true
+    "microserviceName": "common"
 }

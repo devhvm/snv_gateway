@@ -32,7 +32,7 @@
             "relationshipName": "danhmuc"
         }
     ],
-    "changelogDate": "20190404153957",
+    "changelogDate": "20190405140713",
     "entityTableName": "nhom_danh_muc",
     "dto": "mapstruct",
     "pagination": "pagination",
@@ -44,6 +44,5 @@
         "gateway",
         "common"
     ],
-    "microserviceName": "common",
-    "enableEntityAudit": true
+    "microserviceName": "common"
 }

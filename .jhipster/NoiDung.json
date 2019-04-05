@@ -26,7 +26,7 @@
             "otherEntityField": "id"
         }
     ],
-    "changelogDate": "20190404154003",
+    "changelogDate": "20190405140719",
     "entityTableName": "noi_dung",
     "dto": "mapstruct",
     "pagination": "pagination",
@@ -38,6 +38,5 @@
         "gateway",
         "common"
     ],
-    "microserviceName": "common",
-    "enableEntityAudit": true
+    "microserviceName": "common"
 }
