@@ -96,7 +96,11 @@ export class DoiTuong extends React.Component<IDoiTuongProps, IDoiTuongState> {
                     <Translate contentKey={`gatewayApp.Status.${doiTuong.status}`} />
                   </td>
                   <td>
-                    {doiTuong.nhomphanloaiId ? <Link to={`nhom-phan-loai/${doiTuong.nhomphanloaiId}`}>{doiTuong.nhomphanloaiId}</Link> : ''}
+                    {doiTuong.nhomphanloaiNhomPhanLoaiCode ? (
+                      <Link to={`nhom-phan-loai/${doiTuong.nhomphanloaiId}`}>{doiTuong.nhomphanloaiNhomPhanLoaiCode}</Link>
+                    ) : (
+                      ''
+                    )}
                   </td>
                   <td className="text-right">
                     <div className="btn-group flex-btn-group-container">

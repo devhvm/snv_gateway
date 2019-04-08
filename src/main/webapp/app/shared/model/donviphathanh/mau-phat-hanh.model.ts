@@ -14,6 +14,7 @@ export interface IMauPhatHanh {
   mauPhatHanhCode?: string;
   name?: string;
   status?: ReportStatus;
+  phamviMauPhatHanhCode?: string;
   phamviId?: number;
   mauphathanhtieuchis?: IMauPhatHanhTieuChi[];
 }

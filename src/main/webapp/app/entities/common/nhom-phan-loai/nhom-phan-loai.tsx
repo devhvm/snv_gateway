@@ -97,7 +97,11 @@ export class NhomPhanLoai extends React.Component<INhomPhanLoaiProps, INhomPhanL
                     <Translate contentKey={`gatewayApp.Status.${nhomPhanLoai.status}`} />
                   </td>
                   <td>
-                    {nhomPhanLoai.donvitinhId ? <Link to={`don-vi-tinh/${nhomPhanLoai.donvitinhId}`}>{nhomPhanLoai.donvitinhId}</Link> : ''}
+                    {nhomPhanLoai.donvitinhDonViTinhCode ? (
+                      <Link to={`don-vi-tinh/${nhomPhanLoai.donvitinhId}`}>{nhomPhanLoai.donvitinhDonViTinhCode}</Link>
+                    ) : (
+                      ''
+                    )}
                   </td>
                   <td className="text-right">
                     <div className="btn-group flex-btn-group-container">

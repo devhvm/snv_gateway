@@ -43,7 +43,7 @@ export class TieuChiDetail extends React.Component<ITieuChiDetailProps> {
             <dt>
               <Translate contentKey="gatewayApp.donviphathanhTieuChi.kycongbo">Kycongbo</Translate>
             </dt>
-            <dd>{tieuChiEntity.kycongboId ? tieuChiEntity.kycongboId : ''}</dd>
+            <dd>{tieuChiEntity.kycongboKyCongBoCode ? tieuChiEntity.kycongboKyCongBoCode : ''}</dd>
           </dl>
           <Button tag={Link} to="/entity/tieu-chi" replace color="info">
             <FontAwesomeIcon icon="arrow-left" />{' '}

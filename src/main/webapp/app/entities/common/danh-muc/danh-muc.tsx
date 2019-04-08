@@ -95,7 +95,13 @@ export class DanhMuc extends React.Component<IDanhMucProps, IDanhMucState> {
                   <td>
                     <Translate contentKey={`gatewayApp.Status.${danhMuc.status}`} />
                   </td>
-                  <td>{danhMuc.nhomdanhmucId ? <Link to={`nhom-danh-muc/${danhMuc.nhomdanhmucId}`}>{danhMuc.nhomdanhmucId}</Link> : ''}</td>
+                  <td>
+                    {danhMuc.nhomdanhmucNhomDanhMucCode ? (
+                      <Link to={`nhom-danh-muc/${danhMuc.nhomdanhmucId}`}>{danhMuc.nhomdanhmucNhomDanhMucCode}</Link>
+                    ) : (
+                      ''
+                    )}
+                  </td>
                   <td className="text-right">
                     <div className="btn-group flex-btn-group-container">
                       <Button tag={Link} to={`${match.url}/${danhMuc.id}`} color="info" size="sm">

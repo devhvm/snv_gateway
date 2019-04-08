@@ -9,6 +9,7 @@ export interface IDanhMuc {
   danhMucCode?: string;
   name?: string;
   status?: Status;
+  nhomdanhmucNhomDanhMucCode?: string;
   nhomdanhmucId?: number;
 }
 

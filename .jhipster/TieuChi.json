@@ -35,7 +35,7 @@
             "otherEntityName": "kyCongBo",
             "otherEntityRelationshipName": "tieuchi",
             "relationshipName": "kycongbo",
-            "otherEntityField": "id"
+            "otherEntityField": "kyCongBoCode"
         }
     ],
     "changelogDate": "20190405140722",

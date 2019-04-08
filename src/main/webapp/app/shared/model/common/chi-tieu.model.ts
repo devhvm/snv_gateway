@@ -9,6 +9,7 @@ export interface IChiTieu {
   chiTieuCode?: string;
   name?: string;
   status?: Status;
+  nhomchitieuNhomChiTieuCode?: string;
   nhomchitieuId?: number;
 }
 

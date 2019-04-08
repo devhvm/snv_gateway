@@ -49,7 +49,7 @@ export class DanhMucDetail extends React.Component<IDanhMucDetailProps> {
             <dt>
               <Translate contentKey="gatewayApp.commonDanhMuc.nhomdanhmuc">Nhomdanhmuc</Translate>
             </dt>
-            <dd>{danhMucEntity.nhomdanhmucId ? danhMucEntity.nhomdanhmucId : ''}</dd>
+            <dd>{danhMucEntity.nhomdanhmucNhomDanhMucCode ? danhMucEntity.nhomdanhmucNhomDanhMucCode : ''}</dd>
           </dl>
           <Button tag={Link} to="/entity/danh-muc" replace color="info">
             <FontAwesomeIcon icon="arrow-left" />{' '}

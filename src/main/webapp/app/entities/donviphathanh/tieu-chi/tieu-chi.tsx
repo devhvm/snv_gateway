@@ -91,7 +91,13 @@ export class TieuChi extends React.Component<ITieuChiProps, ITieuChiState> {
                   <td>
                     <Translate contentKey={`gatewayApp.ReportStatus.${tieuChi.status}`} />
                   </td>
-                  <td>{tieuChi.kycongboId ? <Link to={`ky-cong-bo/${tieuChi.kycongboId}`}>{tieuChi.kycongboId}</Link> : ''}</td>
+                  <td>
+                    {tieuChi.kycongboKyCongBoCode ? (
+                      <Link to={`ky-cong-bo/${tieuChi.kycongboId}`}>{tieuChi.kycongboKyCongBoCode}</Link>
+                    ) : (
+                      ''
+                    )}
+                  </td>
                   <td className="text-right">
                     <div className="btn-group flex-btn-group-container">
                       <Button tag={Link} to={`${match.url}/${tieuChi.id}`} color="info" size="sm">

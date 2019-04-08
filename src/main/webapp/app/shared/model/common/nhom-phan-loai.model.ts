@@ -12,6 +12,7 @@ export interface INhomPhanLoai {
   name?: string;
   status?: Status;
   doituongs?: IDoiTuong[];
+  donvitinhDonViTinhCode?: string;
   donvitinhId?: number;
 }
 

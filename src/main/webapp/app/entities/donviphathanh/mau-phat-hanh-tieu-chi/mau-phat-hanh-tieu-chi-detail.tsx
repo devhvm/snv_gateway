@@ -36,7 +36,7 @@ export class MauPhatHanhTieuChiDetail extends React.Component<IMauPhatHanhTieuCh
             <dt>
               <Translate contentKey="gatewayApp.donviphathanhMauPhatHanhTieuChi.mauphathanh">Mauphathanh</Translate>
             </dt>
-            <dd>{mauPhatHanhTieuChiEntity.mauphathanhId ? mauPhatHanhTieuChiEntity.mauphathanhId : ''}</dd>
+            <dd>{mauPhatHanhTieuChiEntity.mauphathanhMauPhatHanhCode ? mauPhatHanhTieuChiEntity.mauphathanhMauPhatHanhCode : ''}</dd>
           </dl>
           <Button tag={Link} to="/entity/mau-phat-hanh-tieu-chi" replace color="info">
             <FontAwesomeIcon icon="arrow-left" />{' '}

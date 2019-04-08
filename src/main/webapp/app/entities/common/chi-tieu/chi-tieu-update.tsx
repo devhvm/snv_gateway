@@ -144,7 +144,7 @@ export class ChiTieuUpdate extends React.Component<IChiTieuUpdateProps, IChiTieu
                   </AvInput>
                 </AvGroup>
                 <AvGroup>
-                  <Label for="nhomchitieu.id">
+                  <Label for="nhomchitieu.nhomChiTieuCode">
                     <Translate contentKey="gatewayApp.commonChiTieu.nhomchitieu">Nhomchitieu</Translate>
                   </Label>
                   <AvInput id="chi-tieu-nhomchitieu" type="select" className="form-control" name="nhomchitieuId">
@@ -152,7 +152,7 @@ export class ChiTieuUpdate extends React.Component<IChiTieuUpdateProps, IChiTieu
                     {nhomChiTieus
                       ? nhomChiTieus.map(otherEntity => (
                           <option value={otherEntity.id} key={otherEntity.id}>
-                            {otherEntity.id}
+                            {otherEntity.nhomChiTieuCode}
                           </option>
                         ))
                       : null}

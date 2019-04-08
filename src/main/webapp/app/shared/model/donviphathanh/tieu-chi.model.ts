@@ -16,6 +16,7 @@ export interface ITieuChi {
   status?: ReportStatus;
   tieuchibaocaos?: ITieuChiBaoCao[];
   mauphathanhtieuchis?: IMauPhatHanhTieuChi[];
+  kycongboKyCongBoCode?: string;
   kycongboId?: number;
 }
 

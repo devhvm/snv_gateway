@@ -144,7 +144,7 @@ export class DoiTuongUpdate extends React.Component<IDoiTuongUpdateProps, IDoiTu
                   </AvInput>
                 </AvGroup>
                 <AvGroup>
-                  <Label for="nhomphanloai.id">
+                  <Label for="nhomphanloai.nhomPhanLoaiCode">
                     <Translate contentKey="gatewayApp.commonDoiTuong.nhomphanloai">Nhomphanloai</Translate>
                   </Label>
                   <AvInput id="doi-tuong-nhomphanloai" type="select" className="form-control" name="nhomphanloaiId">
@@ -152,7 +152,7 @@ export class DoiTuongUpdate extends React.Component<IDoiTuongUpdateProps, IDoiTu
                     {nhomPhanLoais
                       ? nhomPhanLoais.map(otherEntity => (
                           <option value={otherEntity.id} key={otherEntity.id}>
-                            {otherEntity.id}
+                            {otherEntity.nhomPhanLoaiCode}
                           </option>
                         ))
                       : null}

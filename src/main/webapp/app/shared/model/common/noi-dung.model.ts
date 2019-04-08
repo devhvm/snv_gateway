@@ -8,6 +8,7 @@ export interface INoiDung {
   id?: number;
   noiDungCode?: string;
   status?: Status;
+  nhomnoidungNhomNoiDungCode?: string;
   nhomnoidungId?: number;
 }
 

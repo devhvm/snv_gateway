@@ -96,8 +96,8 @@ export class MauPhatHanhTieuChi extends React.Component<IMauPhatHanhTieuChiProps
                     )}
                   </td>
                   <td>
-                    {mauPhatHanhTieuChi.mauphathanhId ? (
-                      <Link to={`mau-phat-hanh/${mauPhatHanhTieuChi.mauphathanhId}`}>{mauPhatHanhTieuChi.mauphathanhId}</Link>
+                    {mauPhatHanhTieuChi.mauphathanhMauPhatHanhCode ? (
+                      <Link to={`mau-phat-hanh/${mauPhatHanhTieuChi.mauphathanhId}`}>{mauPhatHanhTieuChi.mauphathanhMauPhatHanhCode}</Link>
                     ) : (
                       ''
                     )}

@@ -1,6 +1,7 @@
 export interface IMauPhatHanhTieuChi {
   id?: number;
   tieuchiId?: number;
+  mauphathanhMauPhatHanhCode?: string;
   mauphathanhId?: number;
 }
 

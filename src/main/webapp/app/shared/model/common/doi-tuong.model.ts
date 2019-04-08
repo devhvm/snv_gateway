@@ -9,6 +9,7 @@ export interface IDoiTuong {
   doiTuongCode?: string;
   name?: string;
   status?: Status;
+  nhomphanloaiNhomPhanLoaiCode?: string;
   nhomphanloaiId?: number;
 }
 

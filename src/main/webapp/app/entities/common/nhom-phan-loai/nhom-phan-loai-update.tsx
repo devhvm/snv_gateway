@@ -144,7 +144,7 @@ export class NhomPhanLoaiUpdate extends React.Component<INhomPhanLoaiUpdateProps
                   </AvInput>
                 </AvGroup>
                 <AvGroup>
-                  <Label for="donvitinh.id">
+                  <Label for="donvitinh.donViTinhCode">
                     <Translate contentKey="gatewayApp.commonNhomPhanLoai.donvitinh">Donvitinh</Translate>
                   </Label>
                   <AvInput id="nhom-phan-loai-donvitinh" type="select" className="form-control" name="donvitinhId">
@@ -152,7 +152,7 @@ export class NhomPhanLoaiUpdate extends React.Component<INhomPhanLoaiUpdateProps
                     {donViTinhs
                       ? donViTinhs.map(otherEntity => (
                           <option value={otherEntity.id} key={otherEntity.id}>
-                            {otherEntity.id}
+                            {otherEntity.donViTinhCode}
                           </option>
                         ))
                       : null}

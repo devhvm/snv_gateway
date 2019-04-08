@@ -95,7 +95,13 @@ export class ChiTieu extends React.Component<IChiTieuProps, IChiTieuState> {
                   <td>
                     <Translate contentKey={`gatewayApp.Status.${chiTieu.status}`} />
                   </td>
-                  <td>{chiTieu.nhomchitieuId ? <Link to={`nhom-chi-tieu/${chiTieu.nhomchitieuId}`}>{chiTieu.nhomchitieuId}</Link> : ''}</td>
+                  <td>
+                    {chiTieu.nhomchitieuNhomChiTieuCode ? (
+                      <Link to={`nhom-chi-tieu/${chiTieu.nhomchitieuId}`}>{chiTieu.nhomchitieuNhomChiTieuCode}</Link>
+                    ) : (
+                      ''
+                    )}
+                  </td>
                   <td className="text-right">
                     <div className="btn-group flex-btn-group-container">
                       <Button tag={Link} to={`${match.url}/${chiTieu.id}`} color="info" size="sm">

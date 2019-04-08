@@ -49,7 +49,7 @@ export class ChiTieuDetail extends React.Component<IChiTieuDetailProps> {
             <dt>
               <Translate contentKey="gatewayApp.commonChiTieu.nhomchitieu">Nhomchitieu</Translate>
             </dt>
-            <dd>{chiTieuEntity.nhomchitieuId ? chiTieuEntity.nhomchitieuId : ''}</dd>
+            <dd>{chiTieuEntity.nhomchitieuNhomChiTieuCode ? chiTieuEntity.nhomchitieuNhomChiTieuCode : ''}</dd>
           </dl>
           <Button tag={Link} to="/entity/chi-tieu" replace color="info">
             <FontAwesomeIcon icon="arrow-left" />{' '}

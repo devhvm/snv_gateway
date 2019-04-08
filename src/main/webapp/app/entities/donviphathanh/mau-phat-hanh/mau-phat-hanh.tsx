@@ -96,7 +96,13 @@ export class MauPhatHanh extends React.Component<IMauPhatHanhProps, IMauPhatHanh
                   <td>
                     <Translate contentKey={`gatewayApp.ReportStatus.${mauPhatHanh.status}`} />
                   </td>
-                  <td>{mauPhatHanh.phamviId ? <Link to={`pham-vi/${mauPhatHanh.phamviId}`}>{mauPhatHanh.phamviId}</Link> : ''}</td>
+                  <td>
+                    {mauPhatHanh.phamviMauPhatHanhCode ? (
+                      <Link to={`pham-vi/${mauPhatHanh.phamviId}`}>{mauPhatHanh.phamviMauPhatHanhCode}</Link>
+                    ) : (
+                      ''
+                    )}
+                  </td>
                   <td className="text-right">
                     <div className="btn-group flex-btn-group-container">
                       <Button tag={Link} to={`${match.url}/${mauPhatHanh.id}`} color="info" size="sm">

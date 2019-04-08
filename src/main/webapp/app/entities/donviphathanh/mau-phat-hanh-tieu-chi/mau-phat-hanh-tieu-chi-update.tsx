@@ -118,7 +118,7 @@ export class MauPhatHanhTieuChiUpdate extends React.Component<IMauPhatHanhTieuCh
                   </AvInput>
                 </AvGroup>
                 <AvGroup>
-                  <Label for="mauphathanh.id">
+                  <Label for="mauphathanh.mauPhatHanhCode">
                     <Translate contentKey="gatewayApp.donviphathanhMauPhatHanhTieuChi.mauphathanh">Mauphathanh</Translate>
                   </Label>
                   <AvInput id="mau-phat-hanh-tieu-chi-mauphathanh" type="select" className="form-control" name="mauphathanhId">
@@ -126,7 +126,7 @@ export class MauPhatHanhTieuChiUpdate extends React.Component<IMauPhatHanhTieuCh
                     {mauPhatHanhs
                       ? mauPhatHanhs.map(otherEntity => (
                           <option value={otherEntity.id} key={otherEntity.id}>
-                            {otherEntity.id}
+                            {otherEntity.mauPhatHanhCode}
                           </option>
                         ))
                       : null}

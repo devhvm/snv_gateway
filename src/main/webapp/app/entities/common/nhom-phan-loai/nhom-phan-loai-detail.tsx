@@ -49,7 +49,7 @@ export class NhomPhanLoaiDetail extends React.Component<INhomPhanLoaiDetailProps
             <dt>
               <Translate contentKey="gatewayApp.commonNhomPhanLoai.donvitinh">Donvitinh</Translate>
             </dt>
-            <dd>{nhomPhanLoaiEntity.donvitinhId ? nhomPhanLoaiEntity.donvitinhId : ''}</dd>
+            <dd>{nhomPhanLoaiEntity.donvitinhDonViTinhCode ? nhomPhanLoaiEntity.donvitinhDonViTinhCode : ''}</dd>
           </dl>
           <Button tag={Link} to="/entity/nhom-phan-loai" replace color="info">
             <FontAwesomeIcon icon="arrow-left" />{' '}

@@ -49,7 +49,7 @@ export class DoiTuongDetail extends React.Component<IDoiTuongDetailProps> {
             <dt>
               <Translate contentKey="gatewayApp.commonDoiTuong.nhomphanloai">Nhomphanloai</Translate>
             </dt>
-            <dd>{doiTuongEntity.nhomphanloaiId ? doiTuongEntity.nhomphanloaiId : ''}</dd>
+            <dd>{doiTuongEntity.nhomphanloaiNhomPhanLoaiCode ? doiTuongEntity.nhomphanloaiNhomPhanLoaiCode : ''}</dd>
           </dl>
           <Button tag={Link} to="/entity/doi-tuong" replace color="info">
             <FontAwesomeIcon icon="arrow-left" />{' '}

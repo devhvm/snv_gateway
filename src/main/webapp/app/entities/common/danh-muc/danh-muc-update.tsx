@@ -144,7 +144,7 @@ export class DanhMucUpdate extends React.Component<IDanhMucUpdateProps, IDanhMuc
                   </AvInput>
                 </AvGroup>
                 <AvGroup>
-                  <Label for="nhomdanhmuc.id">
+                  <Label for="nhomdanhmuc.nhomDanhMucCode">
                     <Translate contentKey="gatewayApp.commonDanhMuc.nhomdanhmuc">Nhomdanhmuc</Translate>
                   </Label>
                   <AvInput id="danh-muc-nhomdanhmuc" type="select" className="form-control" name="nhomdanhmucId">
@@ -152,7 +152,7 @@ export class DanhMucUpdate extends React.Component<IDanhMucUpdateProps, IDanhMuc
                     {nhomDanhMucs
                       ? nhomDanhMucs.map(otherEntity => (
                           <option value={otherEntity.id} key={otherEntity.id}>
-                            {otherEntity.id}
+                            {otherEntity.nhomDanhMucCode}
                           </option>
                         ))
                       : null}

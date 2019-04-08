@@ -14,7 +14,7 @@
             "otherEntityName": "mauPhatHanh",
             "otherEntityRelationshipName": "mauphathanhtieuchi",
             "relationshipName": "mauphathanh",
-            "otherEntityField": "id"
+            "otherEntityField": "mauPhatHanhCode"
         }
     ],
     "changelogDate": "20190405140721",

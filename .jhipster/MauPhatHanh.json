@@ -30,7 +30,7 @@
             "otherEntityName": "phamVi",
             "otherEntityRelationshipName": "mauPhatHanh",
             "relationshipName": "phamvi",
-            "otherEntityField": "id",
+            "otherEntityField": "mauPhatHanhCode",
             "ownerSide": true
         },
         {

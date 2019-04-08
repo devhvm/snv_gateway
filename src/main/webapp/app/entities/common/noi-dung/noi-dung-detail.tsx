@@ -43,7 +43,7 @@ export class NoiDungDetail extends React.Component<INoiDungDetailProps> {
             <dt>
               <Translate contentKey="gatewayApp.commonNoiDung.nhomnoidung">Nhomnoidung</Translate>
             </dt>
-            <dd>{noiDungEntity.nhomnoidungId ? noiDungEntity.nhomnoidungId : ''}</dd>
+            <dd>{noiDungEntity.nhomnoidungNhomNoiDungCode ? noiDungEntity.nhomnoidungNhomNoiDungCode : ''}</dd>
           </dl>
           <Button tag={Link} to="/entity/noi-dung" replace color="info">
             <FontAwesomeIcon icon="arrow-left" />{' '}

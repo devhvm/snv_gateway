@@ -91,7 +91,13 @@ export class NoiDung extends React.Component<INoiDungProps, INoiDungState> {
                   <td>
                     <Translate contentKey={`gatewayApp.Status.${noiDung.status}`} />
                   </td>
-                  <td>{noiDung.nhomnoidungId ? <Link to={`nhom-noi-dung/${noiDung.nhomnoidungId}`}>{noiDung.nhomnoidungId}</Link> : ''}</td>
+                  <td>
+                    {noiDung.nhomnoidungNhomNoiDungCode ? (
+                      <Link to={`nhom-noi-dung/${noiDung.nhomnoidungId}`}>{noiDung.nhomnoidungNhomNoiDungCode}</Link>
+                    ) : (
+                      ''
+                    )}
+                  </td>
                   <td className="text-right">
                     <div className="btn-group flex-btn-group-container">
                       <Button tag={Link} to={`${match.url}/${noiDung.id}`} color="info" size="sm">

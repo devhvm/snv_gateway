@@ -131,7 +131,7 @@ export class NoiDungUpdate extends React.Component<INoiDungUpdateProps, INoiDung
                   </AvInput>
                 </AvGroup>
                 <AvGroup>
-                  <Label for="nhomnoidung.id">
+                  <Label for="nhomnoidung.nhomNoiDungCode">
                     <Translate contentKey="gatewayApp.commonNoiDung.nhomnoidung">Nhomnoidung</Translate>
                   </Label>
                   <AvInput id="noi-dung-nhomnoidung" type="select" className="form-control" name="nhomnoidungId">
@@ -139,7 +139,7 @@ export class NoiDungUpdate extends React.Component<INoiDungUpdateProps, INoiDung
                     {nhomNoiDungs
                       ? nhomNoiDungs.map(otherEntity => (
                           <option value={otherEntity.id} key={otherEntity.id}>
-                            {otherEntity.id}
+                            {otherEntity.nhomNoiDungCode}
                           </option>
                         ))
                       : null}

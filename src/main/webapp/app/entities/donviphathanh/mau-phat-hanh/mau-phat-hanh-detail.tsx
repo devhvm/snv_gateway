@@ -49,7 +49,7 @@ export class MauPhatHanhDetail extends React.Component<IMauPhatHanhDetailProps> 
             <dt>
               <Translate contentKey="gatewayApp.donviphathanhMauPhatHanh.phamvi">Phamvi</Translate>
             </dt>
-            <dd>{mauPhatHanhEntity.phamviId ? mauPhatHanhEntity.phamviId : ''}</dd>
+            <dd>{mauPhatHanhEntity.phamviMauPhatHanhCode ? mauPhatHanhEntity.phamviMauPhatHanhCode : ''}</dd>
           </dl>
           <Button tag={Link} to="/entity/mau-phat-hanh" replace color="info">
             <FontAwesomeIcon icon="arrow-left" />{' '}

@@ -140,7 +140,7 @@ export class TieuChiUpdate extends React.Component<ITieuChiUpdateProps, ITieuChi
                   </AvInput>
                 </AvGroup>
                 <AvGroup>
-                  <Label for="kycongbo.id">
+                  <Label for="kycongbo.kyCongBoCode">
                     <Translate contentKey="gatewayApp.donviphathanhTieuChi.kycongbo">Kycongbo</Translate>
                   </Label>
                   <AvInput id="tieu-chi-kycongbo" type="select" className="form-control" name="kycongboId">
@@ -148,7 +148,7 @@ export class TieuChiUpdate extends React.Component<ITieuChiUpdateProps, ITieuChi
                     {kyCongBos
                       ? kyCongBos.map(otherEntity => (
                           <option value={otherEntity.id} key={otherEntity.id}>
-                            {otherEntity.id}
+                            {otherEntity.kyCongBoCode}
                           </option>
                         ))
                       : null}
