@@ -28,7 +28,7 @@
         {
             "relationshipType": "one-to-one",
             "otherEntityName": "phamVi",
-            "otherEntityRelationshipName": "mauPhatHanh",
+            "otherEntityRelationshipName": "mauphathanh",
             "relationshipName": "phamvi",
             "otherEntityField": "mauPhatHanhCode",
             "ownerSide": true

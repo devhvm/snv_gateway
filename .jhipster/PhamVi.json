@@ -16,7 +16,15 @@
             ]
         }
     ],
-    "relationships": [],
+    "relationships": [
+        {
+            "relationshipType": "one-to-one",
+            "otherEntityName": "mauPhatHanh",
+            "otherEntityRelationshipName": "phamvi",
+            "relationshipName": "mauphathanh",
+            "ownerSide": false
+        }
+    ],
     "changelogDate": "20190405140725",
     "entityTableName": "pham_vi",
     "dto": "mapstruct",
