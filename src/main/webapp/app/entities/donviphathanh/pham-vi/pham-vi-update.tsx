@@ -8,8 +8,6 @@ import { Translate, translate, ICrudGetAction, ICrudGetAllAction, ICrudPutAction
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { IRootState } from 'app/shared/reducers';
 
-import { IMauPhatHanh } from 'app/shared/model/donviphathanh/mau-phat-hanh.model';
-import { getEntities as getMauPhatHanhs } from 'app/entities/donviphathanh/mau-phat-hanh/mau-phat-hanh.reducer';
 import { getEntity, updateEntity, createEntity, reset } from './pham-vi.reducer';
 import { IPhamVi } from 'app/shared/model/donviphathanh/pham-vi.model';
 // tslint:disable-next-line:no-unused-variable
@@ -20,14 +18,12 @@ export interface IPhamViUpdateProps extends StateProps, DispatchProps, RouteComp
 
 export interface IPhamViUpdateState {
   isNew: boolean;
-  mauphathanhId: string;
 }
 
 export class PhamViUpdate extends React.Component<IPhamViUpdateProps, IPhamViUpdateState> {
   constructor(props) {
     super(props);
     this.state = {
-      mauphathanhId: '0',
       isNew: !this.props.match.params || !this.props.match.params.id
     };
   }
@@ -44,8 +40,6 @@ export class PhamViUpdate extends React.Component<IPhamViUpdateProps, IPhamViUpd
     } else {
       this.props.getEntity(this.props.match.params.id);
     }
-
-    this.props.getMauPhatHanhs();
   }
 
   saveEntity = (event, errors, values) => {
@@ -69,7 +63,7 @@ export class PhamViUpdate extends React.Component<IPhamViUpdateProps, IPhamViUpd
   };
 
   render() {
-    const { phamViEntity, mauPhatHanhs, loading, updating } = this.props;
+    const { phamViEntity, loading, updating } = this.props;
     const { isNew } = this.state;
 
     return (
@@ -144,7 +138,6 @@ export class PhamViUpdate extends React.Component<IPhamViUpdateProps, IPhamViUpd
 }
 
 const mapStateToProps = (storeState: IRootState) => ({
-  mauPhatHanhs: storeState.mauPhatHanh.entities,
   phamViEntity: storeState.phamVi.entity,
   loading: storeState.phamVi.loading,
   updating: storeState.phamVi.updating,
@@ -152,7 +145,6 @@ const mapStateToProps = (storeState: IRootState) => ({
 });
 
 const mapDispatchToProps = {
-  getMauPhatHanhs,
   getEntity,
   updateEntity,
   createEntity,

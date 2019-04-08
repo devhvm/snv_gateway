@@ -153,7 +153,7 @@ export class MauPhatHanhUpdate extends React.Component<IMauPhatHanhUpdateProps, 
                   </AvInput>
                 </AvGroup>
                 <AvGroup>
-                  <Label for="phamvi.mauPhatHanhCode">
+                  <Label for="phamvi.id">
                     <Translate contentKey="gatewayApp.donviphathanhMauPhatHanh.phamvi">Phamvi</Translate>
                   </Label>
                   <AvInput id="mau-phat-hanh-phamvi" type="select" className="form-control" name="phamviId">
@@ -161,7 +161,7 @@ export class MauPhatHanhUpdate extends React.Component<IMauPhatHanhUpdateProps, 
                     {phamVis
                       ? phamVis.map(otherEntity => (
                           <option value={otherEntity.id} key={otherEntity.id}>
-                            {otherEntity.mauPhatHanhCode}
+                            {otherEntity.id}
                           </option>
                         ))
                       : null}
