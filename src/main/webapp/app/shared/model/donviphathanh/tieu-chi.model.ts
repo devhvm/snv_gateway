@@ -12,6 +12,7 @@ export const enum ReportStatus {
 
 export interface ITieuChi {
   id?: number;
+  chiTieuCode?: string;
   name?: string;
   status?: ReportStatus;
   tieuchibaocaos?: ITieuChiBaoCao[];

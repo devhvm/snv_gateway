@@ -29,6 +29,12 @@ export class TieuChiDetail extends React.Component<ITieuChiDetailProps> {
           </h2>
           <dl className="jh-entity-details">
             <dt>
+              <span id="chiTieuCode">
+                <Translate contentKey="gatewayApp.donviphathanhTieuChi.chiTieuCode">Chi Tieu Code</Translate>
+              </span>
+            </dt>
+            <dd>{tieuChiEntity.chiTieuCode}</dd>
+            <dt>
               <span id="name">
                 <Translate contentKey="gatewayApp.donviphathanhTieuChi.name">Name</Translate>
               </span>

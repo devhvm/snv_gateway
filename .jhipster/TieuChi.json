@@ -2,6 +2,13 @@
     "name": "TieuChi",
     "fields": [
         {
+            "fieldName": "chiTieuCode",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
             "fieldName": "name",
             "fieldType": "String",
             "fieldValidateRules": [

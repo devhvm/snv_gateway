@@ -4,12 +4,21 @@ export default class TieuChiUpdatePage {
   pageTitle: ElementFinder = element(by.id('gatewayApp.donviphathanhTieuChi.home.createOrEditLabel'));
   saveButton: ElementFinder = element(by.id('save-entity'));
   cancelButton: ElementFinder = element(by.id('cancel-save'));
+  chiTieuCodeInput: ElementFinder = element(by.css('input#tieu-chi-chiTieuCode'));
   nameInput: ElementFinder = element(by.css('input#tieu-chi-name'));
   statusSelect: ElementFinder = element(by.css('select#tieu-chi-status'));
   kycongboSelect: ElementFinder = element(by.css('select#tieu-chi-kycongbo'));
 
   getPageTitle() {
     return this.pageTitle;
+  }
+
+  async setChiTieuCodeInput(chiTieuCode) {
+    await this.chiTieuCodeInput.sendKeys(chiTieuCode);
+  }
+
+  async getChiTieuCodeInput() {
+    return this.chiTieuCodeInput.getAttribute('value');
   }
 
   async setNameInput(name) {

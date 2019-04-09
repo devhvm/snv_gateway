@@ -45,6 +45,8 @@ describe('TieuChi e2e test', () => {
   it('should create and save TieuChis', async () => {
     const nbButtonsBeforeCreate = await tieuChiComponentsPage.countDeleteButtons();
 
+    await tieuChiUpdatePage.setChiTieuCodeInput('chiTieuCode');
+    expect(await tieuChiUpdatePage.getChiTieuCodeInput()).to.match(/chiTieuCode/);
     await tieuChiUpdatePage.setNameInput('name');
     expect(await tieuChiUpdatePage.getNameInput()).to.match(/name/);
     await tieuChiUpdatePage.statusSelectLastOption();

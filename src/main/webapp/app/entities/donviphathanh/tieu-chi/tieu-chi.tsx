@@ -67,6 +67,10 @@ export class TieuChi extends React.Component<ITieuChiProps, ITieuChiState> {
                 <th className="hand" onClick={this.sort('id')}>
                   <Translate contentKey="global.field.id">ID</Translate> <FontAwesomeIcon icon="sort" />
                 </th>
+                <th className="hand" onClick={this.sort('chiTieuCode')}>
+                  <Translate contentKey="gatewayApp.donviphathanhTieuChi.chiTieuCode">Chi Tieu Code</Translate>{' '}
+                  <FontAwesomeIcon icon="sort" />
+                </th>
                 <th className="hand" onClick={this.sort('name')}>
                   <Translate contentKey="gatewayApp.donviphathanhTieuChi.name">Name</Translate> <FontAwesomeIcon icon="sort" />
                 </th>
@@ -87,6 +91,7 @@ export class TieuChi extends React.Component<ITieuChiProps, ITieuChiState> {
                       {tieuChi.id}
                     </Button>
                   </td>
+                  <td>{tieuChi.chiTieuCode}</td>
                   <td>{tieuChi.name}</td>
                   <td>
                     <Translate contentKey={`gatewayApp.ReportStatus.${tieuChi.status}`} />

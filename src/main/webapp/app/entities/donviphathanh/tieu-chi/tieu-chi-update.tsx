@@ -96,6 +96,19 @@ export class TieuChiUpdate extends React.Component<ITieuChiUpdateProps, ITieuChi
                   </AvGroup>
                 ) : null}
                 <AvGroup>
+                  <Label id="chiTieuCodeLabel" for="chiTieuCode">
+                    <Translate contentKey="gatewayApp.donviphathanhTieuChi.chiTieuCode">Chi Tieu Code</Translate>
+                  </Label>
+                  <AvField
+                    id="tieu-chi-chiTieuCode"
+                    type="text"
+                    name="chiTieuCode"
+                    validate={{
+                      required: { value: true, errorMessage: translate('entity.validation.required') }
+                    }}
+                  />
+                </AvGroup>
+                <AvGroup>
                   <Label id="nameLabel" for="name">
                     <Translate contentKey="gatewayApp.donviphathanhTieuChi.name">Name</Translate>
                   </Label>

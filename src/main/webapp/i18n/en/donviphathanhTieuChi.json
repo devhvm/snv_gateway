@@ -12,6 +12,7 @@
       "detail": {
         "title": "Tieu Chi"
       },
+      "chiTieuCode": "Chi Tieu Code",
       "name": "Name",
       "status": "Status",
       "tieuchibaocao": "Tieuchibaocao",
