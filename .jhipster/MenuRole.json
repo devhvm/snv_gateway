@@ -1,0 +1,47 @@
+{
+    "name": "MenuRole",
+    "fields": [
+        {
+            "fieldName": "menuItemRoleCode",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "role",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "name",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "menuItem",
+            "otherEntityRelationshipName": "menurole",
+            "relationshipName": "menuItem",
+            "otherEntityField": "menuItemCode"
+        }
+    ],
+    "changelogDate": "20190409161527",
+    "entityTableName": "menu_role",
+    "dto": "mapstruct",
+    "pagination": "pagination",
+    "service": "serviceClass",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "phanquyenchucnang",
+    "applications": [
+        "phanquyenchucnang"
+    ],
+    "microserviceName": "phanquyenchucnang"
+}

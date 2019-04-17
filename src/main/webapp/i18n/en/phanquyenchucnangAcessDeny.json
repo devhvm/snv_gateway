@@ -1,0 +1,26 @@
+{
+  "gatewayApp": {
+    "phanquyenchucnangAcessDeny": {
+      "home": {
+        "title": "Acess Denies",
+        "createLabel": "Create a new Acess Deny",
+        "createOrEditLabel": "Create or edit a Acess Deny"
+      },
+      "delete": {
+        "question": "Are you sure you want to delete Acess Deny {{ id }}?"
+      },
+      "detail": {
+        "title": "Acess Deny"
+      },
+      "userId": "User Id",
+      "menuItem": "Menu Item"
+    }
+  },
+  "phanquyenchucnangApp": {
+    "phanquyenchucnangAcessDeny": {
+      "created": "A new Acess Deny is created with identifier {{ param }}",
+      "updated": "A Acess Deny is updated with identifier {{ param }}",
+      "deleted": "A Acess Deny is deleted with identifier {{ param }}"
+    }
+  }
+}

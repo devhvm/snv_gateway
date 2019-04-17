@@ -83,6 +83,31 @@ export const EntitiesMenu = props => (
       &nbsp;
       <Translate contentKey="global.menu.entities.donviphathanhPhamVi" />
     </DropdownItem>
+    <DropdownItem tag={Link} to="/entity/menu">
+      <FontAwesomeIcon icon="asterisk" fixedWidth />
+      &nbsp;
+      <Translate contentKey="global.menu.entities.phanquyenchucnangMenu" />
+    </DropdownItem>
+    <DropdownItem tag={Link} to="/entity/screen">
+      <FontAwesomeIcon icon="asterisk" fixedWidth />
+      &nbsp;
+      <Translate contentKey="global.menu.entities.phanquyenchucnangScreen" />
+    </DropdownItem>
+    <DropdownItem tag={Link} to="/entity/acess-deny">
+      <FontAwesomeIcon icon="asterisk" fixedWidth />
+      &nbsp;
+      <Translate contentKey="global.menu.entities.phanquyenchucnangAcessDeny" />
+    </DropdownItem>
+    <DropdownItem tag={Link} to="/entity/menu-role">
+      <FontAwesomeIcon icon="asterisk" fixedWidth />
+      &nbsp;
+      <Translate contentKey="global.menu.entities.phanquyenchucnangMenuRole" />
+    </DropdownItem>
+    <DropdownItem tag={Link} to="/entity/menu-item">
+      <FontAwesomeIcon icon="asterisk" fixedWidth />
+      &nbsp;
+      <Translate contentKey="global.menu.entities.phanquyenchucnangMenuItem" />
+    </DropdownItem>
     {/* jhipster-needle-add-entity-to-menu - JHipster will add entities to the menu here */}
   </NavDropdown>
 );

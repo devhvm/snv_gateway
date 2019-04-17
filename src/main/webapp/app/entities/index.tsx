@@ -19,6 +19,11 @@ import TieuChi from './donviphathanh/tieu-chi';
 import KyCongBo from './donviphathanh/ky-cong-bo';
 import TieuChiBaoCao from './donviphathanh/tieu-chi-bao-cao';
 import PhamVi from './donviphathanh/pham-vi';
+import Menu from './phanquyenchucnang/menu';
+import Screen from './phanquyenchucnang/screen';
+import AcessDeny from './phanquyenchucnang/acess-deny';
+import MenuRole from './phanquyenchucnang/menu-role';
+import MenuItem from './phanquyenchucnang/menu-item';
 /* jhipster-needle-add-route-import - JHipster will add routes here */
 
 const Routes = ({ match }) => (
@@ -40,6 +45,11 @@ const Routes = ({ match }) => (
       <ErrorBoundaryRoute path={`${match.url}/ky-cong-bo`} component={KyCongBo} />
       <ErrorBoundaryRoute path={`${match.url}/tieu-chi-bao-cao`} component={TieuChiBaoCao} />
       <ErrorBoundaryRoute path={`${match.url}/pham-vi`} component={PhamVi} />
+      <ErrorBoundaryRoute path={`${match.url}/menu`} component={Menu} />
+      <ErrorBoundaryRoute path={`${match.url}/screen`} component={Screen} />
+      <ErrorBoundaryRoute path={`${match.url}/acess-deny`} component={AcessDeny} />
+      <ErrorBoundaryRoute path={`${match.url}/menu-role`} component={MenuRole} />
+      <ErrorBoundaryRoute path={`${match.url}/menu-item`} component={MenuItem} />
       {/* jhipster-needle-add-route-path - JHipster will routes here */}
     </Switch>
   </div>

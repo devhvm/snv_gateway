@@ -72,6 +72,26 @@ import tieuChiBaoCao, {
 import phamVi, {
   PhamViState
 } from 'app/entities/donviphathanh/pham-vi/pham-vi.reducer';
+// prettier-ignore
+import menu, {
+  MenuState
+} from 'app/entities/phanquyenchucnang/menu/menu.reducer';
+// prettier-ignore
+import screen, {
+  ScreenState
+} from 'app/entities/phanquyenchucnang/screen/screen.reducer';
+// prettier-ignore
+import acessDeny, {
+  AcessDenyState
+} from 'app/entities/phanquyenchucnang/acess-deny/acess-deny.reducer';
+// prettier-ignore
+import menuRole, {
+  MenuRoleState
+} from 'app/entities/phanquyenchucnang/menu-role/menu-role.reducer';
+// prettier-ignore
+import menuItem, {
+  MenuItemState
+} from 'app/entities/phanquyenchucnang/menu-item/menu-item.reducer';
 /* jhipster-needle-add-reducer-import - JHipster will add reducer here */
 
 export interface IRootState {
@@ -100,6 +120,11 @@ export interface IRootState {
   readonly kyCongBo: KyCongBoState;
   readonly tieuChiBaoCao: TieuChiBaoCaoState;
   readonly phamVi: PhamViState;
+  readonly menu: MenuState;
+  readonly screen: ScreenState;
+  readonly acessDeny: AcessDenyState;
+  readonly menuRole: MenuRoleState;
+  readonly menuItem: MenuItemState;
   /* jhipster-needle-add-reducer-type - JHipster will add reducer type here */
   readonly loadingBar: any;
 }
@@ -130,6 +155,11 @@ const rootReducer = combineReducers<IRootState>({
   kyCongBo,
   tieuChiBaoCao,
   phamVi,
+  menu,
+  screen,
+  acessDeny,
+  menuRole,
+  menuItem,
   /* jhipster-needle-add-reducer-combine - JHipster will add reducer here */
   loadingBar
 });

@@ -1,0 +1,31 @@
+{
+  "gatewayApp": {
+    "phanquyenchucnangMenuItem": {
+      "home": {
+        "title": "Menu Items",
+        "createLabel": "Create a new Menu Item",
+        "createOrEditLabel": "Create or edit a Menu Item"
+      },
+      "delete": {
+        "question": "Are you sure you want to delete Menu Item {{ id }}?"
+      },
+      "detail": {
+        "title": "Menu Item"
+      },
+      "menuItemCode": "Menu Item Code",
+      "name": "Name",
+      "icon": "Icon",
+      "acessdeny": "Acessdeny",
+      "menurole": "Menurole",
+      "screen": "Screen",
+      "menu": "Menu"
+    }
+  },
+  "phanquyenchucnangApp": {
+    "phanquyenchucnangMenuItem": {
+      "created": "A new Menu Item is created with identifier {{ param }}",
+      "updated": "A Menu Item is updated with identifier {{ param }}",
+      "deleted": "A Menu Item is deleted with identifier {{ param }}"
+    }
+  }
+}

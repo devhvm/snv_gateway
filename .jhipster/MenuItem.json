@@ -1,0 +1,66 @@
+{
+    "name": "MenuItem",
+    "fields": [
+        {
+            "fieldName": "menuItemCode",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "name",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "icon",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "acessDeny",
+            "otherEntityRelationshipName": "menuItem",
+            "relationshipName": "acessdeny"
+        },
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "menuRole",
+            "otherEntityRelationshipName": "menuItem",
+            "relationshipName": "menurole"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "screen",
+            "otherEntityRelationshipName": "menu",
+            "relationshipName": "screen",
+            "otherEntityField": "screenCode"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "menu",
+            "otherEntityRelationshipName": "menuItem",
+            "relationshipName": "menu",
+            "otherEntityField": "menuCode"
+        }
+    ],
+    "changelogDate": "20190416220519",
+    "entityTableName": "menu_item",
+    "dto": "mapstruct",
+    "pagination": "pagination",
+    "service": "serviceClass",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "phanquyenchucnang",
+    "applications": [
+        "phanquyenchucnang"
+    ],
+    "microserviceName": "phanquyenchucnang"
+}

@@ -1,0 +1,28 @@
+{
+  "gatewayApp": {
+    "phanquyenchucnangMenuRole": {
+      "home": {
+        "title": "Menu Roles",
+        "createLabel": "Create a new Menu Role",
+        "createOrEditLabel": "Create or edit a Menu Role"
+      },
+      "delete": {
+        "question": "Are you sure you want to delete Menu Role {{ id }}?"
+      },
+      "detail": {
+        "title": "Menu Role"
+      },
+      "menuItemRoleCode": "Menu Item Role Code",
+      "role": "Role",
+      "name": "Name",
+      "menuItem": "Menu Item"
+    }
+  },
+  "phanquyenchucnangApp": {
+    "phanquyenchucnangMenuRole": {
+      "created": "A new Menu Role is created with identifier {{ param }}",
+      "updated": "A Menu Role is updated with identifier {{ param }}",
+      "deleted": "A Menu Role is deleted with identifier {{ param }}"
+    }
+  }
+}

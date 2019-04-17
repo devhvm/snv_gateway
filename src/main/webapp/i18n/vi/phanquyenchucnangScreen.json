@@ -1,0 +1,28 @@
+{
+  "gatewayApp": {
+    "phanquyenchucnangScreen": {
+      "home": {
+        "title": "Screens",
+        "createLabel": "Thêm mới một Screen",
+        "createOrEditLabel": "Thêm mới hoặc cập nhật Screen"
+      },
+      "delete": {
+        "question": "Bạn có chắc là muốn xóa Screen {{ id }}?"
+      },
+      "detail": {
+        "title": "Screen"
+      },
+      "screenCode": "Screen Code",
+      "name": "Name",
+      "link": "Link",
+      "menu": "Menu"
+    }
+  },
+  "phanquyenchucnangApp": {
+    "phanquyenchucnangScreen": {
+      "created": "Một Screen mới được tạo với định danh {{ param }}",
+      "updated": "Một Screen cập nhật với định danh {{ param }}",
+      "deleted": "Một Screen đã xóa với định danh {{ param }}"
+    }
+  }
+}

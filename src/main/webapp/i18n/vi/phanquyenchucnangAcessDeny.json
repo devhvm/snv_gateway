@@ -1,0 +1,26 @@
+{
+  "gatewayApp": {
+    "phanquyenchucnangAcessDeny": {
+      "home": {
+        "title": "Acess Denies",
+        "createLabel": "Thêm mới một Acess Deny",
+        "createOrEditLabel": "Thêm mới hoặc cập nhật Acess Deny"
+      },
+      "delete": {
+        "question": "Bạn có chắc là muốn xóa Acess Deny {{ id }}?"
+      },
+      "detail": {
+        "title": "Acess Deny"
+      },
+      "userId": "User Id",
+      "menuItem": "Menu Item"
+    }
+  },
+  "phanquyenchucnangApp": {
+    "phanquyenchucnangAcessDeny": {
+      "created": "Một Acess Deny mới được tạo với định danh {{ param }}",
+      "updated": "Một Acess Deny cập nhật với định danh {{ param }}",
+      "deleted": "Một Acess Deny đã xóa với định danh {{ param }}"
+    }
+  }
+}

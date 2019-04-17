@@ -1,0 +1,28 @@
+{
+  "gatewayApp": {
+    "phanquyenchucnangScreen": {
+      "home": {
+        "title": "Screens",
+        "createLabel": "Create a new Screen",
+        "createOrEditLabel": "Create or edit a Screen"
+      },
+      "delete": {
+        "question": "Are you sure you want to delete Screen {{ id }}?"
+      },
+      "detail": {
+        "title": "Screen"
+      },
+      "screenCode": "Screen Code",
+      "name": "Name",
+      "link": "Link",
+      "menu": "Menu"
+    }
+  },
+  "phanquyenchucnangApp": {
+    "phanquyenchucnangScreen": {
+      "created": "A new Screen is created with identifier {{ param }}",
+      "updated": "A Screen is updated with identifier {{ param }}",
+      "deleted": "A Screen is deleted with identifier {{ param }}"
+    }
+  }
+}

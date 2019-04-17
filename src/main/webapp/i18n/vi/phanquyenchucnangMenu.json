@@ -1,0 +1,28 @@
+{
+  "gatewayApp": {
+    "phanquyenchucnangMenu": {
+      "home": {
+        "title": "Menus",
+        "createLabel": "Thêm mới một Menu",
+        "createOrEditLabel": "Thêm mới hoặc cập nhật Menu"
+      },
+      "delete": {
+        "question": "Bạn có chắc là muốn xóa Menu {{ id }}?"
+      },
+      "detail": {
+        "title": "Menu"
+      },
+      "menuCode": "Menu Code",
+      "name": "Name",
+      "icon": "Icon",
+      "menuItem": "Menu Item"
+    }
+  },
+  "phanquyenchucnangApp": {
+    "phanquyenchucnangMenu": {
+      "created": "Một Menu mới được tạo với định danh {{ param }}",
+      "updated": "Một Menu cập nhật với định danh {{ param }}",
+      "deleted": "Một Menu đã xóa với định danh {{ param }}"
+    }
+  }
+}
