@@ -27,6 +27,9 @@
         "phanquyenchucnangAcessDeny": "Acess Deny",
         "phanquyenchucnangMenuRole": "Menu Role",
         "phanquyenchucnangMenuItem": "Menu Item",
+        "quanlyquytrinhQuyTrinh": "Quy Trinh",
+        "quanlyquytrinhTienTrinh": "Tien Trinh",
+        "quanlyquytrinhTienTrinhXuLy": "Tien Trinh Xu Ly",
         "jhipster-needle-menu-add-entry": "JHipster will add additional entities here (do not translate!)"
       },
       "account": {

@@ -1,0 +1,29 @@
+{
+  "gatewayApp": {
+    "quanlyquytrinhTienTrinh": {
+      "home": {
+        "title": "Tien Trinhs",
+        "createLabel": "Create a new Tien Trinh",
+        "createOrEditLabel": "Create or edit a Tien Trinh"
+      },
+      "delete": {
+        "question": "Are you sure you want to delete Tien Trinh {{ id }}?"
+      },
+      "detail": {
+        "title": "Tien Trinh"
+      },
+      "menuItemCode": "Menu Item Code",
+      "name": "Name",
+      "icon": "Icon",
+      "tienTrinhXuLy": "Tien Trinh Xu Ly",
+      "quyTrinh": "Quy Trinh"
+    }
+  },
+  "quanlyquytrinhApp": {
+    "quanlyquytrinhTienTrinh": {
+      "created": "A new Tien Trinh is created with identifier {{ param }}",
+      "updated": "A Tien Trinh is updated with identifier {{ param }}",
+      "deleted": "A Tien Trinh is deleted with identifier {{ param }}"
+    }
+  }
+}

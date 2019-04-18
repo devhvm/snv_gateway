@@ -1,0 +1,27 @@
+{
+  "gatewayApp": {
+    "quanlyquytrinhTienTrinhXuLy": {
+      "home": {
+        "title": "Tien Trinh Xu Lies",
+        "createLabel": "Create a new Tien Trinh Xu Ly",
+        "createOrEditLabel": "Create or edit a Tien Trinh Xu Ly"
+      },
+      "delete": {
+        "question": "Are you sure you want to delete Tien Trinh Xu Ly {{ id }}?"
+      },
+      "detail": {
+        "title": "Tien Trinh Xu Ly"
+      },
+      "batdauCode": "Batdau Code",
+      "ketThucCode": "Ket Thuc Code",
+      "tienTrinh": "Tien Trinh"
+    }
+  },
+  "quanlyquytrinhApp": {
+    "quanlyquytrinhTienTrinhXuLy": {
+      "created": "A new Tien Trinh Xu Ly is created with identifier {{ param }}",
+      "updated": "A Tien Trinh Xu Ly is updated with identifier {{ param }}",
+      "deleted": "A Tien Trinh Xu Ly is deleted with identifier {{ param }}"
+    }
+  }
+}
