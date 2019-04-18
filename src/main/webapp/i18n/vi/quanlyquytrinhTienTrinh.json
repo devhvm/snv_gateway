@@ -1,0 +1,29 @@
+{
+  "gatewayApp": {
+    "quanlyquytrinhTienTrinh": {
+      "home": {
+        "title": "Tien Trinhs",
+        "createLabel": "Thêm mới một Tien Trinh",
+        "createOrEditLabel": "Thêm mới hoặc cập nhật Tien Trinh"
+      },
+      "delete": {
+        "question": "Bạn có chắc là muốn xóa Tien Trinh {{ id }}?"
+      },
+      "detail": {
+        "title": "Tien Trinh"
+      },
+      "menuItemCode": "Menu Item Code",
+      "name": "Name",
+      "icon": "Icon",
+      "tienTrinhXuLy": "Tien Trinh Xu Ly",
+      "quyTrinh": "Quy Trinh"
+    }
+  },
+  "quanlyquytrinhApp": {
+    "quanlyquytrinhTienTrinh": {
+      "created": "Một Tien Trinh mới được tạo với định danh {{ param }}",
+      "updated": "Một Tien Trinh cập nhật với định danh {{ param }}",
+      "deleted": "Một Tien Trinh đã xóa với định danh {{ param }}"
+    }
+  }
+}

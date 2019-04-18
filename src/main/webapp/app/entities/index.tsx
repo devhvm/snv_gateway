@@ -24,6 +24,9 @@ import Screen from './phanquyenchucnang/screen';
 import AcessDeny from './phanquyenchucnang/acess-deny';
 import MenuRole from './phanquyenchucnang/menu-role';
 import MenuItem from './phanquyenchucnang/menu-item';
+import QuyTrinh from './quanlyquytrinh/quy-trinh';
+import TienTrinh from './quanlyquytrinh/tien-trinh';
+import TienTrinhXuLy from './quanlyquytrinh/tien-trinh-xu-ly';
 /* jhipster-needle-add-route-import - JHipster will add routes here */
 
 const Routes = ({ match }) => (
@@ -50,6 +53,9 @@ const Routes = ({ match }) => (
       <ErrorBoundaryRoute path={`${match.url}/acess-deny`} component={AcessDeny} />
       <ErrorBoundaryRoute path={`${match.url}/menu-role`} component={MenuRole} />
       <ErrorBoundaryRoute path={`${match.url}/menu-item`} component={MenuItem} />
+      <ErrorBoundaryRoute path={`${match.url}/quy-trinh`} component={QuyTrinh} />
+      <ErrorBoundaryRoute path={`${match.url}/tien-trinh`} component={TienTrinh} />
+      <ErrorBoundaryRoute path={`${match.url}/tien-trinh-xu-ly`} component={TienTrinhXuLy} />
       {/* jhipster-needle-add-route-path - JHipster will routes here */}
     </Switch>
   </div>

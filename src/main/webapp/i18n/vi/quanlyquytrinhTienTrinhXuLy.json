@@ -1,0 +1,27 @@
+{
+  "gatewayApp": {
+    "quanlyquytrinhTienTrinhXuLy": {
+      "home": {
+        "title": "Tien Trinh Xu Lies",
+        "createLabel": "Thêm mới một Tien Trinh Xu Ly",
+        "createOrEditLabel": "Thêm mới hoặc cập nhật Tien Trinh Xu Ly"
+      },
+      "delete": {
+        "question": "Bạn có chắc là muốn xóa Tien Trinh Xu Ly {{ id }}?"
+      },
+      "detail": {
+        "title": "Tien Trinh Xu Ly"
+      },
+      "batdauCode": "Batdau Code",
+      "ketThucCode": "Ket Thuc Code",
+      "tienTrinh": "Tien Trinh"
+    }
+  },
+  "quanlyquytrinhApp": {
+    "quanlyquytrinhTienTrinhXuLy": {
+      "created": "Một Tien Trinh Xu Ly mới được tạo với định danh {{ param }}",
+      "updated": "Một Tien Trinh Xu Ly cập nhật với định danh {{ param }}",
+      "deleted": "Một Tien Trinh Xu Ly đã xóa với định danh {{ param }}"
+    }
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "gatewayApp": {
+    "quanlyquytrinhQuyTrinh": {
+      "home": {
+        "title": "Quy Trinhs",
+        "createLabel": "Thêm mới một Quy Trinh",
+        "createOrEditLabel": "Thêm mới hoặc cập nhật Quy Trinh"
+      },
+      "delete": {
+        "question": "Bạn có chắc là muốn xóa Quy Trinh {{ id }}?"
+      },
+      "detail": {
+        "title": "Quy Trinh"
+      },
+      "quyTrinhCode": "Quy Trinh Code",
+      "name": "Name",
+      "icon": "Icon",
+      "tienTrinh": "Tien Trinh"
+    }
+  },
+  "quanlyquytrinhApp": {
+    "quanlyquytrinhQuyTrinh": {
+      "created": "Một Quy Trinh mới được tạo với định danh {{ param }}",
+      "updated": "Một Quy Trinh cập nhật với định danh {{ param }}",
+      "deleted": "Một Quy Trinh đã xóa với định danh {{ param }}"
+    }
+  }
+}

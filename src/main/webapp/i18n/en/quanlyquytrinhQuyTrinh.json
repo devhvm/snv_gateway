@@ -1,0 +1,28 @@
+{
+  "gatewayApp": {
+    "quanlyquytrinhQuyTrinh": {
+      "home": {
+        "title": "Quy Trinhs",
+        "createLabel": "Create a new Quy Trinh",
+        "createOrEditLabel": "Create or edit a Quy Trinh"
+      },
+      "delete": {
+        "question": "Are you sure you want to delete Quy Trinh {{ id }}?"
+      },
+      "detail": {
+        "title": "Quy Trinh"
+      },
+      "quyTrinhCode": "Quy Trinh Code",
+      "name": "Name",
+      "icon": "Icon",
+      "tienTrinh": "Tien Trinh"
+    }
+  },
+  "quanlyquytrinhApp": {
+    "quanlyquytrinhQuyTrinh": {
+      "created": "A new Quy Trinh is created with identifier {{ param }}",
+      "updated": "A Quy Trinh is updated with identifier {{ param }}",
+      "deleted": "A Quy Trinh is deleted with identifier {{ param }}"
+    }
+  }
+}

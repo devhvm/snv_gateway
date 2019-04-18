@@ -92,6 +92,18 @@ import menuRole, {
 import menuItem, {
   MenuItemState
 } from 'app/entities/phanquyenchucnang/menu-item/menu-item.reducer';
+// prettier-ignore
+import quyTrinh, {
+  QuyTrinhState
+} from 'app/entities/quanlyquytrinh/quy-trinh/quy-trinh.reducer';
+// prettier-ignore
+import tienTrinh, {
+  TienTrinhState
+} from 'app/entities/quanlyquytrinh/tien-trinh/tien-trinh.reducer';
+// prettier-ignore
+import tienTrinhXuLy, {
+  TienTrinhXuLyState
+} from 'app/entities/quanlyquytrinh/tien-trinh-xu-ly/tien-trinh-xu-ly.reducer';
 /* jhipster-needle-add-reducer-import - JHipster will add reducer here */
 
 export interface IRootState {
@@ -125,6 +137,9 @@ export interface IRootState {
   readonly acessDeny: AcessDenyState;
   readonly menuRole: MenuRoleState;
   readonly menuItem: MenuItemState;
+  readonly quyTrinh: QuyTrinhState;
+  readonly tienTrinh: TienTrinhState;
+  readonly tienTrinhXuLy: TienTrinhXuLyState;
   /* jhipster-needle-add-reducer-type - JHipster will add reducer type here */
   readonly loadingBar: any;
 }
@@ -160,6 +175,9 @@ const rootReducer = combineReducers<IRootState>({
   acessDeny,
   menuRole,
   menuItem,
+  quyTrinh,
+  tienTrinh,
+  tienTrinhXuLy,
   /* jhipster-needle-add-reducer-combine - JHipster will add reducer here */
   loadingBar
 });
