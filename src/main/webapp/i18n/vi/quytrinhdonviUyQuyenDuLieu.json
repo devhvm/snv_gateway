@@ -1,0 +1,28 @@
+{
+  "gatewayApp": {
+    "quytrinhdonviUyQuyenDuLieu": {
+      "home": {
+        "title": "Uy Quyen Du Lieus",
+        "createLabel": "Thêm mới một Uy Quyen Du Lieu",
+        "createOrEditLabel": "Thêm mới hoặc cập nhật Uy Quyen Du Lieu"
+      },
+      "delete": {
+        "question": "Bạn có chắc là muốn xóa Uy Quyen Du Lieu {{ id }}?"
+      },
+      "detail": {
+        "title": "Uy Quyen Du Lieu"
+      },
+      "fromUserId": "From User Id",
+      "toUserId": "To User Id",
+      "role": "Role",
+      "duLieuTienTrinh": "Du Lieu Tien Trinh"
+    }
+  },
+  "quytrinhdonviApp": {
+    "quytrinhdonviUyQuyenDuLieu": {
+      "created": "Một Uy Quyen Du Lieu mới được tạo với định danh {{ param }}",
+      "updated": "Một Uy Quyen Du Lieu cập nhật với định danh {{ param }}",
+      "deleted": "Một Uy Quyen Du Lieu đã xóa với định danh {{ param }}"
+    }
+  }
+}

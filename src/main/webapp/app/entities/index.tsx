@@ -27,6 +27,11 @@ import MenuItem from './phanquyenchucnang/menu-item';
 import QuyTrinh from './quanlyquytrinh/quy-trinh';
 import TienTrinh from './quanlyquytrinh/tien-trinh';
 import TienTrinhXuLy from './quanlyquytrinh/tien-trinh-xu-ly';
+import CoQuanHanhChinh from './quytrinhdonvi/co-quan-hanh-chinh';
+import QuyTrinhDonVi from './quytrinhdonvi/quy-trinh-don-vi';
+import UyQuyenDuLieu from './quytrinhdonvi/uy-quyen-du-lieu';
+import DuLieuTienTrinh from './quytrinhdonvi/du-lieu-tien-trinh';
+import UyQuyenTienTrinh from './quytrinhdonvi/uy-quyen-tien-trinh';
 /* jhipster-needle-add-route-import - JHipster will add routes here */
 
 const Routes = ({ match }) => (
@@ -56,6 +61,11 @@ const Routes = ({ match }) => (
       <ErrorBoundaryRoute path={`${match.url}/quy-trinh`} component={QuyTrinh} />
       <ErrorBoundaryRoute path={`${match.url}/tien-trinh`} component={TienTrinh} />
       <ErrorBoundaryRoute path={`${match.url}/tien-trinh-xu-ly`} component={TienTrinhXuLy} />
+      <ErrorBoundaryRoute path={`${match.url}/co-quan-hanh-chinh`} component={CoQuanHanhChinh} />
+      <ErrorBoundaryRoute path={`${match.url}/quy-trinh-don-vi`} component={QuyTrinhDonVi} />
+      <ErrorBoundaryRoute path={`${match.url}/uy-quyen-du-lieu`} component={UyQuyenDuLieu} />
+      <ErrorBoundaryRoute path={`${match.url}/du-lieu-tien-trinh`} component={DuLieuTienTrinh} />
+      <ErrorBoundaryRoute path={`${match.url}/uy-quyen-tien-trinh`} component={UyQuyenTienTrinh} />
       {/* jhipster-needle-add-route-path - JHipster will routes here */}
     </Switch>
   </div>

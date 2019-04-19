@@ -123,6 +123,31 @@ export const EntitiesMenu = props => (
       &nbsp;
       <Translate contentKey="global.menu.entities.quanlyquytrinhTienTrinhXuLy" />
     </DropdownItem>
+    <DropdownItem tag={Link} to="/entity/co-quan-hanh-chinh">
+      <FontAwesomeIcon icon="asterisk" fixedWidth />
+      &nbsp;
+      <Translate contentKey="global.menu.entities.quytrinhdonviCoQuanHanhChinh" />
+    </DropdownItem>
+    <DropdownItem tag={Link} to="/entity/quy-trinh-don-vi">
+      <FontAwesomeIcon icon="asterisk" fixedWidth />
+      &nbsp;
+      <Translate contentKey="global.menu.entities.quytrinhdonviQuyTrinhDonVi" />
+    </DropdownItem>
+    <DropdownItem tag={Link} to="/entity/uy-quyen-du-lieu">
+      <FontAwesomeIcon icon="asterisk" fixedWidth />
+      &nbsp;
+      <Translate contentKey="global.menu.entities.quytrinhdonviUyQuyenDuLieu" />
+    </DropdownItem>
+    <DropdownItem tag={Link} to="/entity/du-lieu-tien-trinh">
+      <FontAwesomeIcon icon="asterisk" fixedWidth />
+      &nbsp;
+      <Translate contentKey="global.menu.entities.quytrinhdonviDuLieuTienTrinh" />
+    </DropdownItem>
+    <DropdownItem tag={Link} to="/entity/uy-quyen-tien-trinh">
+      <FontAwesomeIcon icon="asterisk" fixedWidth />
+      &nbsp;
+      <Translate contentKey="global.menu.entities.quytrinhdonviUyQuyenTienTrinh" />
+    </DropdownItem>
     {/* jhipster-needle-add-entity-to-menu - JHipster will add entities to the menu here */}
   </NavDropdown>
 );

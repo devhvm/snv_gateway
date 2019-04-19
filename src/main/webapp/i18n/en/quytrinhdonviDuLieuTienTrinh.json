@@ -1,0 +1,32 @@
+{
+  "gatewayApp": {
+    "quytrinhdonviDuLieuTienTrinh": {
+      "home": {
+        "title": "Du Lieu Tien Trinhs",
+        "createLabel": "Create a new Du Lieu Tien Trinh",
+        "createOrEditLabel": "Create or edit a Du Lieu Tien Trinh"
+      },
+      "delete": {
+        "question": "Are you sure you want to delete Du Lieu Tien Trinh {{ id }}?"
+      },
+      "detail": {
+        "title": "Du Lieu Tien Trinh"
+      },
+      "tienTrinhCode": "Tien Trinh Code",
+      "duLieuCode": "Du Lieu Code",
+      "fromUserId": "From User Id",
+      "toUserId": "To User Id",
+      "level": "Level",
+      "note": "Note",
+      "uyQuyenDuLieu": "Uy Quyen Du Lieu",
+      "quyTrinhDonVi": "Quy Trinh Don Vi"
+    }
+  },
+  "quytrinhdonviApp": {
+    "quytrinhdonviDuLieuTienTrinh": {
+      "created": "A new Du Lieu Tien Trinh is created with identifier {{ param }}",
+      "updated": "A Du Lieu Tien Trinh is updated with identifier {{ param }}",
+      "deleted": "A Du Lieu Tien Trinh is deleted with identifier {{ param }}"
+    }
+  }
+}
