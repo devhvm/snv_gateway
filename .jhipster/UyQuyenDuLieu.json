@@ -1,0 +1,47 @@
+{
+    "name": "UyQuyenDuLieu",
+    "fields": [
+        {
+            "fieldName": "fromUserId",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "toUserId",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "role",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "duLieuTienTrinh",
+            "otherEntityRelationshipName": "uyQuyenDuLieu",
+            "relationshipName": "duLieuTienTrinh",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20190419074726",
+    "entityTableName": "uy_quyen_du_lieu",
+    "dto": "mapstruct",
+    "pagination": "pagination",
+    "service": "serviceClass",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "quytrinhdonvi",
+    "applications": [
+        "quytrinhdonvi"
+    ],
+    "microserviceName": "quytrinhdonvi"
+}

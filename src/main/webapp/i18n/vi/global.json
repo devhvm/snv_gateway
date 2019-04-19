@@ -30,6 +30,11 @@
         "quanlyquytrinhQuyTrinh": "Quy Trinh",
         "quanlyquytrinhTienTrinh": "Tien Trinh",
         "quanlyquytrinhTienTrinhXuLy": "Tien Trinh Xu Ly",
+        "quytrinhdonviCoQuanHanhChinh": "Co Quan Hanh Chinh",
+        "quytrinhdonviQuyTrinhDonVi": "Quy Trinh Don Vi",
+        "quytrinhdonviUyQuyenDuLieu": "Uy Quyen Du Lieu",
+        "quytrinhdonviDuLieuTienTrinh": "Du Lieu Tien Trinh",
+        "quytrinhdonviUyQuyenTienTrinh": "Uy Quyen Tien Trinh",
         "jhipster-needle-menu-add-entry": "JHipster will add additional entities here (do not translate!)"
       },
       "account": {

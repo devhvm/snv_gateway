@@ -1,0 +1,31 @@
+{
+  "gatewayApp": {
+    "quytrinhdonviCoQuanHanhChinh": {
+      "home": {
+        "title": "Co Quan Hanh Chinhs",
+        "createLabel": "Thêm mới một Co Quan Hanh Chinh",
+        "createOrEditLabel": "Thêm mới hoặc cập nhật Co Quan Hanh Chinh"
+      },
+      "delete": {
+        "question": "Bạn có chắc là muốn xóa Co Quan Hanh Chinh {{ id }}?"
+      },
+      "detail": {
+        "title": "Co Quan Hanh Chinh"
+      },
+      "coQuanHanhChinhCode": "Co Quan Hanh Chinh Code",
+      "name": "Name",
+      "description": "Description",
+      "maDinhDanhCode": "Ma Dinh Danh Code",
+      "level": "Level",
+      "status": "Status",
+      "quyTrinhDonVi": "Quy Trinh Don Vi"
+    }
+  },
+  "quytrinhdonviApp": {
+    "quytrinhdonviCoQuanHanhChinh": {
+      "created": "Một Co Quan Hanh Chinh mới được tạo với định danh {{ param }}",
+      "updated": "Một Co Quan Hanh Chinh cập nhật với định danh {{ param }}",
+      "deleted": "Một Co Quan Hanh Chinh đã xóa với định danh {{ param }}"
+    }
+  }
+}
