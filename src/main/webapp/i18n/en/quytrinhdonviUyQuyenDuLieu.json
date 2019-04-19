@@ -1,0 +1,28 @@
+{
+  "gatewayApp": {
+    "quytrinhdonviUyQuyenDuLieu": {
+      "home": {
+        "title": "Uy Quyen Du Lieus",
+        "createLabel": "Create a new Uy Quyen Du Lieu",
+        "createOrEditLabel": "Create or edit a Uy Quyen Du Lieu"
+      },
+      "delete": {
+        "question": "Are you sure you want to delete Uy Quyen Du Lieu {{ id }}?"
+      },
+      "detail": {
+        "title": "Uy Quyen Du Lieu"
+      },
+      "fromUserId": "From User Id",
+      "toUserId": "To User Id",
+      "role": "Role",
+      "quyTrinhDonVi": "Quy Trinh Don Vi"
+    }
+  },
+  "quytrinhdonviApp": {
+    "quytrinhdonviUyQuyenDuLieu": {
+      "created": "A new Uy Quyen Du Lieu is created with identifier {{ param }}",
+      "updated": "A Uy Quyen Du Lieu is updated with identifier {{ param }}",
+      "deleted": "A Uy Quyen Du Lieu is deleted with identifier {{ param }}"
+    }
+  }
+}

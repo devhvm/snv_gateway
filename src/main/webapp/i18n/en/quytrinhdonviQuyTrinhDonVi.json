@@ -1,0 +1,29 @@
+{
+  "gatewayApp": {
+    "quytrinhdonviQuyTrinhDonVi": {
+      "home": {
+        "title": "Quy Trinh Don Vis",
+        "createLabel": "Create a new Quy Trinh Don Vi",
+        "createOrEditLabel": "Create or edit a Quy Trinh Don Vi"
+      },
+      "delete": {
+        "question": "Are you sure you want to delete Quy Trinh Don Vi {{ id }}?"
+      },
+      "detail": {
+        "title": "Quy Trinh Don Vi"
+      },
+      "quyTrinhCode": "Quy Trinh Code",
+      "name": "Name",
+      "duLieuTienTrinh": "Du Lieu Tien Trinh",
+      "uyQuyenTienTrinh": "Uy Quyen Tien Trinh",
+      "coQuanHanhChinh": "Co Quan Hanh Chinh"
+    }
+  },
+  "quytrinhdonviApp": {
+    "quytrinhdonviQuyTrinhDonVi": {
+      "created": "A new Quy Trinh Don Vi is created with identifier {{ param }}",
+      "updated": "A Quy Trinh Don Vi is updated with identifier {{ param }}",
+      "deleted": "A Quy Trinh Don Vi is deleted with identifier {{ param }}"
+    }
+  }
+}

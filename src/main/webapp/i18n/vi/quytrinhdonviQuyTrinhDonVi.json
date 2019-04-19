@@ -1,0 +1,29 @@
+{
+  "gatewayApp": {
+    "quytrinhdonviQuyTrinhDonVi": {
+      "home": {
+        "title": "Quy Trinh Don Vis",
+        "createLabel": "Thêm mới một Quy Trinh Don Vi",
+        "createOrEditLabel": "Thêm mới hoặc cập nhật Quy Trinh Don Vi"
+      },
+      "delete": {
+        "question": "Bạn có chắc là muốn xóa Quy Trinh Don Vi {{ id }}?"
+      },
+      "detail": {
+        "title": "Quy Trinh Don Vi"
+      },
+      "quyTrinhCode": "Quy Trinh Code",
+      "name": "Name",
+      "duLieuTienTrinh": "Du Lieu Tien Trinh",
+      "uyQuyenTienTrinh": "Uy Quyen Tien Trinh",
+      "coQuanHanhChinh": "Co Quan Hanh Chinh"
+    }
+  },
+  "quytrinhdonviApp": {
+    "quytrinhdonviQuyTrinhDonVi": {
+      "created": "Một Quy Trinh Don Vi mới được tạo với định danh {{ param }}",
+      "updated": "Một Quy Trinh Don Vi cập nhật với định danh {{ param }}",
+      "deleted": "Một Quy Trinh Don Vi đã xóa với định danh {{ param }}"
+    }
+  }
+}

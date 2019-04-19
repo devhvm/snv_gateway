@@ -1,0 +1,29 @@
+{
+  "gatewayApp": {
+    "quytrinhdonviUyQuyenTienTrinh": {
+      "home": {
+        "title": "Uy Quyen Tien Trinhs",
+        "createLabel": "Thêm mới một Uy Quyen Tien Trinh",
+        "createOrEditLabel": "Thêm mới hoặc cập nhật Uy Quyen Tien Trinh"
+      },
+      "delete": {
+        "question": "Bạn có chắc là muốn xóa Uy Quyen Tien Trinh {{ id }}?"
+      },
+      "detail": {
+        "title": "Uy Quyen Tien Trinh"
+      },
+      "tienTrinhCode": "Tien Trinh Code",
+      "fromUserId": "From User Id",
+      "toUserId": "To User Id",
+      "role": "Role",
+      "quyTrinhDonVi": "Quy Trinh Don Vi"
+    }
+  },
+  "quytrinhdonviApp": {
+    "quytrinhdonviUyQuyenTienTrinh": {
+      "created": "Một Uy Quyen Tien Trinh mới được tạo với định danh {{ param }}",
+      "updated": "Một Uy Quyen Tien Trinh cập nhật với định danh {{ param }}",
+      "deleted": "Một Uy Quyen Tien Trinh đã xóa với định danh {{ param }}"
+    }
+  }
+}

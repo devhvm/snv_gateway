@@ -72,6 +72,26 @@ import kyCongBo, {
 import tieuChiBaoCao, {
   TieuChiBaoCaoState
 } from 'app/entities/donviphathanh/tieu-chi-bao-cao/tieu-chi-bao-cao.reducer';
+// prettier-ignore
+import coQuanHanhChinh, {
+  CoQuanHanhChinhState
+} from 'app/entities/quytrinhdonvi/co-quan-hanh-chinh/co-quan-hanh-chinh.reducer';
+// prettier-ignore
+import quyTrinhDonVi, {
+  QuyTrinhDonViState
+} from 'app/entities/quytrinhdonvi/quy-trinh-don-vi/quy-trinh-don-vi.reducer';
+// prettier-ignore
+import uyQuyenDuLieu, {
+  UyQuyenDuLieuState
+} from 'app/entities/quytrinhdonvi/uy-quyen-du-lieu/uy-quyen-du-lieu.reducer';
+// prettier-ignore
+import duLieuTienTrinh, {
+  DuLieuTienTrinhState
+} from 'app/entities/quytrinhdonvi/du-lieu-tien-trinh/du-lieu-tien-trinh.reducer';
+// prettier-ignore
+import uyQuyenTienTrinh, {
+  UyQuyenTienTrinhState
+} from 'app/entities/quytrinhdonvi/uy-quyen-tien-trinh/uy-quyen-tien-trinh.reducer';
 /* jhipster-needle-add-reducer-import - JHipster will add reducer here */
 
 export interface IRootState {
@@ -100,6 +120,11 @@ export interface IRootState {
   readonly tieuChi: TieuChiState;
   readonly kyCongBo: KyCongBoState;
   readonly tieuChiBaoCao: TieuChiBaoCaoState;
+  readonly coQuanHanhChinh: CoQuanHanhChinhState;
+  readonly quyTrinhDonVi: QuyTrinhDonViState;
+  readonly uyQuyenDuLieu: UyQuyenDuLieuState;
+  readonly duLieuTienTrinh: DuLieuTienTrinhState;
+  readonly uyQuyenTienTrinh: UyQuyenTienTrinhState;
   /* jhipster-needle-add-reducer-type - JHipster will add reducer type here */
   readonly loadingBar: any;
 }
@@ -130,6 +155,11 @@ const rootReducer = combineReducers<IRootState>({
   tieuChi,
   kyCongBo,
   tieuChiBaoCao,
+  coQuanHanhChinh,
+  quyTrinhDonVi,
+  uyQuyenDuLieu,
+  duLieuTienTrinh,
+  uyQuyenTienTrinh,
   /* jhipster-needle-add-reducer-combine - JHipster will add reducer here */
   loadingBar
 });

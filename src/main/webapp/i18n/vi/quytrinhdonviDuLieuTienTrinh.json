@@ -1,0 +1,32 @@
+{
+  "gatewayApp": {
+    "quytrinhdonviDuLieuTienTrinh": {
+      "home": {
+        "title": "Du Lieu Tien Trinhs",
+        "createLabel": "Thêm mới một Du Lieu Tien Trinh",
+        "createOrEditLabel": "Thêm mới hoặc cập nhật Du Lieu Tien Trinh"
+      },
+      "delete": {
+        "question": "Bạn có chắc là muốn xóa Du Lieu Tien Trinh {{ id }}?"
+      },
+      "detail": {
+        "title": "Du Lieu Tien Trinh"
+      },
+      "tienTrinhCode": "Tien Trinh Code",
+      "duLieuCode": "Du Lieu Code",
+      "fromUserId": "From User Id",
+      "toUserId": "To User Id",
+      "level": "Level",
+      "note": "Note",
+      "uyQuyenDuLieu": "Uy Quyen Du Lieu",
+      "quyTrinhDonVi": "Quy Trinh Don Vi"
+    }
+  },
+  "quytrinhdonviApp": {
+    "quytrinhdonviDuLieuTienTrinh": {
+      "created": "Một Du Lieu Tien Trinh mới được tạo với định danh {{ param }}",
+      "updated": "Một Du Lieu Tien Trinh cập nhật với định danh {{ param }}",
+      "deleted": "Một Du Lieu Tien Trinh đã xóa với định danh {{ param }}"
+    }
+  }
+}
