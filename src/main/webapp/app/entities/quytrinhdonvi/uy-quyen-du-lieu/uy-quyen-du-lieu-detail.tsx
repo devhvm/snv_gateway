@@ -48,9 +48,9 @@ export class UyQuyenDuLieuDetail extends React.Component<IUyQuyenDuLieuDetailPro
             </dt>
             <dd>{uyQuyenDuLieuEntity.role}</dd>
             <dt>
-              <Translate contentKey="gatewayApp.quytrinhdonviUyQuyenDuLieu.quyTrinhDonVi">Quy Trinh Don Vi</Translate>
+              <Translate contentKey="gatewayApp.quytrinhdonviUyQuyenDuLieu.duLieuTienTrinh">Du Lieu Tien Trinh</Translate>
             </dt>
-            <dd>{uyQuyenDuLieuEntity.quyTrinhDonViName ? uyQuyenDuLieuEntity.quyTrinhDonViName : ''}</dd>
+            <dd>{uyQuyenDuLieuEntity.duLieuTienTrinhId ? uyQuyenDuLieuEntity.duLieuTienTrinhId : ''}</dd>
           </dl>
           <Button tag={Link} to="/entity/uy-quyen-du-lieu" replace color="info">
             <FontAwesomeIcon icon="arrow-left" />{' '}

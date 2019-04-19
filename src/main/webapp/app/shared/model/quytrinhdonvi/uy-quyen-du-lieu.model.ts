@@ -3,8 +3,7 @@ export interface IUyQuyenDuLieu {
   fromUserId?: string;
   toUserId?: string;
   role?: string;
-  quyTrinhDonViName?: string;
-  quyTrinhDonViId?: number;
+  duLieuTienTrinhId?: number;
 }
 
 export const defaultValue: Readonly<IUyQuyenDuLieu> = {};

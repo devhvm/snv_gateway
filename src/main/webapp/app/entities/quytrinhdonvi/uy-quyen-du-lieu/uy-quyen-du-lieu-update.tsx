@@ -20,14 +20,14 @@ export interface IUyQuyenDuLieuUpdateProps extends StateProps, DispatchProps, Ro
 
 export interface IUyQuyenDuLieuUpdateState {
   isNew: boolean;
-  quyTrinhDonViId: string;
+  duLieuTienTrinhId: string;
 }
 
 export class UyQuyenDuLieuUpdate extends React.Component<IUyQuyenDuLieuUpdateProps, IUyQuyenDuLieuUpdateState> {
   constructor(props) {
     super(props);
     this.state = {
-      quyTrinhDonViId: '0',
+      duLieuTienTrinhId: '0',
       isNew: !this.props.match.params || !this.props.match.params.id
     };
   }
@@ -137,15 +137,15 @@ export class UyQuyenDuLieuUpdate extends React.Component<IUyQuyenDuLieuUpdatePro
                   />
                 </AvGroup>
                 <AvGroup>
-                  <Label for="quyTrinhDonVi.name">
-                    <Translate contentKey="gatewayApp.quytrinhdonviUyQuyenDuLieu.quyTrinhDonVi">Quy Trinh Don Vi</Translate>
+                  <Label for="duLieuTienTrinh.id">
+                    <Translate contentKey="gatewayApp.quytrinhdonviUyQuyenDuLieu.duLieuTienTrinh">Du Lieu Tien Trinh</Translate>
                   </Label>
-                  <AvInput id="uy-quyen-du-lieu-quyTrinhDonVi" type="select" className="form-control" name="quyTrinhDonViId">
+                  <AvInput id="uy-quyen-du-lieu-duLieuTienTrinh" type="select" className="form-control" name="duLieuTienTrinhId">
                     <option value="" key="0" />
                     {duLieuTienTrinhs
                       ? duLieuTienTrinhs.map(otherEntity => (
                           <option value={otherEntity.id} key={otherEntity.id}>
-                            {otherEntity.name}
+                            {otherEntity.id}
                           </option>
                         ))
                       : null}

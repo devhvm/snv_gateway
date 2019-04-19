@@ -7,7 +7,7 @@ export default class UyQuyenDuLieuUpdatePage {
   fromUserIdInput: ElementFinder = element(by.css('input#uy-quyen-du-lieu-fromUserId'));
   toUserIdInput: ElementFinder = element(by.css('input#uy-quyen-du-lieu-toUserId'));
   roleInput: ElementFinder = element(by.css('input#uy-quyen-du-lieu-role'));
-  quyTrinhDonViSelect: ElementFinder = element(by.css('select#uy-quyen-du-lieu-quyTrinhDonVi'));
+  duLieuTienTrinhSelect: ElementFinder = element(by.css('select#uy-quyen-du-lieu-duLieuTienTrinh'));
 
   getPageTitle() {
     return this.pageTitle;
@@ -37,23 +37,23 @@ export default class UyQuyenDuLieuUpdatePage {
     return this.roleInput.getAttribute('value');
   }
 
-  async quyTrinhDonViSelectLastOption() {
-    await this.quyTrinhDonViSelect
+  async duLieuTienTrinhSelectLastOption() {
+    await this.duLieuTienTrinhSelect
       .all(by.tagName('option'))
       .last()
       .click();
   }
 
-  async quyTrinhDonViSelectOption(option) {
-    await this.quyTrinhDonViSelect.sendKeys(option);
+  async duLieuTienTrinhSelectOption(option) {
+    await this.duLieuTienTrinhSelect.sendKeys(option);
   }
 
-  getQuyTrinhDonViSelect() {
-    return this.quyTrinhDonViSelect;
+  getDuLieuTienTrinhSelect() {
+    return this.duLieuTienTrinhSelect;
   }
 
-  async getQuyTrinhDonViSelectedOption() {
-    return this.quyTrinhDonViSelect.element(by.css('option:checked')).getText();
+  async getDuLieuTienTrinhSelectedOption() {
+    return this.duLieuTienTrinhSelect.element(by.css('option:checked')).getText();
   }
 
   async save() {

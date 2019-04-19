@@ -28,8 +28,8 @@
             "relationshipType": "many-to-one",
             "otherEntityName": "duLieuTienTrinh",
             "otherEntityRelationshipName": "uyQuyenDuLieu",
-            "relationshipName": "quyTrinhDonVi",
-            "otherEntityField": "name"
+            "relationshipName": "duLieuTienTrinh",
+            "otherEntityField": "id"
         }
     ],
     "changelogDate": "20190419074726",
@@ -39,10 +39,9 @@
     "service": "serviceClass",
     "jpaMetamodelFiltering": false,
     "fluentMethods": true,
-    "clientRootFolder": "",
+    "clientRootFolder": "quytrinhdonvi",
     "applications": [
         "quytrinhdonvi"
     ],
-    "microserviceName": "quytrinhdonvi",
-    "enableEntityAudit": true
+    "microserviceName": "quytrinhdonvi"
 }

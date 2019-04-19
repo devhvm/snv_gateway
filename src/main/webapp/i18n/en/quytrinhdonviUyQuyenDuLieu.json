@@ -15,7 +15,7 @@
       "fromUserId": "From User Id",
       "toUserId": "To User Id",
       "role": "Role",
-      "quyTrinhDonVi": "Quy Trinh Don Vi"
+      "duLieuTienTrinh": "Du Lieu Tien Trinh"
     }
   },
   "quytrinhdonviApp": {

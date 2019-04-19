@@ -53,7 +53,7 @@ describe('UyQuyenDuLieu e2e test', () => {
     expect(await uyQuyenDuLieuUpdatePage.getToUserIdInput()).to.match(/toUserId/);
     await uyQuyenDuLieuUpdatePage.setRoleInput('role');
     expect(await uyQuyenDuLieuUpdatePage.getRoleInput()).to.match(/role/);
-    await uyQuyenDuLieuUpdatePage.quyTrinhDonViSelectLastOption();
+    await uyQuyenDuLieuUpdatePage.duLieuTienTrinhSelectLastOption();
     await waitUntilDisplayed(uyQuyenDuLieuUpdatePage.getSaveButton());
     await uyQuyenDuLieuUpdatePage.save();
     await waitUntilHidden(uyQuyenDuLieuUpdatePage.getSaveButton());

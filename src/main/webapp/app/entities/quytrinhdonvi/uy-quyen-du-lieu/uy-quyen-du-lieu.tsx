@@ -79,7 +79,7 @@ export class UyQuyenDuLieu extends React.Component<IUyQuyenDuLieuProps, IUyQuyen
                   <Translate contentKey="gatewayApp.quytrinhdonviUyQuyenDuLieu.role">Role</Translate> <FontAwesomeIcon icon="sort" />
                 </th>
                 <th>
-                  <Translate contentKey="gatewayApp.quytrinhdonviUyQuyenDuLieu.quyTrinhDonVi">Quy Trinh Don Vi</Translate>{' '}
+                  <Translate contentKey="gatewayApp.quytrinhdonviUyQuyenDuLieu.duLieuTienTrinh">Du Lieu Tien Trinh</Translate>{' '}
                   <FontAwesomeIcon icon="sort" />
                 </th>
                 <th />
@@ -97,8 +97,8 @@ export class UyQuyenDuLieu extends React.Component<IUyQuyenDuLieuProps, IUyQuyen
                   <td>{uyQuyenDuLieu.toUserId}</td>
                   <td>{uyQuyenDuLieu.role}</td>
                   <td>
-                    {uyQuyenDuLieu.quyTrinhDonViName ? (
-                      <Link to={`du-lieu-tien-trinh/${uyQuyenDuLieu.quyTrinhDonViId}`}>{uyQuyenDuLieu.quyTrinhDonViName}</Link>
+                    {uyQuyenDuLieu.duLieuTienTrinhId ? (
+                      <Link to={`du-lieu-tien-trinh/${uyQuyenDuLieu.duLieuTienTrinhId}`}>{uyQuyenDuLieu.duLieuTienTrinhId}</Link>
                     ) : (
                       ''
                     )}
