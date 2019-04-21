@@ -53,6 +53,12 @@ describe('MenuItem e2e test', () => {
     expect(await menuItemUpdatePage.getNameInput()).to.match(/name/);
     await menuItemUpdatePage.setIconInput('icon');
     expect(await menuItemUpdatePage.getIconInput()).to.match(/icon/);
+    await menuItemUpdatePage.setParrentCodeInput('parrentCode');
+    expect(await menuItemUpdatePage.getParrentCodeInput()).to.match(/parrentCode/);
+    await menuItemUpdatePage.setOrdNumberInput('5');
+    expect(await menuItemUpdatePage.getOrdNumberInput()).to.eq('5');
+    await menuItemUpdatePage.setLinkInput('link');
+    expect(await menuItemUpdatePage.getLinkInput()).to.match(/link/);
     await menuItemUpdatePage.screenSelectLastOption();
     await menuItemUpdatePage.menuSelectLastOption();
     await waitUntilDisplayed(menuItemUpdatePage.getSaveButton());

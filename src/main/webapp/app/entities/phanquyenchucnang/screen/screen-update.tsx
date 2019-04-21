@@ -115,19 +115,6 @@ export class ScreenUpdate extends React.Component<IScreenUpdateProps, IScreenUpd
                     }}
                   />
                 </AvGroup>
-                <AvGroup>
-                  <Label id="linkLabel" for="link">
-                    <Translate contentKey="gatewayApp.phanquyenchucnangScreen.link">Link</Translate>
-                  </Label>
-                  <AvField
-                    id="screen-link"
-                    type="text"
-                    name="link"
-                    validate={{
-                      required: { value: true, errorMessage: translate('entity.validation.required') }
-                    }}
-                  />
-                </AvGroup>
                 <Button tag={Link} id="cancel-save" to="/entity/screen" replace color="info">
                   <FontAwesomeIcon icon="arrow-left" />
                   &nbsp;

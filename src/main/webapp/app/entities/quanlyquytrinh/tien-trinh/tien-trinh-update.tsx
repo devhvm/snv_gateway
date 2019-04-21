@@ -122,13 +122,26 @@ export class TienTrinhUpdate extends React.Component<ITienTrinhUpdateProps, ITie
                   />
                 </AvGroup>
                 <AvGroup>
-                  <Label id="iconLabel" for="icon">
-                    <Translate contentKey="gatewayApp.quanlyquytrinhTienTrinh.icon">Icon</Translate>
+                  <Label id="screenCodeLabel" for="screenCode">
+                    <Translate contentKey="gatewayApp.quanlyquytrinhTienTrinh.screenCode">Screen Code</Translate>
                   </Label>
                   <AvField
-                    id="tien-trinh-icon"
+                    id="tien-trinh-screenCode"
                     type="text"
-                    name="icon"
+                    name="screenCode"
+                    validate={{
+                      required: { value: true, errorMessage: translate('entity.validation.required') }
+                    }}
+                  />
+                </AvGroup>
+                <AvGroup>
+                  <Label id="statusLabel" for="status">
+                    <Translate contentKey="gatewayApp.quanlyquytrinhTienTrinh.status">Status</Translate>
+                  </Label>
+                  <AvField
+                    id="tien-trinh-status"
+                    type="text"
+                    name="status"
                     validate={{
                       required: { value: true, errorMessage: translate('entity.validation.required') }
                     }}

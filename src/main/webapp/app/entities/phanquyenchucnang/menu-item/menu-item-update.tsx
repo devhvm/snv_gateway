@@ -130,14 +130,25 @@ export class MenuItemUpdate extends React.Component<IMenuItemUpdateProps, IMenuI
                   <Label id="iconLabel" for="icon">
                     <Translate contentKey="gatewayApp.phanquyenchucnangMenuItem.icon">Icon</Translate>
                   </Label>
-                  <AvField
-                    id="menu-item-icon"
-                    type="text"
-                    name="icon"
-                    validate={{
-                      required: { value: true, errorMessage: translate('entity.validation.required') }
-                    }}
-                  />
+                  <AvField id="menu-item-icon" type="text" name="icon" />
+                </AvGroup>
+                <AvGroup>
+                  <Label id="parrentCodeLabel" for="parrentCode">
+                    <Translate contentKey="gatewayApp.phanquyenchucnangMenuItem.parrentCode">Parrent Code</Translate>
+                  </Label>
+                  <AvField id="menu-item-parrentCode" type="text" name="parrentCode" />
+                </AvGroup>
+                <AvGroup>
+                  <Label id="ordNumberLabel" for="ordNumber">
+                    <Translate contentKey="gatewayApp.phanquyenchucnangMenuItem.ordNumber">Ord Number</Translate>
+                  </Label>
+                  <AvField id="menu-item-ordNumber" type="string" className="form-control" name="ordNumber" />
+                </AvGroup>
+                <AvGroup>
+                  <Label id="linkLabel" for="link">
+                    <Translate contentKey="gatewayApp.phanquyenchucnangMenuItem.link">Link</Translate>
+                  </Label>
+                  <AvField id="menu-item-link" type="text" name="link" />
                 </AvGroup>
                 <AvGroup>
                   <Label for="screen.screenCode">

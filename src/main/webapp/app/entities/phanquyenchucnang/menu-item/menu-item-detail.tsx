@@ -47,6 +47,24 @@ export class MenuItemDetail extends React.Component<IMenuItemDetailProps> {
             </dt>
             <dd>{menuItemEntity.icon}</dd>
             <dt>
+              <span id="parrentCode">
+                <Translate contentKey="gatewayApp.phanquyenchucnangMenuItem.parrentCode">Parrent Code</Translate>
+              </span>
+            </dt>
+            <dd>{menuItemEntity.parrentCode}</dd>
+            <dt>
+              <span id="ordNumber">
+                <Translate contentKey="gatewayApp.phanquyenchucnangMenuItem.ordNumber">Ord Number</Translate>
+              </span>
+            </dt>
+            <dd>{menuItemEntity.ordNumber}</dd>
+            <dt>
+              <span id="link">
+                <Translate contentKey="gatewayApp.phanquyenchucnangMenuItem.link">Link</Translate>
+              </span>
+            </dt>
+            <dd>{menuItemEntity.link}</dd>
+            <dt>
               <Translate contentKey="gatewayApp.phanquyenchucnangMenuItem.screen">Screen</Translate>
             </dt>
             <dd>{menuItemEntity.screenScreenCode ? menuItemEntity.screenScreenCode : ''}</dd>

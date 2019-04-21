@@ -4,7 +4,6 @@ export interface IQuyTrinh {
   id?: number;
   quyTrinhCode?: string;
   name?: string;
-  icon?: string;
   tienTrinhs?: ITienTrinh[];
 }
 

@@ -14,7 +14,8 @@
       },
       "menuItemCode": "Menu Item Code",
       "name": "Name",
-      "icon": "Icon",
+      "screenCode": "Screen Code",
+      "status": "Status",
       "tienTrinhXuLy": "Tien Trinh Xu Ly",
       "quyTrinh": "Quy Trinh"
     }

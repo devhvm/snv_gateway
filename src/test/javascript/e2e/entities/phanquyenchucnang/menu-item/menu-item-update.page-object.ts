@@ -7,6 +7,9 @@ export default class MenuItemUpdatePage {
   menuItemCodeInput: ElementFinder = element(by.css('input#menu-item-menuItemCode'));
   nameInput: ElementFinder = element(by.css('input#menu-item-name'));
   iconInput: ElementFinder = element(by.css('input#menu-item-icon'));
+  parrentCodeInput: ElementFinder = element(by.css('input#menu-item-parrentCode'));
+  ordNumberInput: ElementFinder = element(by.css('input#menu-item-ordNumber'));
+  linkInput: ElementFinder = element(by.css('input#menu-item-link'));
   screenSelect: ElementFinder = element(by.css('select#menu-item-screen'));
   menuSelect: ElementFinder = element(by.css('select#menu-item-menu'));
 
@@ -36,6 +39,30 @@ export default class MenuItemUpdatePage {
 
   async getIconInput() {
     return this.iconInput.getAttribute('value');
+  }
+
+  async setParrentCodeInput(parrentCode) {
+    await this.parrentCodeInput.sendKeys(parrentCode);
+  }
+
+  async getParrentCodeInput() {
+    return this.parrentCodeInput.getAttribute('value');
+  }
+
+  async setOrdNumberInput(ordNumber) {
+    await this.ordNumberInput.sendKeys(ordNumber);
+  }
+
+  async getOrdNumberInput() {
+    return this.ordNumberInput.getAttribute('value');
+  }
+
+  async setLinkInput(link) {
+    await this.linkInput.sendKeys(link);
+  }
+
+  async getLinkInput() {
+    return this.linkInput.getAttribute('value');
   }
 
   async screenSelectLastOption() {
