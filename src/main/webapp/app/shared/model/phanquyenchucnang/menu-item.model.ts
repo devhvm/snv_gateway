@@ -6,6 +6,9 @@ export interface IMenuItem {
   menuItemCode?: string;
   name?: string;
   icon?: string;
+  parrentCode?: string;
+  ordNumber?: number;
+  link?: string;
   acessdenies?: IAcessDeny[];
   menuroles?: IMenuRole[];
   screenScreenCode?: string;

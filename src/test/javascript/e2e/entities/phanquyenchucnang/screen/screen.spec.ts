@@ -49,8 +49,6 @@ describe('Screen e2e test', () => {
     expect(await screenUpdatePage.getScreenCodeInput()).to.match(/screenCode/);
     await screenUpdatePage.setNameInput('name');
     expect(await screenUpdatePage.getNameInput()).to.match(/name/);
-    await screenUpdatePage.setLinkInput('link');
-    expect(await screenUpdatePage.getLinkInput()).to.match(/link/);
     await waitUntilDisplayed(screenUpdatePage.getSaveButton());
     await screenUpdatePage.save();
     await waitUntilHidden(screenUpdatePage.getSaveButton());

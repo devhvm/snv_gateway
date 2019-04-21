@@ -74,9 +74,6 @@ export class Screen extends React.Component<IScreenProps, IScreenState> {
                 <th className="hand" onClick={this.sort('name')}>
                   <Translate contentKey="gatewayApp.phanquyenchucnangScreen.name">Name</Translate> <FontAwesomeIcon icon="sort" />
                 </th>
-                <th className="hand" onClick={this.sort('link')}>
-                  <Translate contentKey="gatewayApp.phanquyenchucnangScreen.link">Link</Translate> <FontAwesomeIcon icon="sort" />
-                </th>
                 <th />
               </tr>
             </thead>
@@ -90,7 +87,6 @@ export class Screen extends React.Component<IScreenProps, IScreenState> {
                   </td>
                   <td>{screen.screenCode}</td>
                   <td>{screen.name}</td>
-                  <td>{screen.link}</td>
                   <td className="text-right">
                     <div className="btn-group flex-btn-group-container">
                       <Button tag={Link} to={`${match.url}/${screen.id}`} color="info" size="sm">

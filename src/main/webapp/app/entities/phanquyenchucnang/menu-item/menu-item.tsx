@@ -77,6 +77,17 @@ export class MenuItem extends React.Component<IMenuItemProps, IMenuItemState> {
                 <th className="hand" onClick={this.sort('icon')}>
                   <Translate contentKey="gatewayApp.phanquyenchucnangMenuItem.icon">Icon</Translate> <FontAwesomeIcon icon="sort" />
                 </th>
+                <th className="hand" onClick={this.sort('parrentCode')}>
+                  <Translate contentKey="gatewayApp.phanquyenchucnangMenuItem.parrentCode">Parrent Code</Translate>{' '}
+                  <FontAwesomeIcon icon="sort" />
+                </th>
+                <th className="hand" onClick={this.sort('ordNumber')}>
+                  <Translate contentKey="gatewayApp.phanquyenchucnangMenuItem.ordNumber">Ord Number</Translate>{' '}
+                  <FontAwesomeIcon icon="sort" />
+                </th>
+                <th className="hand" onClick={this.sort('link')}>
+                  <Translate contentKey="gatewayApp.phanquyenchucnangMenuItem.link">Link</Translate> <FontAwesomeIcon icon="sort" />
+                </th>
                 <th>
                   <Translate contentKey="gatewayApp.phanquyenchucnangMenuItem.screen">Screen</Translate> <FontAwesomeIcon icon="sort" />
                 </th>
@@ -97,6 +108,9 @@ export class MenuItem extends React.Component<IMenuItemProps, IMenuItemState> {
                   <td>{menuItem.menuItemCode}</td>
                   <td>{menuItem.name}</td>
                   <td>{menuItem.icon}</td>
+                  <td>{menuItem.parrentCode}</td>
+                  <td>{menuItem.ordNumber}</td>
+                  <td>{menuItem.link}</td>
                   <td>{menuItem.screenScreenCode ? <Link to={`screen/${menuItem.screenId}`}>{menuItem.screenScreenCode}</Link> : ''}</td>
                   <td>{menuItem.menuMenuCode ? <Link to={`menu/${menuItem.menuId}`}>{menuItem.menuMenuCode}</Link> : ''}</td>
                   <td className="text-right">

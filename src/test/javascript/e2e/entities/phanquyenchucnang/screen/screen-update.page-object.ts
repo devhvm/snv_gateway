@@ -6,7 +6,6 @@ export default class ScreenUpdatePage {
   cancelButton: ElementFinder = element(by.id('cancel-save'));
   screenCodeInput: ElementFinder = element(by.css('input#screen-screenCode'));
   nameInput: ElementFinder = element(by.css('input#screen-name'));
-  linkInput: ElementFinder = element(by.css('input#screen-link'));
 
   getPageTitle() {
     return this.pageTitle;
@@ -26,14 +25,6 @@ export default class ScreenUpdatePage {
 
   async getNameInput() {
     return this.nameInput.getAttribute('value');
-  }
-
-  async setLinkInput(link) {
-    await this.linkInput.sendKeys(link);
-  }
-
-  async getLinkInput() {
-    return this.linkInput.getAttribute('value');
   }
 
   async save() {

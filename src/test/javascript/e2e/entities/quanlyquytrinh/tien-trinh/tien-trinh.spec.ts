@@ -51,8 +51,10 @@ describe('TienTrinh e2e test', () => {
     expect(await tienTrinhUpdatePage.getMenuItemCodeInput()).to.match(/menuItemCode/);
     await tienTrinhUpdatePage.setNameInput('name');
     expect(await tienTrinhUpdatePage.getNameInput()).to.match(/name/);
-    await tienTrinhUpdatePage.setIconInput('icon');
-    expect(await tienTrinhUpdatePage.getIconInput()).to.match(/icon/);
+    await tienTrinhUpdatePage.setScreenCodeInput('screenCode');
+    expect(await tienTrinhUpdatePage.getScreenCodeInput()).to.match(/screenCode/);
+    await tienTrinhUpdatePage.setStatusInput('status');
+    expect(await tienTrinhUpdatePage.getStatusInput()).to.match(/status/);
     await tienTrinhUpdatePage.quyTrinhSelectLastOption();
     await waitUntilDisplayed(tienTrinhUpdatePage.getSaveButton());
     await tienTrinhUpdatePage.save();

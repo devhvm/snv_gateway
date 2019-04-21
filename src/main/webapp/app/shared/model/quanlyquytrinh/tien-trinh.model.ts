@@ -4,7 +4,8 @@ export interface ITienTrinh {
   id?: number;
   menuItemCode?: string;
   name?: string;
-  icon?: string;
+  screenCode?: string;
+  status?: string;
   tienTrinhXuLies?: ITienTrinhXuLy[];
   quyTrinhName?: string;
   quyTrinhId?: number;

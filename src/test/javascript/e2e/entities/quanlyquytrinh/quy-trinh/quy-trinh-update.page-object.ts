@@ -6,7 +6,6 @@ export default class QuyTrinhUpdatePage {
   cancelButton: ElementFinder = element(by.id('cancel-save'));
   quyTrinhCodeInput: ElementFinder = element(by.css('input#quy-trinh-quyTrinhCode'));
   nameInput: ElementFinder = element(by.css('input#quy-trinh-name'));
-  iconInput: ElementFinder = element(by.css('input#quy-trinh-icon'));
 
   getPageTitle() {
     return this.pageTitle;
@@ -26,14 +25,6 @@ export default class QuyTrinhUpdatePage {
 
   async getNameInput() {
     return this.nameInput.getAttribute('value');
-  }
-
-  async setIconInput(icon) {
-    await this.iconInput.sendKeys(icon);
-  }
-
-  async getIconInput() {
-    return this.iconInput.getAttribute('value');
   }
 
   async save() {

@@ -40,12 +40,6 @@ export class ScreenDetail extends React.Component<IScreenDetailProps> {
               </span>
             </dt>
             <dd>{screenEntity.name}</dd>
-            <dt>
-              <span id="link">
-                <Translate contentKey="gatewayApp.phanquyenchucnangScreen.link">Link</Translate>
-              </span>
-            </dt>
-            <dd>{screenEntity.link}</dd>
           </dl>
           <Button tag={Link} to="/entity/screen" replace color="info">
             <FontAwesomeIcon icon="arrow-left" />{' '}

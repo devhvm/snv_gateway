@@ -40,12 +40,6 @@ export class QuyTrinhDetail extends React.Component<IQuyTrinhDetailProps> {
               </span>
             </dt>
             <dd>{quyTrinhEntity.name}</dd>
-            <dt>
-              <span id="icon">
-                <Translate contentKey="gatewayApp.quanlyquytrinhQuyTrinh.icon">Icon</Translate>
-              </span>
-            </dt>
-            <dd>{quyTrinhEntity.icon}</dd>
           </dl>
           <Button tag={Link} to="/entity/quy-trinh" replace color="info">
             <FontAwesomeIcon icon="arrow-left" />{' '}

@@ -41,11 +41,17 @@ export class TienTrinhDetail extends React.Component<ITienTrinhDetailProps> {
             </dt>
             <dd>{tienTrinhEntity.name}</dd>
             <dt>
-              <span id="icon">
-                <Translate contentKey="gatewayApp.quanlyquytrinhTienTrinh.icon">Icon</Translate>
+              <span id="screenCode">
+                <Translate contentKey="gatewayApp.quanlyquytrinhTienTrinh.screenCode">Screen Code</Translate>
               </span>
             </dt>
-            <dd>{tienTrinhEntity.icon}</dd>
+            <dd>{tienTrinhEntity.screenCode}</dd>
+            <dt>
+              <span id="status">
+                <Translate contentKey="gatewayApp.quanlyquytrinhTienTrinh.status">Status</Translate>
+              </span>
+            </dt>
+            <dd>{tienTrinhEntity.status}</dd>
             <dt>
               <Translate contentKey="gatewayApp.quanlyquytrinhTienTrinh.quyTrinh">Quy Trinh</Translate>
             </dt>

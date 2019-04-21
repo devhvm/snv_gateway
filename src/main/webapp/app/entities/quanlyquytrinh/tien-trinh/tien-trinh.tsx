@@ -74,8 +74,12 @@ export class TienTrinh extends React.Component<ITienTrinhProps, ITienTrinhState>
                 <th className="hand" onClick={this.sort('name')}>
                   <Translate contentKey="gatewayApp.quanlyquytrinhTienTrinh.name">Name</Translate> <FontAwesomeIcon icon="sort" />
                 </th>
-                <th className="hand" onClick={this.sort('icon')}>
-                  <Translate contentKey="gatewayApp.quanlyquytrinhTienTrinh.icon">Icon</Translate> <FontAwesomeIcon icon="sort" />
+                <th className="hand" onClick={this.sort('screenCode')}>
+                  <Translate contentKey="gatewayApp.quanlyquytrinhTienTrinh.screenCode">Screen Code</Translate>{' '}
+                  <FontAwesomeIcon icon="sort" />
+                </th>
+                <th className="hand" onClick={this.sort('status')}>
+                  <Translate contentKey="gatewayApp.quanlyquytrinhTienTrinh.status">Status</Translate> <FontAwesomeIcon icon="sort" />
                 </th>
                 <th>
                   <Translate contentKey="gatewayApp.quanlyquytrinhTienTrinh.quyTrinh">Quy Trinh</Translate> <FontAwesomeIcon icon="sort" />
@@ -93,7 +97,8 @@ export class TienTrinh extends React.Component<ITienTrinhProps, ITienTrinhState>
                   </td>
                   <td>{tienTrinh.menuItemCode}</td>
                   <td>{tienTrinh.name}</td>
-                  <td>{tienTrinh.icon}</td>
+                  <td>{tienTrinh.screenCode}</td>
+                  <td>{tienTrinh.status}</td>
                   <td>{tienTrinh.quyTrinhName ? <Link to={`quy-trinh/${tienTrinh.quyTrinhId}`}>{tienTrinh.quyTrinhName}</Link> : ''}</td>
                   <td className="text-right">
                     <div className="btn-group flex-btn-group-container">

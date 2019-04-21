@@ -115,19 +115,6 @@ export class QuyTrinhUpdate extends React.Component<IQuyTrinhUpdateProps, IQuyTr
                     }}
                   />
                 </AvGroup>
-                <AvGroup>
-                  <Label id="iconLabel" for="icon">
-                    <Translate contentKey="gatewayApp.quanlyquytrinhQuyTrinh.icon">Icon</Translate>
-                  </Label>
-                  <AvField
-                    id="quy-trinh-icon"
-                    type="text"
-                    name="icon"
-                    validate={{
-                      required: { value: true, errorMessage: translate('entity.validation.required') }
-                    }}
-                  />
-                </AvGroup>
                 <Button tag={Link} id="cancel-save" to="/entity/quy-trinh" replace color="info">
                   <FontAwesomeIcon icon="arrow-left" />
                   &nbsp;

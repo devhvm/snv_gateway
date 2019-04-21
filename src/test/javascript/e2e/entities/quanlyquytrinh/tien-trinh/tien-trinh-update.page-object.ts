@@ -6,7 +6,8 @@ export default class TienTrinhUpdatePage {
   cancelButton: ElementFinder = element(by.id('cancel-save'));
   menuItemCodeInput: ElementFinder = element(by.css('input#tien-trinh-menuItemCode'));
   nameInput: ElementFinder = element(by.css('input#tien-trinh-name'));
-  iconInput: ElementFinder = element(by.css('input#tien-trinh-icon'));
+  screenCodeInput: ElementFinder = element(by.css('input#tien-trinh-screenCode'));
+  statusInput: ElementFinder = element(by.css('input#tien-trinh-status'));
   quyTrinhSelect: ElementFinder = element(by.css('select#tien-trinh-quyTrinh'));
 
   getPageTitle() {
@@ -29,12 +30,20 @@ export default class TienTrinhUpdatePage {
     return this.nameInput.getAttribute('value');
   }
 
-  async setIconInput(icon) {
-    await this.iconInput.sendKeys(icon);
+  async setScreenCodeInput(screenCode) {
+    await this.screenCodeInput.sendKeys(screenCode);
   }
 
-  async getIconInput() {
-    return this.iconInput.getAttribute('value');
+  async getScreenCodeInput() {
+    return this.screenCodeInput.getAttribute('value');
+  }
+
+  async setStatusInput(status) {
+    await this.statusInput.sendKeys(status);
+  }
+
+  async getStatusInput() {
+    return this.statusInput.getAttribute('value');
   }
 
   async quyTrinhSelectLastOption() {

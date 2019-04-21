@@ -4,7 +4,6 @@ export interface IScreen {
   id?: number;
   screenCode?: string;
   name?: string;
-  link?: string;
   menus?: IMenuItem[];
 }
 
