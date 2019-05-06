@@ -6,7 +6,8 @@ export interface IDuLieuTienTrinh {
   duLieuCode?: string;
   fromUserId?: string;
   toUserId?: string;
-  level?: string;
+  name?: string;
+  status?: string;
   note?: string;
   uyQuyenDuLieus?: IUyQuyenDuLieu[];
   quyTrinhDonViName?: string;

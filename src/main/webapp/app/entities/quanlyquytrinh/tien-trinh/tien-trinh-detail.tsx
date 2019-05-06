@@ -29,11 +29,11 @@ export class TienTrinhDetail extends React.Component<ITienTrinhDetailProps> {
           </h2>
           <dl className="jh-entity-details">
             <dt>
-              <span id="menuItemCode">
-                <Translate contentKey="gatewayApp.quanlyquytrinhTienTrinh.menuItemCode">Menu Item Code</Translate>
+              <span id="tienTrinhCode">
+                <Translate contentKey="gatewayApp.quanlyquytrinhTienTrinh.tienTrinhCode">Tien Trinh Code</Translate>
               </span>
             </dt>
-            <dd>{tienTrinhEntity.menuItemCode}</dd>
+            <dd>{tienTrinhEntity.tienTrinhCode}</dd>
             <dt>
               <span id="name">
                 <Translate contentKey="gatewayApp.quanlyquytrinhTienTrinh.name">Name</Translate>

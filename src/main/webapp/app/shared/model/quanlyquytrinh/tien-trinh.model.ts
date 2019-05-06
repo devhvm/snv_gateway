@@ -2,7 +2,7 @@ import { ITienTrinhXuLy } from 'app/shared/model/quanlyquytrinh/tien-trinh-xu-ly
 
 export interface ITienTrinh {
   id?: number;
-  menuItemCode?: string;
+  tienTrinhCode?: string;
   name?: string;
   screenCode?: string;
   status?: string;

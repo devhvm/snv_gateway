@@ -67,8 +67,8 @@ export class TienTrinh extends React.Component<ITienTrinhProps, ITienTrinhState>
                 <th className="hand" onClick={this.sort('id')}>
                   <Translate contentKey="global.field.id">ID</Translate> <FontAwesomeIcon icon="sort" />
                 </th>
-                <th className="hand" onClick={this.sort('menuItemCode')}>
-                  <Translate contentKey="gatewayApp.quanlyquytrinhTienTrinh.menuItemCode">Menu Item Code</Translate>{' '}
+                <th className="hand" onClick={this.sort('tienTrinhCode')}>
+                  <Translate contentKey="gatewayApp.quanlyquytrinhTienTrinh.tienTrinhCode">Tien Trinh Code</Translate>{' '}
                   <FontAwesomeIcon icon="sort" />
                 </th>
                 <th className="hand" onClick={this.sort('name')}>
@@ -95,7 +95,7 @@ export class TienTrinh extends React.Component<ITienTrinhProps, ITienTrinhState>
                       {tienTrinh.id}
                     </Button>
                   </td>
-                  <td>{tienTrinh.menuItemCode}</td>
+                  <td>{tienTrinh.tienTrinhCode}</td>
                   <td>{tienTrinh.name}</td>
                   <td>{tienTrinh.screenCode}</td>
                   <td>{tienTrinh.status}</td>

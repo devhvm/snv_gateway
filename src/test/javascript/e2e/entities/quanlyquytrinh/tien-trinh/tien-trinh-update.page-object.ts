@@ -4,7 +4,7 @@ export default class TienTrinhUpdatePage {
   pageTitle: ElementFinder = element(by.id('gatewayApp.quanlyquytrinhTienTrinh.home.createOrEditLabel'));
   saveButton: ElementFinder = element(by.id('save-entity'));
   cancelButton: ElementFinder = element(by.id('cancel-save'));
-  menuItemCodeInput: ElementFinder = element(by.css('input#tien-trinh-menuItemCode'));
+  tienTrinhCodeInput: ElementFinder = element(by.css('input#tien-trinh-tienTrinhCode'));
   nameInput: ElementFinder = element(by.css('input#tien-trinh-name'));
   screenCodeInput: ElementFinder = element(by.css('input#tien-trinh-screenCode'));
   statusInput: ElementFinder = element(by.css('input#tien-trinh-status'));
@@ -14,12 +14,12 @@ export default class TienTrinhUpdatePage {
     return this.pageTitle;
   }
 
-  async setMenuItemCodeInput(menuItemCode) {
-    await this.menuItemCodeInput.sendKeys(menuItemCode);
+  async setTienTrinhCodeInput(tienTrinhCode) {
+    await this.tienTrinhCodeInput.sendKeys(tienTrinhCode);
   }
 
-  async getMenuItemCodeInput() {
-    return this.menuItemCodeInput.getAttribute('value');
+  async getTienTrinhCodeInput() {
+    return this.tienTrinhCodeInput.getAttribute('value');
   }
 
   async setNameInput(name) {

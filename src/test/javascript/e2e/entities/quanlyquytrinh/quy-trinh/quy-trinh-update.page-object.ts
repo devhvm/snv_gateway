@@ -6,6 +6,7 @@ export default class QuyTrinhUpdatePage {
   cancelButton: ElementFinder = element(by.id('cancel-save'));
   quyTrinhCodeInput: ElementFinder = element(by.css('input#quy-trinh-quyTrinhCode'));
   nameInput: ElementFinder = element(by.css('input#quy-trinh-name'));
+  loaiQuyTrinhSelect: ElementFinder = element(by.css('select#quy-trinh-loaiQuyTrinh'));
 
   getPageTitle() {
     return this.pageTitle;
@@ -25,6 +26,25 @@ export default class QuyTrinhUpdatePage {
 
   async getNameInput() {
     return this.nameInput.getAttribute('value');
+  }
+
+  async loaiQuyTrinhSelectLastOption() {
+    await this.loaiQuyTrinhSelect
+      .all(by.tagName('option'))
+      .last()
+      .click();
+  }
+
+  async loaiQuyTrinhSelectOption(option) {
+    await this.loaiQuyTrinhSelect.sendKeys(option);
+  }
+
+  getLoaiQuyTrinhSelect() {
+    return this.loaiQuyTrinhSelect;
+  }
+
+  async getLoaiQuyTrinhSelectedOption() {
+    return this.loaiQuyTrinhSelect.element(by.css('option:checked')).getText();
   }
 
   async save() {

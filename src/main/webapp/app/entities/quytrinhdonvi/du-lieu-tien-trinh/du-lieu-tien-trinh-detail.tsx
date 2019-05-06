@@ -54,11 +54,17 @@ export class DuLieuTienTrinhDetail extends React.Component<IDuLieuTienTrinhDetai
             </dt>
             <dd>{duLieuTienTrinhEntity.toUserId}</dd>
             <dt>
-              <span id="level">
-                <Translate contentKey="gatewayApp.quytrinhdonviDuLieuTienTrinh.level">Level</Translate>
+              <span id="name">
+                <Translate contentKey="gatewayApp.quytrinhdonviDuLieuTienTrinh.name">Name</Translate>
               </span>
             </dt>
-            <dd>{duLieuTienTrinhEntity.level}</dd>
+            <dd>{duLieuTienTrinhEntity.name}</dd>
+            <dt>
+              <span id="status">
+                <Translate contentKey="gatewayApp.quytrinhdonviDuLieuTienTrinh.status">Status</Translate>
+              </span>
+            </dt>
+            <dd>{duLieuTienTrinhEntity.status}</dd>
             <dt>
               <span id="note">
                 <Translate contentKey="gatewayApp.quytrinhdonviDuLieuTienTrinh.note">Note</Translate>

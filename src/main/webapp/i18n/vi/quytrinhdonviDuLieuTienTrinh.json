@@ -16,7 +16,8 @@
       "duLieuCode": "Du Lieu Code",
       "fromUserId": "From User Id",
       "toUserId": "To User Id",
-      "level": "Level",
+      "name": "Name",
+      "status": "Status",
       "note": "Note",
       "uyQuyenDuLieu": "Uy Quyen Du Lieu",
       "quyTrinhDonVi": "Quy Trinh Don Vi"

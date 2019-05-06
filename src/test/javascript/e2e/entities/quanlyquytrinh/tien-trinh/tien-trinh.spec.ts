@@ -47,8 +47,8 @@ describe('TienTrinh e2e test', () => {
   it('should create and save TienTrinhs', async () => {
     const nbButtonsBeforeCreate = await tienTrinhComponentsPage.countDeleteButtons();
 
-    await tienTrinhUpdatePage.setMenuItemCodeInput('menuItemCode');
-    expect(await tienTrinhUpdatePage.getMenuItemCodeInput()).to.match(/menuItemCode/);
+    await tienTrinhUpdatePage.setTienTrinhCodeInput('tienTrinhCode');
+    expect(await tienTrinhUpdatePage.getTienTrinhCodeInput()).to.match(/tienTrinhCode/);
     await tienTrinhUpdatePage.setNameInput('name');
     expect(await tienTrinhUpdatePage.getNameInput()).to.match(/name/);
     await tienTrinhUpdatePage.setScreenCodeInput('screenCode');

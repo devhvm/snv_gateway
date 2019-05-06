@@ -49,6 +49,7 @@ describe('QuyTrinh e2e test', () => {
     expect(await quyTrinhUpdatePage.getQuyTrinhCodeInput()).to.match(/quyTrinhCode/);
     await quyTrinhUpdatePage.setNameInput('name');
     expect(await quyTrinhUpdatePage.getNameInput()).to.match(/name/);
+    await quyTrinhUpdatePage.loaiQuyTrinhSelectLastOption();
     await waitUntilDisplayed(quyTrinhUpdatePage.getSaveButton());
     await quyTrinhUpdatePage.save();
     await waitUntilHidden(quyTrinhUpdatePage.getSaveButton());
