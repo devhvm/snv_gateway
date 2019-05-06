@@ -22,13 +22,6 @@
             "otherEntityName": "tienTrinh",
             "otherEntityRelationshipName": "quyTrinh",
             "relationshipName": "tienTrinh"
-        },
-        {
-            "relationshipType": "many-to-one",
-            "otherEntityName": "loaiQuyTrinh",
-            "otherEntityRelationshipName": "quyTrinh",
-            "relationshipName": "loaiQuyTrinh",
-            "otherEntityField": "name"
         }
     ],
     "changelogDate": "20190418160851",
@@ -42,5 +35,6 @@
     "applications": [
         "quanlyquytrinh"
     ],
-    "microserviceName": "quanlyquytrinh"
+    "microserviceName": "quanlyquytrinh",
+    "enableEntityAudit": true
 }

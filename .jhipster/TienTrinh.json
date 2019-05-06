@@ -2,7 +2,7 @@
     "name": "TienTrinh",
     "fields": [
         {
-            "fieldName": "tienTrinhCode",
+            "fieldName": "menuItemCode",
             "fieldType": "String",
             "fieldValidateRules": [
                 "required"
@@ -56,5 +56,6 @@
     "applications": [
         "quanlyquytrinh"
     ],
-    "microserviceName": "quanlyquytrinh"
+    "microserviceName": "quanlyquytrinh",
+    "enableEntityAudit": true
 }

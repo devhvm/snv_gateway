@@ -55,10 +55,8 @@ describe('DuLieuTienTrinh e2e test', () => {
     expect(await duLieuTienTrinhUpdatePage.getFromUserIdInput()).to.match(/fromUserId/);
     await duLieuTienTrinhUpdatePage.setToUserIdInput('toUserId');
     expect(await duLieuTienTrinhUpdatePage.getToUserIdInput()).to.match(/toUserId/);
-    await duLieuTienTrinhUpdatePage.setNameInput('name');
-    expect(await duLieuTienTrinhUpdatePage.getNameInput()).to.match(/name/);
-    await duLieuTienTrinhUpdatePage.setStatusInput('status');
-    expect(await duLieuTienTrinhUpdatePage.getStatusInput()).to.match(/status/);
+    await duLieuTienTrinhUpdatePage.setLevelInput('level');
+    expect(await duLieuTienTrinhUpdatePage.getLevelInput()).to.match(/level/);
     await duLieuTienTrinhUpdatePage.setNoteInput('note');
     expect(await duLieuTienTrinhUpdatePage.getNoteInput()).to.match(/note/);
     await duLieuTienTrinhUpdatePage.quyTrinhDonViSelectLastOption();

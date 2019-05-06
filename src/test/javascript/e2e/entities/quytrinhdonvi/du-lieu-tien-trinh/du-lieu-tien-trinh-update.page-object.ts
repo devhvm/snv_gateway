@@ -8,8 +8,7 @@ export default class DuLieuTienTrinhUpdatePage {
   duLieuCodeInput: ElementFinder = element(by.css('input#du-lieu-tien-trinh-duLieuCode'));
   fromUserIdInput: ElementFinder = element(by.css('input#du-lieu-tien-trinh-fromUserId'));
   toUserIdInput: ElementFinder = element(by.css('input#du-lieu-tien-trinh-toUserId'));
-  nameInput: ElementFinder = element(by.css('input#du-lieu-tien-trinh-name'));
-  statusInput: ElementFinder = element(by.css('input#du-lieu-tien-trinh-status'));
+  levelInput: ElementFinder = element(by.css('input#du-lieu-tien-trinh-level'));
   noteInput: ElementFinder = element(by.css('input#du-lieu-tien-trinh-note'));
   quyTrinhDonViSelect: ElementFinder = element(by.css('select#du-lieu-tien-trinh-quyTrinhDonVi'));
 
@@ -49,20 +48,12 @@ export default class DuLieuTienTrinhUpdatePage {
     return this.toUserIdInput.getAttribute('value');
   }
 
-  async setNameInput(name) {
-    await this.nameInput.sendKeys(name);
+  async setLevelInput(level) {
+    await this.levelInput.sendKeys(level);
   }
 
-  async getNameInput() {
-    return this.nameInput.getAttribute('value');
-  }
-
-  async setStatusInput(status) {
-    await this.statusInput.sendKeys(status);
-  }
-
-  async getStatusInput() {
-    return this.statusInput.getAttribute('value');
+  async getLevelInput() {
+    return this.levelInput.getAttribute('value');
   }
 
   async setNoteInput(note) {

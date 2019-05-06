@@ -83,11 +83,8 @@ export class DuLieuTienTrinh extends React.Component<IDuLieuTienTrinhProps, IDuL
                   <Translate contentKey="gatewayApp.quytrinhdonviDuLieuTienTrinh.toUserId">To User Id</Translate>{' '}
                   <FontAwesomeIcon icon="sort" />
                 </th>
-                <th className="hand" onClick={this.sort('name')}>
-                  <Translate contentKey="gatewayApp.quytrinhdonviDuLieuTienTrinh.name">Name</Translate> <FontAwesomeIcon icon="sort" />
-                </th>
-                <th className="hand" onClick={this.sort('status')}>
-                  <Translate contentKey="gatewayApp.quytrinhdonviDuLieuTienTrinh.status">Status</Translate> <FontAwesomeIcon icon="sort" />
+                <th className="hand" onClick={this.sort('level')}>
+                  <Translate contentKey="gatewayApp.quytrinhdonviDuLieuTienTrinh.level">Level</Translate> <FontAwesomeIcon icon="sort" />
                 </th>
                 <th className="hand" onClick={this.sort('note')}>
                   <Translate contentKey="gatewayApp.quytrinhdonviDuLieuTienTrinh.note">Note</Translate> <FontAwesomeIcon icon="sort" />
@@ -111,8 +108,7 @@ export class DuLieuTienTrinh extends React.Component<IDuLieuTienTrinhProps, IDuL
                   <td>{duLieuTienTrinh.duLieuCode}</td>
                   <td>{duLieuTienTrinh.fromUserId}</td>
                   <td>{duLieuTienTrinh.toUserId}</td>
-                  <td>{duLieuTienTrinh.name}</td>
-                  <td>{duLieuTienTrinh.status}</td>
+                  <td>{duLieuTienTrinh.level}</td>
                   <td>{duLieuTienTrinh.note}</td>
                   <td>
                     {duLieuTienTrinh.quyTrinhDonViName ? (

@@ -8,8 +8,6 @@ import { Translate, translate, ICrudGetAction, ICrudGetAllAction, ICrudPutAction
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { IRootState } from 'app/shared/reducers';
 
-import { ILoaiQuyTrinh } from 'app/shared/model/quanlyquytrinh/loai-quy-trinh.model';
-import { getEntities as getLoaiQuyTrinhs } from 'app/entities/quanlyquytrinh/loai-quy-trinh/loai-quy-trinh.reducer';
 import { getEntity, updateEntity, createEntity, reset } from './quy-trinh.reducer';
 import { IQuyTrinh } from 'app/shared/model/quanlyquytrinh/quy-trinh.model';
 // tslint:disable-next-line:no-unused-variable
@@ -20,14 +18,12 @@ export interface IQuyTrinhUpdateProps extends StateProps, DispatchProps, RouteCo
 
 export interface IQuyTrinhUpdateState {
   isNew: boolean;
-  loaiQuyTrinhId: string;
 }
 
 export class QuyTrinhUpdate extends React.Component<IQuyTrinhUpdateProps, IQuyTrinhUpdateState> {
   constructor(props) {
     super(props);
     this.state = {
-      loaiQuyTrinhId: '0',
       isNew: !this.props.match.params || !this.props.match.params.id
     };
   }
@@ -44,8 +40,6 @@ export class QuyTrinhUpdate extends React.Component<IQuyTrinhUpdateProps, IQuyTr
     } else {
       this.props.getEntity(this.props.match.params.id);
     }
-
-    this.props.getLoaiQuyTrinhs();
   }
 
   saveEntity = (event, errors, values) => {
@@ -69,7 +63,7 @@ export class QuyTrinhUpdate extends React.Component<IQuyTrinhUpdateProps, IQuyTr
   };
 
   render() {
-    const { quyTrinhEntity, loaiQuyTrinhs, loading, updating } = this.props;
+    const { quyTrinhEntity, loading, updating } = this.props;
     const { isNew } = this.state;
 
     return (
@@ -121,21 +115,6 @@ export class QuyTrinhUpdate extends React.Component<IQuyTrinhUpdateProps, IQuyTr
                     }}
                   />
                 </AvGroup>
-                <AvGroup>
-                  <Label for="loaiQuyTrinh.name">
-                    <Translate contentKey="gatewayApp.quanlyquytrinhQuyTrinh.loaiQuyTrinh">Loai Quy Trinh</Translate>
-                  </Label>
-                  <AvInput id="quy-trinh-loaiQuyTrinh" type="select" className="form-control" name="loaiQuyTrinhId">
-                    <option value="" key="0" />
-                    {loaiQuyTrinhs
-                      ? loaiQuyTrinhs.map(otherEntity => (
-                          <option value={otherEntity.id} key={otherEntity.id}>
-                            {otherEntity.name}
-                          </option>
-                        ))
-                      : null}
-                  </AvInput>
-                </AvGroup>
                 <Button tag={Link} id="cancel-save" to="/entity/quy-trinh" replace color="info">
                   <FontAwesomeIcon icon="arrow-left" />
                   &nbsp;
@@ -159,7 +138,6 @@ export class QuyTrinhUpdate extends React.Component<IQuyTrinhUpdateProps, IQuyTr
 }
 
 const mapStateToProps = (storeState: IRootState) => ({
-  loaiQuyTrinhs: storeState.loaiQuyTrinh.entities,
   quyTrinhEntity: storeState.quyTrinh.entity,
   loading: storeState.quyTrinh.loading,
   updating: storeState.quyTrinh.updating,
@@ -167,7 +145,6 @@ const mapStateToProps = (storeState: IRootState) => ({
 });
 
 const mapDispatchToProps = {
-  getLoaiQuyTrinhs,
   getEntity,
   updateEntity,
   createEntity,

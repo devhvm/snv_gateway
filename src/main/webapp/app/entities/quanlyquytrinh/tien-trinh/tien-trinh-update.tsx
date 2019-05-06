@@ -96,13 +96,13 @@ export class TienTrinhUpdate extends React.Component<ITienTrinhUpdateProps, ITie
                   </AvGroup>
                 ) : null}
                 <AvGroup>
-                  <Label id="tienTrinhCodeLabel" for="tienTrinhCode">
-                    <Translate contentKey="gatewayApp.quanlyquytrinhTienTrinh.tienTrinhCode">Tien Trinh Code</Translate>
+                  <Label id="menuItemCodeLabel" for="menuItemCode">
+                    <Translate contentKey="gatewayApp.quanlyquytrinhTienTrinh.menuItemCode">Menu Item Code</Translate>
                   </Label>
                   <AvField
-                    id="tien-trinh-tienTrinhCode"
+                    id="tien-trinh-menuItemCode"
                     type="text"
-                    name="tienTrinhCode"
+                    name="menuItemCode"
                     validate={{
                       required: { value: true, errorMessage: translate('entity.validation.required') }
                     }}

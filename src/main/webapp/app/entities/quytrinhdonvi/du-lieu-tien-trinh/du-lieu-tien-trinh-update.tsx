@@ -150,26 +150,13 @@ export class DuLieuTienTrinhUpdate extends React.Component<IDuLieuTienTrinhUpdat
                   />
                 </AvGroup>
                 <AvGroup>
-                  <Label id="nameLabel" for="name">
-                    <Translate contentKey="gatewayApp.quytrinhdonviDuLieuTienTrinh.name">Name</Translate>
+                  <Label id="levelLabel" for="level">
+                    <Translate contentKey="gatewayApp.quytrinhdonviDuLieuTienTrinh.level">Level</Translate>
                   </Label>
                   <AvField
-                    id="du-lieu-tien-trinh-name"
+                    id="du-lieu-tien-trinh-level"
                     type="text"
-                    name="name"
-                    validate={{
-                      required: { value: true, errorMessage: translate('entity.validation.required') }
-                    }}
-                  />
-                </AvGroup>
-                <AvGroup>
-                  <Label id="statusLabel" for="status">
-                    <Translate contentKey="gatewayApp.quytrinhdonviDuLieuTienTrinh.status">Status</Translate>
-                  </Label>
-                  <AvField
-                    id="du-lieu-tien-trinh-status"
-                    type="text"
-                    name="status"
+                    name="level"
                     validate={{
                       required: { value: true, errorMessage: translate('entity.validation.required') }
                     }}
