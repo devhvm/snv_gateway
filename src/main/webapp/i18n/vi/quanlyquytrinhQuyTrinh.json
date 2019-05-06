@@ -14,8 +14,7 @@
       },
       "quyTrinhCode": "Quy Trinh Code",
       "name": "Name",
-      "tienTrinh": "Tien Trinh",
-      "loaiQuyTrinh": "Loai Quy Trinh"
+      "tienTrinh": "Tien Trinh"
     }
   },
   "quanlyquytrinhApp": {

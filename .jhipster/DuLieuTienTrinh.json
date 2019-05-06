@@ -30,14 +30,7 @@
             ]
         },
         {
-            "fieldName": "name",
-            "fieldType": "String",
-            "fieldValidateRules": [
-                "required"
-            ]
-        },
-        {
-            "fieldName": "status",
+            "fieldName": "level",
             "fieldType": "String",
             "fieldValidateRules": [
                 "required"
