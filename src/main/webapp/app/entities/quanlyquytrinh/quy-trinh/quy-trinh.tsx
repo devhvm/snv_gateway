@@ -74,6 +74,10 @@ export class QuyTrinh extends React.Component<IQuyTrinhProps, IQuyTrinhState> {
                 <th className="hand" onClick={this.sort('name')}>
                   <Translate contentKey="gatewayApp.quanlyquytrinhQuyTrinh.name">Name</Translate> <FontAwesomeIcon icon="sort" />
                 </th>
+                <th>
+                  <Translate contentKey="gatewayApp.quanlyquytrinhQuyTrinh.loaiQuyTrinh">Loai Quy Trinh</Translate>{' '}
+                  <FontAwesomeIcon icon="sort" />
+                </th>
                 <th />
               </tr>
             </thead>
@@ -87,6 +91,13 @@ export class QuyTrinh extends React.Component<IQuyTrinhProps, IQuyTrinhState> {
                   </td>
                   <td>{quyTrinh.quyTrinhCode}</td>
                   <td>{quyTrinh.name}</td>
+                  <td>
+                    {quyTrinh.loaiQuyTrinhName ? (
+                      <Link to={`loai-quy-trinh/${quyTrinh.loaiQuyTrinhId}`}>{quyTrinh.loaiQuyTrinhName}</Link>
+                    ) : (
+                      ''
+                    )}
+                  </td>
                   <td className="text-right">
                     <div className="btn-group flex-btn-group-container">
                       <Button tag={Link} to={`${match.url}/${quyTrinh.id}`} color="info" size="sm">

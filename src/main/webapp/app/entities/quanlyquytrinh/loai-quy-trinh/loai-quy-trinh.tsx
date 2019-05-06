@@ -7,18 +7,18 @@ import { Translate, ICrudGetAllAction, getSortState, IPaginationBaseState, getPa
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import { IRootState } from 'app/shared/reducers';
-import { getEntities } from './du-lieu-tien-trinh.reducer';
-import { IDuLieuTienTrinh } from 'app/shared/model/quytrinhdonvi/du-lieu-tien-trinh.model';
+import { getEntities } from './loai-quy-trinh.reducer';
+import { ILoaiQuyTrinh } from 'app/shared/model/quanlyquytrinh/loai-quy-trinh.model';
 // tslint:disable-next-line:no-unused-variable
 import { APP_DATE_FORMAT, APP_LOCAL_DATE_FORMAT } from 'app/config/constants';
 import { ITEMS_PER_PAGE } from 'app/shared/util/pagination.constants';
 
-export interface IDuLieuTienTrinhProps extends StateProps, DispatchProps, RouteComponentProps<{ url: string }> {}
+export interface ILoaiQuyTrinhProps extends StateProps, DispatchProps, RouteComponentProps<{ url: string }> {}
 
-export type IDuLieuTienTrinhState = IPaginationBaseState;
+export type ILoaiQuyTrinhState = IPaginationBaseState;
 
-export class DuLieuTienTrinh extends React.Component<IDuLieuTienTrinhProps, IDuLieuTienTrinhState> {
-  state: IDuLieuTienTrinhState = {
+export class LoaiQuyTrinh extends React.Component<ILoaiQuyTrinhProps, ILoaiQuyTrinhState> {
+  state: ILoaiQuyTrinhState = {
     ...getSortState(this.props.location, ITEMS_PER_PAGE)
   };
 
@@ -49,15 +49,15 @@ export class DuLieuTienTrinh extends React.Component<IDuLieuTienTrinhProps, IDuL
   };
 
   render() {
-    const { duLieuTienTrinhList, match, totalItems } = this.props;
+    const { loaiQuyTrinhList, match, totalItems } = this.props;
     return (
       <div>
-        <h2 id="du-lieu-tien-trinh-heading">
-          <Translate contentKey="gatewayApp.quytrinhdonviDuLieuTienTrinh.home.title">Du Lieu Tien Trinhs</Translate>
+        <h2 id="loai-quy-trinh-heading">
+          <Translate contentKey="gatewayApp.quanlyquytrinhLoaiQuyTrinh.home.title">Loai Quy Trinhs</Translate>
           <Link to={`${match.url}/new`} className="btn btn-primary float-right jh-create-entity" id="jh-create-entity">
             <FontAwesomeIcon icon="plus" />
             &nbsp;
-            <Translate contentKey="gatewayApp.quytrinhdonviDuLieuTienTrinh.home.createLabel">Create new Du Lieu Tien Trinh</Translate>
+            <Translate contentKey="gatewayApp.quanlyquytrinhLoaiQuyTrinh.home.createLabel">Create new Loai Quy Trinh</Translate>
           </Link>
         </h2>
         <div className="table-responsive">
@@ -67,75 +67,52 @@ export class DuLieuTienTrinh extends React.Component<IDuLieuTienTrinhProps, IDuL
                 <th className="hand" onClick={this.sort('id')}>
                   <Translate contentKey="global.field.id">ID</Translate> <FontAwesomeIcon icon="sort" />
                 </th>
-                <th className="hand" onClick={this.sort('tienTrinhCode')}>
-                  <Translate contentKey="gatewayApp.quytrinhdonviDuLieuTienTrinh.tienTrinhCode">Tien Trinh Code</Translate>{' '}
+                <th className="hand" onClick={this.sort('loaiQuyTrinhCode')}>
+                  <Translate contentKey="gatewayApp.quanlyquytrinhLoaiQuyTrinh.loaiQuyTrinhCode">Loai Quy Trinh Code</Translate>{' '}
                   <FontAwesomeIcon icon="sort" />
                 </th>
-                <th className="hand" onClick={this.sort('duLieuCode')}>
-                  <Translate contentKey="gatewayApp.quytrinhdonviDuLieuTienTrinh.duLieuCode">Du Lieu Code</Translate>{' '}
+                <th className="hand" onClick={this.sort('methodName')}>
+                  <Translate contentKey="gatewayApp.quanlyquytrinhLoaiQuyTrinh.methodName">Method Name</Translate>{' '}
                   <FontAwesomeIcon icon="sort" />
                 </th>
-                <th className="hand" onClick={this.sort('fromUserId')}>
-                  <Translate contentKey="gatewayApp.quytrinhdonviDuLieuTienTrinh.fromUserId">From User Id</Translate>{' '}
+                <th className="hand" onClick={this.sort('entityName')}>
+                  <Translate contentKey="gatewayApp.quanlyquytrinhLoaiQuyTrinh.entityName">Entity Name</Translate>{' '}
                   <FontAwesomeIcon icon="sort" />
                 </th>
-                <th className="hand" onClick={this.sort('toUserId')}>
-                  <Translate contentKey="gatewayApp.quytrinhdonviDuLieuTienTrinh.toUserId">To User Id</Translate>{' '}
-                  <FontAwesomeIcon icon="sort" />
-                </th>
-                <th className="hand" onClick={this.sort('name')}>
-                  <Translate contentKey="gatewayApp.quytrinhdonviDuLieuTienTrinh.name">Name</Translate> <FontAwesomeIcon icon="sort" />
-                </th>
-                <th className="hand" onClick={this.sort('status')}>
-                  <Translate contentKey="gatewayApp.quytrinhdonviDuLieuTienTrinh.status">Status</Translate> <FontAwesomeIcon icon="sort" />
-                </th>
-                <th className="hand" onClick={this.sort('note')}>
-                  <Translate contentKey="gatewayApp.quytrinhdonviDuLieuTienTrinh.note">Note</Translate> <FontAwesomeIcon icon="sort" />
-                </th>
-                <th>
-                  <Translate contentKey="gatewayApp.quytrinhdonviDuLieuTienTrinh.quyTrinhDonVi">Quy Trinh Don Vi</Translate>{' '}
+                <th className="hand" onClick={this.sort('serviceName')}>
+                  <Translate contentKey="gatewayApp.quanlyquytrinhLoaiQuyTrinh.serviceName">Service Name</Translate>{' '}
                   <FontAwesomeIcon icon="sort" />
                 </th>
                 <th />
               </tr>
             </thead>
             <tbody>
-              {duLieuTienTrinhList.map((duLieuTienTrinh, i) => (
+              {loaiQuyTrinhList.map((loaiQuyTrinh, i) => (
                 <tr key={`entity-${i}`}>
                   <td>
-                    <Button tag={Link} to={`${match.url}/${duLieuTienTrinh.id}`} color="link" size="sm">
-                      {duLieuTienTrinh.id}
+                    <Button tag={Link} to={`${match.url}/${loaiQuyTrinh.id}`} color="link" size="sm">
+                      {loaiQuyTrinh.id}
                     </Button>
                   </td>
-                  <td>{duLieuTienTrinh.tienTrinhCode}</td>
-                  <td>{duLieuTienTrinh.duLieuCode}</td>
-                  <td>{duLieuTienTrinh.fromUserId}</td>
-                  <td>{duLieuTienTrinh.toUserId}</td>
-                  <td>{duLieuTienTrinh.name}</td>
-                  <td>{duLieuTienTrinh.status}</td>
-                  <td>{duLieuTienTrinh.note}</td>
-                  <td>
-                    {duLieuTienTrinh.quyTrinhDonViName ? (
-                      <Link to={`quy-trinh-don-vi/${duLieuTienTrinh.quyTrinhDonViId}`}>{duLieuTienTrinh.quyTrinhDonViName}</Link>
-                    ) : (
-                      ''
-                    )}
-                  </td>
+                  <td>{loaiQuyTrinh.loaiQuyTrinhCode}</td>
+                  <td>{loaiQuyTrinh.methodName}</td>
+                  <td>{loaiQuyTrinh.entityName}</td>
+                  <td>{loaiQuyTrinh.serviceName}</td>
                   <td className="text-right">
                     <div className="btn-group flex-btn-group-container">
-                      <Button tag={Link} to={`${match.url}/${duLieuTienTrinh.id}`} color="info" size="sm">
+                      <Button tag={Link} to={`${match.url}/${loaiQuyTrinh.id}`} color="info" size="sm">
                         <FontAwesomeIcon icon="eye" />{' '}
                         <span className="d-none d-md-inline">
                           <Translate contentKey="entity.action.view">View</Translate>
                         </span>
                       </Button>
-                      <Button tag={Link} to={`${match.url}/${duLieuTienTrinh.id}/edit`} color="primary" size="sm">
+                      <Button tag={Link} to={`${match.url}/${loaiQuyTrinh.id}/edit`} color="primary" size="sm">
                         <FontAwesomeIcon icon="pencil-alt" />{' '}
                         <span className="d-none d-md-inline">
                           <Translate contentKey="entity.action.edit">Edit</Translate>
                         </span>
                       </Button>
-                      <Button tag={Link} to={`${match.url}/${duLieuTienTrinh.id}/delete`} color="danger" size="sm">
+                      <Button tag={Link} to={`${match.url}/${loaiQuyTrinh.id}/delete`} color="danger" size="sm">
                         <FontAwesomeIcon icon="trash" />{' '}
                         <span className="d-none d-md-inline">
                           <Translate contentKey="entity.action.delete">Delete</Translate>
@@ -161,9 +138,9 @@ export class DuLieuTienTrinh extends React.Component<IDuLieuTienTrinhProps, IDuL
   }
 }
 
-const mapStateToProps = ({ duLieuTienTrinh }: IRootState) => ({
-  duLieuTienTrinhList: duLieuTienTrinh.entities,
-  totalItems: duLieuTienTrinh.totalItems
+const mapStateToProps = ({ loaiQuyTrinh }: IRootState) => ({
+  loaiQuyTrinhList: loaiQuyTrinh.entities,
+  totalItems: loaiQuyTrinh.totalItems
 });
 
 const mapDispatchToProps = {
@@ -176,4 +153,4 @@ type DispatchProps = typeof mapDispatchToProps;
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(DuLieuTienTrinh);
+)(LoaiQuyTrinh);

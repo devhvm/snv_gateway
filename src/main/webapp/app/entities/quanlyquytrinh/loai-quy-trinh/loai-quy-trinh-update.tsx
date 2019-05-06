@@ -8,26 +8,22 @@ import { Translate, translate, ICrudGetAction, ICrudGetAllAction, ICrudPutAction
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { IRootState } from 'app/shared/reducers';
 
+import { getEntity, updateEntity, createEntity, reset } from './loai-quy-trinh.reducer';
 import { ILoaiQuyTrinh } from 'app/shared/model/quanlyquytrinh/loai-quy-trinh.model';
-import { getEntities as getLoaiQuyTrinhs } from 'app/entities/quanlyquytrinh/loai-quy-trinh/loai-quy-trinh.reducer';
-import { getEntity, updateEntity, createEntity, reset } from './quy-trinh.reducer';
-import { IQuyTrinh } from 'app/shared/model/quanlyquytrinh/quy-trinh.model';
 // tslint:disable-next-line:no-unused-variable
 import { convertDateTimeFromServer, convertDateTimeToServer } from 'app/shared/util/date-utils';
 import { mapIdList } from 'app/shared/util/entity-utils';
 
-export interface IQuyTrinhUpdateProps extends StateProps, DispatchProps, RouteComponentProps<{ id: string }> {}
+export interface ILoaiQuyTrinhUpdateProps extends StateProps, DispatchProps, RouteComponentProps<{ id: string }> {}
 
-export interface IQuyTrinhUpdateState {
+export interface ILoaiQuyTrinhUpdateState {
   isNew: boolean;
-  loaiQuyTrinhId: string;
 }
 
-export class QuyTrinhUpdate extends React.Component<IQuyTrinhUpdateProps, IQuyTrinhUpdateState> {
+export class LoaiQuyTrinhUpdate extends React.Component<ILoaiQuyTrinhUpdateProps, ILoaiQuyTrinhUpdateState> {
   constructor(props) {
     super(props);
     this.state = {
-      loaiQuyTrinhId: '0',
       isNew: !this.props.match.params || !this.props.match.params.id
     };
   }
@@ -44,15 +40,13 @@ export class QuyTrinhUpdate extends React.Component<IQuyTrinhUpdateProps, IQuyTr
     } else {
       this.props.getEntity(this.props.match.params.id);
     }
-
-    this.props.getLoaiQuyTrinhs();
   }
 
   saveEntity = (event, errors, values) => {
     if (errors.length === 0) {
-      const { quyTrinhEntity } = this.props;
+      const { loaiQuyTrinhEntity } = this.props;
       const entity = {
-        ...quyTrinhEntity,
+        ...loaiQuyTrinhEntity,
         ...values
       };
 
@@ -65,19 +59,19 @@ export class QuyTrinhUpdate extends React.Component<IQuyTrinhUpdateProps, IQuyTr
   };
 
   handleClose = () => {
-    this.props.history.push('/entity/quy-trinh');
+    this.props.history.push('/entity/loai-quy-trinh');
   };
 
   render() {
-    const { quyTrinhEntity, loaiQuyTrinhs, loading, updating } = this.props;
+    const { loaiQuyTrinhEntity, loading, updating } = this.props;
     const { isNew } = this.state;
 
     return (
       <div>
         <Row className="justify-content-center">
           <Col md="8">
-            <h2 id="gatewayApp.quanlyquytrinhQuyTrinh.home.createOrEditLabel">
-              <Translate contentKey="gatewayApp.quanlyquytrinhQuyTrinh.home.createOrEditLabel">Create or edit a QuyTrinh</Translate>
+            <h2 id="gatewayApp.quanlyquytrinhLoaiQuyTrinh.home.createOrEditLabel">
+              <Translate contentKey="gatewayApp.quanlyquytrinhLoaiQuyTrinh.home.createOrEditLabel">Create or edit a LoaiQuyTrinh</Translate>
             </h2>
           </Col>
         </Row>
@@ -86,57 +80,47 @@ export class QuyTrinhUpdate extends React.Component<IQuyTrinhUpdateProps, IQuyTr
             {loading ? (
               <p>Loading...</p>
             ) : (
-              <AvForm model={isNew ? {} : quyTrinhEntity} onSubmit={this.saveEntity}>
+              <AvForm model={isNew ? {} : loaiQuyTrinhEntity} onSubmit={this.saveEntity}>
                 {!isNew ? (
                   <AvGroup>
                     <Label for="id">
                       <Translate contentKey="global.field.id">ID</Translate>
                     </Label>
-                    <AvInput id="quy-trinh-id" type="text" className="form-control" name="id" required readOnly />
+                    <AvInput id="loai-quy-trinh-id" type="text" className="form-control" name="id" required readOnly />
                   </AvGroup>
                 ) : null}
                 <AvGroup>
-                  <Label id="quyTrinhCodeLabel" for="quyTrinhCode">
-                    <Translate contentKey="gatewayApp.quanlyquytrinhQuyTrinh.quyTrinhCode">Quy Trinh Code</Translate>
+                  <Label id="loaiQuyTrinhCodeLabel" for="loaiQuyTrinhCode">
+                    <Translate contentKey="gatewayApp.quanlyquytrinhLoaiQuyTrinh.loaiQuyTrinhCode">Loai Quy Trinh Code</Translate>
                   </Label>
                   <AvField
-                    id="quy-trinh-quyTrinhCode"
+                    id="loai-quy-trinh-loaiQuyTrinhCode"
                     type="text"
-                    name="quyTrinhCode"
+                    name="loaiQuyTrinhCode"
                     validate={{
                       required: { value: true, errorMessage: translate('entity.validation.required') }
                     }}
                   />
                 </AvGroup>
                 <AvGroup>
-                  <Label id="nameLabel" for="name">
-                    <Translate contentKey="gatewayApp.quanlyquytrinhQuyTrinh.name">Name</Translate>
+                  <Label id="methodNameLabel" for="methodName">
+                    <Translate contentKey="gatewayApp.quanlyquytrinhLoaiQuyTrinh.methodName">Method Name</Translate>
                   </Label>
-                  <AvField
-                    id="quy-trinh-name"
-                    type="text"
-                    name="name"
-                    validate={{
-                      required: { value: true, errorMessage: translate('entity.validation.required') }
-                    }}
-                  />
+                  <AvField id="loai-quy-trinh-methodName" type="text" name="methodName" />
                 </AvGroup>
                 <AvGroup>
-                  <Label for="loaiQuyTrinh.name">
-                    <Translate contentKey="gatewayApp.quanlyquytrinhQuyTrinh.loaiQuyTrinh">Loai Quy Trinh</Translate>
+                  <Label id="entityNameLabel" for="entityName">
+                    <Translate contentKey="gatewayApp.quanlyquytrinhLoaiQuyTrinh.entityName">Entity Name</Translate>
                   </Label>
-                  <AvInput id="quy-trinh-loaiQuyTrinh" type="select" className="form-control" name="loaiQuyTrinhId">
-                    <option value="" key="0" />
-                    {loaiQuyTrinhs
-                      ? loaiQuyTrinhs.map(otherEntity => (
-                          <option value={otherEntity.id} key={otherEntity.id}>
-                            {otherEntity.name}
-                          </option>
-                        ))
-                      : null}
-                  </AvInput>
+                  <AvField id="loai-quy-trinh-entityName" type="text" name="entityName" />
                 </AvGroup>
-                <Button tag={Link} id="cancel-save" to="/entity/quy-trinh" replace color="info">
+                <AvGroup>
+                  <Label id="serviceNameLabel" for="serviceName">
+                    <Translate contentKey="gatewayApp.quanlyquytrinhLoaiQuyTrinh.serviceName">Service Name</Translate>
+                  </Label>
+                  <AvField id="loai-quy-trinh-serviceName" type="text" name="serviceName" />
+                </AvGroup>
+                <Button tag={Link} id="cancel-save" to="/entity/loai-quy-trinh" replace color="info">
                   <FontAwesomeIcon icon="arrow-left" />
                   &nbsp;
                   <span className="d-none d-md-inline">
@@ -159,15 +143,13 @@ export class QuyTrinhUpdate extends React.Component<IQuyTrinhUpdateProps, IQuyTr
 }
 
 const mapStateToProps = (storeState: IRootState) => ({
-  loaiQuyTrinhs: storeState.loaiQuyTrinh.entities,
-  quyTrinhEntity: storeState.quyTrinh.entity,
-  loading: storeState.quyTrinh.loading,
-  updating: storeState.quyTrinh.updating,
-  updateSuccess: storeState.quyTrinh.updateSuccess
+  loaiQuyTrinhEntity: storeState.loaiQuyTrinh.entity,
+  loading: storeState.loaiQuyTrinh.loading,
+  updating: storeState.loaiQuyTrinh.updating,
+  updateSuccess: storeState.loaiQuyTrinh.updateSuccess
 });
 
 const mapDispatchToProps = {
-  getLoaiQuyTrinhs,
   getEntity,
   updateEntity,
   createEntity,
@@ -180,4 +162,4 @@ type DispatchProps = typeof mapDispatchToProps;
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(QuyTrinhUpdate);
+)(LoaiQuyTrinhUpdate);

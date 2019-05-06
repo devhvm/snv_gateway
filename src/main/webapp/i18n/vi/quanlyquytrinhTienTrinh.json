@@ -12,7 +12,7 @@
       "detail": {
         "title": "Tien Trinh"
       },
-      "menuItemCode": "Menu Item Code",
+      "tienTrinhCode": "Tien Trinh Code",
       "name": "Name",
       "screenCode": "Screen Code",
       "status": "Status",
